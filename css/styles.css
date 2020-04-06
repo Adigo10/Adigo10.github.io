@@ -1,33 +1,50 @@
 .top{
-  background-color: black;
+padding: 25px;
 }
 .middle1{
-  background-color: #393e46;
+padding: 100px;
 }
 .middle2{
-  background-color: #55bcc9;
+padding: 100px;
 }
 .bottom{
-  background-color: black;
+background-color: black;
 }
 .contact{
   height: 50px;
+}
+.contact-info{
+  width: 60%;
+  margin: auto;
 }
 .footer{
   margin: 10px;
 }
 .skill-img{
-  width: 25%;
-    float: left;
+    width: 20%;
     margin-right: 30px;
+    float: left;
 }
-.skill-row{
-  width: 50%;
+.skill-ml{
+    width: 60%;
   margin:auto;
   text-align:left;
+  padding: 20px;
+}
+.skill-web{
+    width: 60%;
+  margin:auto;
+  text-align:left;
+  padding: 20px;
+}
+.skill-iot{
+    width: 60%;
+  margin:auto;
+  text-align:left;
+  padding: 20px;
 }
 .intro{
-  width: 66%;
+  width: 60%;
   margin:auto;
 }
 
@@ -36,6 +53,10 @@ body{
   font-family: 'Comfortaa';
   text-align: center;
   margin: 0;
+  background-image: url('laptop.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 h1{
   color: #00fff5;
@@ -59,7 +80,7 @@ p{
 
 
 .btn {
-  color: #FFFFFF !important;
+  color: #FFFFFF ;
   font-size: 20px;
   text-shadow: 1px 1px 9px #7CACDE;
   text-decoration: none;
@@ -75,7 +96,7 @@ p{
   background: -moz-linear-gradient(top,  #00FFF5,  #42B3B3);
 }
 .btn:hover {
-  color: #FFFFFF !important;
+  color: #FFFFFF ;
   background: linear-gradient(top,  #42B3B3,  #00FFF5);
   background: -ms-linear-gradient(top,  #42B3B3,  #00FFF5);
   background: -webkit-gradient(linear, left top, left bottom, from(#42B3B3), to(#00FFF5));
