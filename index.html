@@ -1,85 +1,534 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Aditya Kumar Goel</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Kumar Goel - AI/ML | Innovator | Explorer</title>
+    <meta name="description" content="Portfolio of Aditya Kumar Goel, AI/ML Innovator pursuing MSAI at NTU Singapore, ex-Responsible AI Senior Analyst at Accenture">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#home">Aditya Kumar Goel</a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#publications" class="nav-link">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#awards" class="nav-link">Awards</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162926226-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Aditya Kumar Goel</h1>
+                    <h2 class="hero-subtitle">AI/ML | Innovator | Explorer</h2>
+                    <p class="hero-description">MSAI @ NTU | ex-RAI @ Accenture</p>
+                    <p class="hero-location">📍 Singapore</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn--primary">Get In Touch</a>
+                        <a href="#publications" class="btn btn--outline">View Research</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-geometric"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      gtag('config', 'UA-162926226-1');
-    </script>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">AI/ML specialist delivering cutting-edge solutions</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        My expertise lies in training and fine-tuning Large Language Models (LLMs) and Machine Learning (ML) 
+                        models to create bespoke solutions tailored to unique challenges. I thrive on exploring the depths of 
+                        the Vector Database & Semantic Search, utilizing advanced embedding techniques, and harnessing the power 
+                        of AI for innovation.
+                    </p>
+                    <p class="about-mission">
+                        <strong>Mission:</strong> In a world where AI is rapidly transforming industries, my mission is to 
+                        leverage my skills in AI and ML to drive innovation and solve complex problems. I am enthusiastic about 
+                        collaborating with forward-thinking organizations and individuals who share a vision of harnessing the 
+                        power of AI for the greater good.
+                    </p>
+                </div>
+                <div class="skills-section">
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">Artificial Intelligence</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Responsible AI</span>
+                            <span class="skill-tag">GenAI</span>
+                            <span class="skill-tag">Large Language Models (LLMs)</span>
+                            <span class="skill-tag">Computer Vision</span>
+                            <span class="skill-tag">Vector Database</span>
+                            <span class="skill-tag">Semantic Search</span>
+                            <span class="skill-tag">Advanced Embeddings</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Deep Learning</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">Programming & Frameworks</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">OpenCV</span>
+                            <span class="skill-tag">MLFlow</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Postman</span>
+                            <span class="skill-tag">Fast API</span>
+                            <span class="skill-tag">PyFlask API</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">MLOps & DevOps</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">CI/CD for ML</span>
+                            <span class="skill-tag">Model Deployment</span>
+                            <span class="skill-tag">Model Monitoring</span>
+                            <span class="skill-tag">Weights & Biases</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Azure DevOs</span>
+                            <span class="skill-tag">MLflow</span>
+                            <span class="skill-tag">Azure ML</span>
+                            <span class="skill-tag">AWS SageMaker</span>
+                            <span class="skill-tag">Data Versioning (DVC)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience & Education</h2>
+                <p class="section-subtitle">Professional journey and academic achievements</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-period">2025-2026</div>
+                        <h3 class="timeline-title">Master of Science in Artificial Intelligence</h3>
+                        <h4 class="timeline-company">Nanyang Technological University Singapore</h4>
+                        <p class="timeline-location">Singapore</p>
+                        <p class="timeline-description">
+                            Pursuing advanced studies in AI with focus on cutting-edge artificial intelligence technologies and research.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-period">Jun 2024 - Jul 2025</div>
+                        <h3 class="timeline-title">Responsible AI Senior Analyst</h3>
+                        <h4 class="timeline-company">Accenture</h4>
+                        <p class="timeline-location">Bengaluru, Karnataka, India</p>
+                        <p class="timeline-description">
+                            Led groundbreaking AI initiatives and research contributions in responsible AI implementation.
+                        </p>
+                        <div class="timeline-achievements">
+                            <div class="achievement">
+                                <span class="achievement-icon">📄</span>
+                                <span class="achievement-text">Developed novel solution to fine-tune Transformer model and published IEEE paper</span>
+                            </div>
+                            <div class="achievement">
+                                <span class="achievement-icon">🏥</span>
+                                <span class="achievement-text">Worked with Pharmaceutical Company to overhaul AI Review process</span>
+                            </div>
+                            <div class="achievement">
+                                <span class="achievement-icon">💰</span>
+                                <span class="achievement-text">Developed RAI Quantitative Metrics for Finance Company</span>
+                            </div>
+                            <div class="achievement">
+                                <span class="achievement-icon">🚀</span>
+                                <span class="achievement-text">Delivered multiple PoCs and e2e GenAI/LLM projects</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-period">Previous Role</div>
+                        <h3 class="timeline-title">Advanced Application Engineering Analyst</h3>
+                        <h4 class="timeline-company">Accenture</h4>
+                        <p class="timeline-location">India</p>
+                        <p class="timeline-description">
+                            Developed comprehensive AI/ML solutions for industrial applications using GenAI and Computer Vision.
+                        </p>
+                        <div class="timeline-achievements">
+                            <div class="achievement">
+                                <span class="achievement-icon">🤖</span>
+                                <span class="achievement-text">Developed e2e solutions using Generative AI LLM models</span>
+                            </div>
+                            <div class="achievement">
+                                <span class="achievement-icon">👁️</span>
+                                <span class="achievement-text">Implemented CV functionality with custom CNN models using PyTorch</span>
+                            </div>
+                            <div class="achievement">
+                                <span class="achievement-icon">⚙️</span>
+                                <span class="achievement-text">Applied MLOps techniques using MLFlow, Docker and Postman</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-period">Mar 2024 - Mar 2025</div>
+                        <h3 class="timeline-title">CO Venture Fellow | Cohort 6</h3>
+                        <h4 class="timeline-company">OP Venture Cooperative</h4>
+                        <p class="timeline-location">Remote</p>
+                        <p class="timeline-description">
+                            Participated in venture capital education and investment processes, collaborating on due diligence and working with early stage founders.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-period">Oct 2020 - May 2021</div>
+                        <h3 class="timeline-title">President</h3>
+                        <h4 class="timeline-company">VentureOps</h4>
+                        <p class="timeline-location">Vellore, Tamil Nadu, India</p>
+                        <p class="timeline-description">
+                            Led university venture operations and organized major tech events.
+                        </p>
+                        <div class="timeline-achievements">
+                            <div class="achievement">
+                                <span class="achievement-icon">🔥</span>
+                                <span class="achievement-text">Hackathon Lead for 'Hello World 4.0' (Oct 2020)</span>
+                            </div>
+                            <div class="achievement">
+                                <span class="achievement-icon">🌐</span>
+                                <span class="achievement-text">Developed Club Website - venturesityvit.github.io</span>
+                            </div>
+                            <div class="achievement">
+                                <span class="achievement-icon">🎙️</span>
+                                <span class="achievement-text">Organised Workshop with Slang Labs on 'Voice Augmented Reality'</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-period">Aug 2019 - Feb 2020</div>
+                        <h3 class="timeline-title">Student R&D Engineer</h3>
+                        <h4 class="timeline-company">Centre of Excellence for Autonomous Vehicles Research, ARC-VIT</h4>
+                        <p class="timeline-location">Vellore, Tamil Nadu</p>
+                        <p class="timeline-description">
+                            Developed AI algorithms for autonomous vehicle systems using OpenCV & TensorFlow.
+                        </p>
+                        <div class="timeline-achievements">
+                            <div class="achievement">
+                                <span class="achievement-icon">🚗</span>
+                                <span class="achievement-text">Developed Computer Vision for Autonomous EV</span>
+                            </div>
+                            <div class="achievement">
+                                <span class="achievement-icon">📊</span>
+                                <span class="achievement-text">Developed optical flow for vehicle direction estimation</span>
+                            </div>
+                            <div class="achievement">
+                                <span class="achievement-icon">📡</span>
+                                <span class="achievement-text">Worked on LiDAR systems and Intel RealSense Depth camera</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-period">2018-2022</div>
+                        <h3 class="timeline-title">Bachelor of Technology - Information Technology</h3>
+                        <h4 class="timeline-company">Vellore Institute of Technology</h4>
+                        <p class="timeline-location">Vellore, Tamil Nadu</p>
+                        <p class="timeline-description">
+                            CGPA: 8.22/10. Special Achiever's Award 2020-21 for exemplary achievements in International hackathons and competitions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </head>
-  <body >
-    <div class="top">
-      <table align="center" cellspacing="20px">
-        <tr>
-          <td><img src="images/aditya.png" alt="profile-img" width="150px"></td>
-          <td><h1>I'm Aditya Kumar Goel</h1>
-          <h2>a programmer / developer.<h2></td>
-        </tr>
-      </table>
+    <!-- Publications Section -->
+    <section id="publications" class="publications">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Publications</h2>
+                <p class="section-subtitle">Research contributions to the academic community</p>
+            </div>
+            <div class="publication-content">
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-type">Conference Paper</div>
+                        <div class="publication-status">Published</div>
+                    </div>
+                    <h3 class="publication-title">Factual Accuracy Checking by Validating Numerical Values in Financial Summaries</h3>
+                    <div class="publication-details">
+                        <div class="publication-venue">
+                            <span class="venue-icon">🏛️</span>
+                            <span class="venue-name">IEEE Big Data Conference 2024</span>
+                        </div>
+                        <div class="publication-date">
+                            <span class="date-icon">📅</span>
+                            <span class="date-text">December 15, 2024</span>
+                        </div>
+                    </div>
+                    <p class="publication-description">
+                        Research contribution focusing on developing novel solutions for validating numerical accuracy in 
+                        financial document summaries using advanced AI techniques. This work presents innovative approaches 
+                        to ensure factual accuracy in financial reporting through automated validation systems.
+                    </p>
+                    <div class="publication-keywords">
+                        <span class="keyword-tag">AI/ML</span>
+                        <span class="keyword-tag">Financial Analysis</span>
+                        <span class="keyword-tag">Transformer Models</span>
+                        <span class="keyword-tag">Numerical Validation</span>
+                        <span class="keyword-tag">Document Processing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </div>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Innovation across AI/ML, Autonomous Systems, and IoT</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">VIT Autonomous Ground Vehicle</h3>
+                        <div class="project-period">Aug 2019 - Feb 2020</div>
+                        <p class="project-description">
+                            Project in collaboration with State University of New York (SUNY) for the Research and Development 
+                            of Autonomous Ground Vehicle at VIT, Vellore. Developed computer vision algorithms and autonomous 
+                            navigation systems.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">OpenCV</span>
+                            <span class="project-tag">TensorFlow</span>
+                            <span class="project-tag">Computer Vision</span>
+                            <span class="project-tag">Autonomous Systems</span>
+                        </div>
+                    </div>
+                    <div class="project-category">Research & Development</div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Stock Prediction Model</h3>
+                        <div class="project-period">Jan 2020 - Feb 2020</div>
+                        <p class="project-description">
+                            Developed machine learning models for financial market prediction using advanced algorithms and 
+                            data analysis techniques to forecast stock market trends and patterns.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Machine Learning</span>
+                            <span class="project-tag">Financial Analytics</span>
+                        </div>
+                    </div>
+                    <div class="project-category">Machine Learning</div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Obstacle Avoidance Bot</h3>
+                        <div class="project-period">Jun 2019</div>
+                        <p class="project-description">
+                            A RaspberryPi based robot whose Obstacle Avoidance was controlled by a ML model trained by collecting 
+                            database from the sensors present on the robot and processing done by the RaspberryPi board.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">RaspberryPi</span>
+                            <span class="project-tag">Machine Learning</span>
+                            <span class="project-tag">Sensor Integration</span>
+                            <span class="project-tag">Robotics</span>
+                        </div>
+                    </div>
+                    <div class="project-category">IoT & Robotics</div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Smart Industry Monitoring System</h3>
+                        <div class="project-period">Sep 2018 - Oct 2018</div>
+                        <p class="project-description">
+                            An IoT based Project using NodeMCU integrated with sensors to monitor temperature, humidity, and detect 
+                            smoke with a Real Time Data analysis on Blynk App for advanced warning system.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">NodeMCU</span>
+                            <span class="project-tag">IoT</span>
+                            <span class="project-tag">Blynk</span>
+                            <span class="project-tag">Sensor Integration</span>
+                            <span class="project-tag">Real-time Analytics</span>
+                        </div>
+                    </div>
+                    <div class="project-category">Internet of Things</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="middle1">
-      <div class="intro">
-        <br><h2>Hello.</h2>
-        <p>I am a B.Tech Sophomore. A tech Enthusiast/Explorer and an "IT Chameleon" ( I like that term )
-           as I adapt new technologies & environment with ease.
-          I believe in smart work and also that patience is the key to efficiency.
-          Experienced in Machine Learning Algorithms, Web Development and IOT.</p>
-          <h2>Timeline</h2>
-          <table>
+    <!-- Awards Section -->
+    <section id="awards" class="awards">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Awards & Honors</h2>
+                <p class="section-subtitle">Recognition for excellence in innovation and achievement</p>
+            </div>
+            <div class="awards-grid">
+                <div class="award-card">
+                    <div class="award-icon">🏛️</div>
+                    <h3 class="award-title">HPAIR Asia & Harvard Conference (ACONF & HCONF)</h3>
+                    <div class="award-organization">Harvard College Project for Asian and International Relations (HPAIR)</div>
+                    <div class="award-date">2024 - 2025</div>
+                    <p class="award-description">
+                        Selected amongst a pool of young international applicants to attend HPAIR ACONF 2024, 2025 and HCONF 2025 as a Delegate 
+                        held at USA, Thailand & Japan .
+                    </p>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon">🏆</div>
+                    <h3 class="award-title">ACE Inspiring Innovator Award</h3>
+                    <div class="award-organization">Accenture</div>
+                    <div class="award-date">Nov 2023</div>
+                    <p class="award-description">
+                        Recognition for exceptional innovation and leadership in RAI projects.
+                    </p>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon">⭐</div>
+                    <h3 class="award-title">Innovation Excellence Award</h3>
+                    <div class="award-organization">Accenture</div>
+                    <div class="award-date">Aug 2023</div>
+                    <p class="award-description">
+                        Recognised by then RAI Lead & MD for outstanding innovative contributions.
+                    </p>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon">🔧</div>
+                    <h3 class="award-title">Technical Excellence towards Client MVP</h3>
+                    <div class="award-organization">Accenture</div>
+                    <div class="award-date">Aug 2023</div>
+                    <p class="award-description">
+                        Recognition for technical excellence in delivering client MVPs.
+                    </p>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon">🎓</div>
+                    <h3 class="award-title">Special Achiever's Award 2020-21</h3>
+                    <div class="award-organization">Vellore Institute of Technology</div>
+                    <div class="award-date">Nov 2021</div>
+                    <p class="award-description">
+                        Appreciated by University for exemplary achievements in International hackathons and competitions.
+                    </p>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon">💻</div>
+                    <h3 class="award-title">Top 20 in Prospect 100 for Tech</h3>
+                    <div class="award-organization">Prospect 100</div>
+                    <div class="award-date">Aug 2020</div>
+                    <p class="award-description">
+                        Recognized as one of the top 20 candidates in global tech innovation competition.
+                    </p>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon">🥉</div>
+                    <h3 class="award-title">Bronze Medal at District-Level Taekwondo Championship</h3>
+                    <div class="award-organization">UP Olympic Association & Taekwondo Federation of India</div>
+                    <div class="award-date">2010</div>
+                    <p class="award-description">
+                        Athletic achievement in martial arts competition.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-          </table>
-      </div>
-    </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's connect and discuss opportunities</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-info-title">Contact Information</h3>
+                    <div class="contact-item">
+                        <strong>Location </strong> : Nanyang Technological University, Singapore
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/adigo10/" target="_blank" class="social-link">LinkedIn Profile</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/Adigo10" target="_blank" class="social-link">Github Profile</a>
+                    </div>
+                    <div class="contact-item", style="margin-top: 1rem;">
+                        <strong>Email Me </strong> : adityagoel1999@gmail.com
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
 
-      <div class="middle2">
-          <br><h2>My Skills</h2>
-          <div class="skill-ml">
-            <img class="skill-img" src="https://media.giphy.com/media/SU2ic3wTfuC6JhD1lA/giphy.gif" alt="">
-            <h3>Machine Learning</h3>
-            <p>I have worked around various ML algorithms covering numerous datascience projects using Python. <br>
-            Tools & Frameworks: keras | pandas | tensorflow | numpy </p>
-          </div>
-          <div class="skill-web">
-            <img class="skill-img" src="https://media.giphy.com/media/d9IfL7seBexHLct75B/giphy.gif" alt="">
-            <h3>Fullstack Web Developer</h3>
-            <p>Keeping up with the latest trends in this domain. <br>
-             HTML | CSS | NodeJS | MongoDB | SQL | Django </p>
-          </div>
-          <div class="skill-iot">
-            <img class="skill-img" src="https://media.giphy.com/media/Zcc3ZeeZ5ztdw1oNSB/giphy.gif" alt="">
-            <h3>IOT</h3>
-            <p>Built an IOT project right in my freshman year and it's been a journey ever since.
-            Worked with Arduino Uno, RaspberryPi, Node MCU and a plethora of sensors. </p><br>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Aditya Kumar Goel. All rights reserved.</p>
+        </div>
+    </footer>
 
-          </div>
-        <center><a class="btn" href="https://github.com/Adigo10/">View Projects</a><br><br></center>
-    </div>
-
-    <div class="bottom">
-      <div class="contact-info">
-
-      <br><h2>Get In Touch</h2>
-      <p>If you are offering me a job or if there's anything I can build for you <br> Even if you just wanna talk about tech or grab a coffee! <br> Ping me :)</p>
-      <a class="footer" href="https://www.linkedin.com/in/aditya-kumar-goel-236590168/"><img class="contact" src="images/linkedin.png" alt=""></a>
-      <a class="footer" href="https://github.com/Adigo10/"><img class="contact" src="images/github.png" alt=""></a>
-      <a class="footer" href="https://twitter.com/_adigo"><img class="contact" src="images/twitter.png" alt=""></a><br><br>
-      <a class="btn" href="mailto:adityagoel1999@email.com">Mail Me</a>
-      <h4>+91-7620573959 <br><br>© 2020 Aditya Kumar Goel.</h4>
-    </div>
-  </div>
-  </body>
+    <script src="app.js"></script>
+</body>
 </html>
