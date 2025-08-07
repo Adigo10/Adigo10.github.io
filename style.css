@@ -982,6 +982,20 @@ body {
   border-radius: 50% 40% 60% 30%;
 }
 
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* animation: rotate-slow 8s linear infinite; */
+  animation: pulse 3s ease-in-out infinite;
+  /* animation: bounce 2s ease-in-out infinite; */
+}
+
+
 @keyframes float {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   50% { transform: translateY(-20px) rotate(180deg); }
@@ -1001,6 +1015,11 @@ body {
   
   .hero-buttons {
     justify-content: center;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
   }
 }
 
