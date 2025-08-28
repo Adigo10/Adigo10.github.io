@@ -9,69 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Enhanced Social Links Styling */
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin: 1.5rem 0;
-            flex-wrap: wrap;
-        }
-
-        .social-link {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.25rem;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
-
-        .social-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-            text-decoration: none;
-        }
-
-        .social-link i {
-            font-size: 1.2rem;
-        }
-
-        /* LinkedIn styling */
-        .social-link.linkedin {
-            background: linear-gradient(135deg, #0077b5 0%, #0066a0 100%);
-        }
-
-        .social-link.linkedin:hover {
-            background: linear-gradient(135deg, #005885 0%, #004d70 100%);
-        }
-
-        /* GitHub styling */
-        .social-link.github {
-            background: linear-gradient(135deg, #333 0%, #24292e 100%);
-        }
-
-        .social-link.github:hover {
-            background: linear-gradient(135deg, #1a1a1a 0%, #0d1117 100%);
-        }
-
-        /* Responsive design for mobile */
-        @media (max-width: 768px) {
-            .social-links {
-                justify-content: center;
-            }
-
-            .social-link {
-                padding: 0.6rem 1rem;
-                font-size: 0.9rem;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -411,72 +348,76 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-content">
-                        <h3 class="project-title">VIT Autonomous Ground Vehicle</h3>
-                        <div class="project-period">Aug 2019 - Feb 2020</div>
+                        <h3 class="project-title">Sentiment Analysis Dashboard</h3>
+                        <div class="project-period">Recent</div>
                         <p class="project-description">
-                            Project in collaboration with State University of New York (SUNY) for the Research and Development 
-                            of Autonomous Ground Vehicle at VIT, Vellore. Developed computer vision algorithms and autonomous 
-                            navigation systems.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">OpenCV</span>
-                            <span class="project-tag">TensorFlow</span>
-                            <span class="project-tag">Computer Vision</span>
-                            <span class="project-tag">Autonomous Systems</span>
-                        </div>
-                    </div>
-                    <div class="project-category">Research & Development</div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">Stock Prediction Model</h3>
-                        <div class="project-period">Jan 2020 - Feb 2020</div>
-                        <p class="project-description">
-                            Developed machine learning models for financial market prediction using advanced algorithms and 
-                            data analysis techniques to forecast stock market trends and patterns.
+                            Engineered a sentiment analysis engine using key-phrase extraction and intelligent source filtering to capture highly 
+                            authentic public opinion. Built a high-performance backend with Python and FastAPI, leveraging the Groq LPU inference 
+                            engine to serve OpenAI models for real-time, low-latency analysis.
                         </p>
                         <div class="project-tags">
                             <span class="project-tag">Python</span>
-                            <span class="project-tag">Machine Learning</span>
-                            <span class="project-tag">Financial Analytics</span>
+                            <span class="project-tag">FastAPI</span>
+                            <span class="project-tag">OpenAI</span>
+                            <span class="project-tag">Groq LPU</span>
+                            <span class="project-tag">NLP</span>
                         </div>
                     </div>
-                    <div class="project-category">Machine Learning</div>
+                    <div class="project-category">Natural Language Processing</div>
                 </div>
                 <div class="project-card">
                     <div class="project-content">
-                        <h3 class="project-title">Obstacle Avoidance Bot</h3>
-                        <div class="project-period">Jun 2019</div>
+                        <h3 class="project-title">Bias and Toxicity Detection and Mitigation</h3>
+                        <div class="project-period">Recent</div>
                         <p class="project-description">
-                            A RaspberryPi based robot whose Obstacle Avoidance was controlled by a ML model trained by collecting 
-                            database from the sensors present on the robot and processing done by the RaspberryPi board.
+                            Trained and Fine-tuned Transformer Model for GenAI Toxic/Bias Data Detection. Developed advanced algorithms 
+                            to identify and mitigate harmful content in AI-generated outputs, ensuring responsible AI deployment.
                         </p>
                         <div class="project-tags">
-                            <span class="project-tag">RaspberryPi</span>
-                            <span class="project-tag">Machine Learning</span>
-                            <span class="project-tag">Sensor Integration</span>
-                            <span class="project-tag">Robotics</span>
+                            <span class="project-tag">Transformers</span>
+                            <span class="project-tag">Fine-tuning</span>
+                            <span class="project-tag">Responsible AI</span>
+                            <span class="project-tag">GenAI</span>
+                            <span class="project-tag">Bias Detection</span>
                         </div>
                     </div>
-                    <div class="project-category">IoT & Robotics</div>
+                    <div class="project-category">Responsible AI</div>
                 </div>
                 <div class="project-card">
                     <div class="project-content">
-                        <h3 class="project-title">Smart Industry Monitoring System</h3>
-                        <div class="project-period">Sep 2018 - Oct 2018</div>
+                        <h3 class="project-title">GenAI Q&A post Multi-Doc Data Extraction</h3>
+                        <div class="project-period">Recent</div>
                         <p class="project-description">
-                            An IoT based Project using NodeMCU integrated with sensors to monitor temperature, humidity, and detect 
-                            smoke with a Real Time Data analysis on Blynk App for advanced warning system.
+                            Data Extraction using OCR techniques from PDF, PPT, Doc, Excel. Implemented Semantic Search Algorithm for relevant data 
+                            identification based on the input query. Dynamic Prompting and Summarization using GPT-3.5 Turbo.
                         </p>
                         <div class="project-tags">
-                            <span class="project-tag">NodeMCU</span>
-                            <span class="project-tag">IoT</span>
-                            <span class="project-tag">Blynk</span>
-                            <span class="project-tag">Sensor Integration</span>
-                            <span class="project-tag">Real-time Analytics</span>
+                            <span class="project-tag">OCR</span>
+                            <span class="project-tag">Semantic Search</span>
+                            <span class="project-tag">GPT-3.5</span>
+                            <span class="project-tag">Document Processing</span>
+                            <span class="project-tag">Q&A Systems</span>
                         </div>
                     </div>
-                    <div class="project-category">Internet of Things</div>
+                    <div class="project-category">Document Intelligence</div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">AI in Manufacturing Defect Detection</h3>
+                        <div class="project-period">Recent</div>
+                        <p class="project-description">
+                            Trained Deep Learning Vision model for Vehicle Manufacturing Defect detection for efficient quality assurance. 
+                            Implemented computer vision algorithms to automatically identify manufacturing defects, improving quality control processes.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Computer Vision</span>
+                            <span class="project-tag">Deep Learning</span>
+                            <span class="project-tag">Manufacturing</span>
+                            <span class="project-tag">Quality Assurance</span>
+                            <span class="project-tag">Defect Detection</span>
+                        </div>
+                    </div>
+                    <div class="project-category">Computer Vision</div>
                 </div>
             </div>
         </div>
