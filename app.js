@@ -1,6 +1,6 @@
 // Portfolio Website JavaScript functionality
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Mobile Navigation Toggle
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Toggle mobile menu
     if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
+        navToggle.addEventListener('click', function () {
             navMenu.classList.toggle('active');
             navToggle.classList.toggle('active');
         });
 
         // Close mobile menu when clicking on nav links
         navLinks.forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 navMenu.classList.remove('active');
                 navToggle.classList.remove('active');
             });
@@ -26,20 +26,20 @@ document.addEventListener('DOMContentLoaded', function() {
     function addSmoothScrolling() {
         // Get all links that start with #
         const allScrollLinks = document.querySelectorAll('a[href^="#"]');
-        
+
         allScrollLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
+            link.addEventListener('click', function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 const targetSection = document.querySelector(targetId);
-                
+
                 if (targetSection) {
                     const offsetTop = targetSection.offsetTop - 60; // Account for fixed navbar
                     window.scrollTo({
                         top: offsetTop,
                         behavior: 'smooth'
                     });
-                    
+
                     // Close mobile menu if open
                     if (navMenu && navToggle) {
                         navMenu.classList.remove('active');
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Update active nav link on scroll
     window.addEventListener('scroll', updateActiveNavLink);
-    
+
     // Update active nav link on page load
     updateActiveNavLink();
 
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
             rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver(function(entries) {
+        const observer = new IntersectionObserver(function (entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
@@ -108,16 +108,15 @@ document.addEventListener('DOMContentLoaded', function() {
             element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
 
             observer.observe(element);
-            link.setAttribute('rel', 'noopener noreferrer');
         });
     }
 
     // Initialize external links
-    fixExternalLinks();
+    observeElements();
 
     // Navbar background on scroll
     const navbar = document.getElementById('navbar');
-    
+
     function updateNavbarBackground() {
         // In the new CSS, navbar already has glass effect.
         // We can just add a shadow on scroll.
@@ -183,11 +182,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Debug: Log successful initialization
     console.log('Portfolio website loaded successfully (Apple Design Version)!');
-    
+
     // Add a subtle fade-in effect to the entire page
     document.body.style.opacity = '0';
     document.body.style.transition = 'opacity 0.5s ease-in-out';
-    
+
     setTimeout(() => {
         document.body.style.opacity = '1';
     }, 100);
