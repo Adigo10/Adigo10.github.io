@@ -5,6 +5,34 @@ document.addEventListener('DOMContentLoaded', function () {
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
+    const themeToggles = document.querySelectorAll('.theme-toggle');
+    const themeKey = 'portfolio-theme';
+
+    function applyTheme(theme) {
+        const isAlt = theme === 'alt';
+        document.body.classList.toggle('theme-alt', isAlt);
+        themeToggles.forEach(toggle => {
+            toggle.setAttribute('aria-pressed', String(isAlt));
+            toggle.setAttribute('aria-label', isAlt ? 'Switch to light theme' : 'Switch to dark theme');
+        });
+    }
+
+    if (themeToggles.length > 0) {
+        const savedTheme = localStorage.getItem(themeKey);
+        if (savedTheme) {
+            applyTheme(savedTheme);
+        } else {
+            applyTheme('default');
+        }
+
+        themeToggles.forEach(toggle => {
+            toggle.addEventListener('click', function () {
+                const isAlt = document.body.classList.toggle('theme-alt');
+                applyTheme(isAlt ? 'alt' : 'default');
+                localStorage.setItem(themeKey, isAlt ? 'alt' : 'default');
+            });
+        });
+    }
 
     // Toggle mobile menu
     if (navToggle && navMenu) {
@@ -179,6 +207,69 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Initialize scroll to top button
     createScrollToTopButton();
+
+    // Latest Medium post
+    function stripHtml(html) {
+        const temp = document.createElement('div');
+        temp.innerHTML = html;
+        return (temp.textContent || temp.innerText || '').trim();
+    }
+
+    function loadLatestMediumPost() {
+        const container = document.getElementById('latest-blog');
+        if (!container) {
+            return;
+        }
+
+        const mediumRssUrl = 'https://medium.com/feed/@adityagoel1999';
+        const rssToJsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(mediumRssUrl)}`;
+
+        fetch(rssToJsonUrl)
+            .then(response => response.json())
+            .then(data => {
+                if (!data || !data.items || data.items.length === 0) {
+                    throw new Error('No posts found');
+                }
+
+                const post = data.items[0];
+                const title = post.title || 'Latest post';
+                const link = post.link || 'https://medium.com/@adityagoel1999';
+                const pubDate = post.pubDate ? new Date(post.pubDate) : null;
+                const dateText = pubDate ? pubDate.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' }) : 'Recent';
+                const rawExcerpt = post.description || '';
+                const excerpt = stripHtml(rawExcerpt).slice(0, 180).trim();
+                const safeExcerpt = excerpt.length === 0 ? 'Read the latest article on Medium.' : `${excerpt}${excerpt.length >= 180 ? '...' : ''}`;
+
+                container.innerHTML = `
+                    <div class="publication-header">
+                        <span class="publication-type">Medium</span>
+                        <span class="publication-venue">@adityagoel1999</span>
+                    </div>
+                    <h3 class="publication-title">${title}</h3>
+                    <p class="publication-meta">${dateText}</p>
+                    <p class="publication-summary">${safeExcerpt}</p>
+                    <div>
+                        <a href="${link}" target="_blank" class="btn btn--primary">Read on Medium</a>
+                    </div>
+                `;
+            })
+            .catch(() => {
+                container.innerHTML = `
+                    <div class="publication-header">
+                        <span class="publication-type">Medium</span>
+                        <span class="publication-venue">@adityagoel1999</span>
+                    </div>
+                    <h3 class="publication-title">Latest post</h3>
+                    <p class="publication-meta">Medium</p>
+                    <p class="publication-summary">Read the latest article on Medium.</p>
+                    <div>
+                        <a href="https://medium.com/@adityagoel1999" target="_blank" class="btn btn--primary">Visit Medium</a>
+                    </div>
+                `;
+            });
+    }
+
+    loadLatestMediumPost();
 
     // Debug: Log successful initialization
     console.log('Portfolio website loaded successfully (Apple Design Version)!');
