@@ -1,0 +1,181 @@
+\documentclass[9pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+\usepackage{xcolor}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[a4paper,margin=0.35in]{geometry}
+\title{Curriculum vitae}
+\author{Aditya Kumar Goel}
+
+\usepackage{multicol}
+% Allows to create more than two columns
+
+\usepackage{array}
+% For adjusting column widths
+
+\usepackage{fontawesome}
+\usepackage[hidelinks, unicode]{hyperref}
+
+\usepackage[compact]{titlesec}
+\usepackage{hyphenat}
+\usepackage{graphicx}
+\graphicspath{ {./media/} }
+
+
+\raggedright
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\usepackage{enumitem}
+\setlist[itemize]{nosep, leftmargin=12pt}
+
+% Sections formatting
+\titleformat{\section}{
+\bfseries\raggedright\large}
+
+\begin{document}
+% ---------- HEADING ----------
+\begin{center}
+    \textbf{\Huge Aditya Kumar Goel}
+    \\ \vspace{2pt}
+    \small
+    \faEnvelope\ \href{mailto:adityaku003@e.ntu.edu.sg}{adityaku003@e.ntu.edu.sg} \hspace{3pt}
+    \faPhone\ +65 88465661 \hspace{3pt}
+    \faMapMarker\ Singapore \hspace{3pt}
+    \faLinkedin\ \href{https://linkedin.com/in/adigo10}{linkedin.com/in/adigo10} \hspace{3pt}
+    \faGithub\ \href{https://github.com/Adigo10}{github.com/Adigo10}
+\end{center}
+
+\vspace{-10pt}
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+\vspace{-2pt}
+
+% ---------- SUMMARY ----------
+\section{Summary} \vspace{-6pt}\hrule\vspace{4pt}
+AI/ML Engineer with 3+ years of experience delivering production-grade Generative AI, NLP, and Computer Vision solutions across pharma, finance, and logistics. Published researcher (IEEE Big Data 2024) specializing in LLM fine-tuning, RAG, and Responsible AI governance.
+
+
+% ---------- EDUCATION ----------
+\section{Education} \vspace{-6pt}\hrule\vspace{4pt}
+\textbf{Master of Science in Artificial Intelligence} \hfill August 2025 -- June 2026 \\
+Nanyang Technological University, Singapore \hfill CGPA: 3.9/5.0
+
+\vspace{2pt}
+\textbf{Bachelor of Technology in Information Technology} \hfill July 2018 -- June 2022 \\
+Vellore Institute of Technology, India \hfill CGPA: 8.22/10
+
+% ---------- WORK EXPERIENCE ----------
+\section{Work Experience}
+\vspace{-6pt}\hrule\vspace{4pt}
+\textbf{AI Engineer Intern} | \textit{Go-Genie, Singapore} \hfill January 2026 -- Present \\
+
+\begin{itemize}
+    \item Developed and evaluated ML models using Python, Scikit-learn, and PyTorch for logistics demand forecasting, route optimization, and load balancing
+    \item Engineered end-to-end data pipelines and integrated AI model inference into backend microservices via REST APIs for scalable deployment
+    \item Designed ML experimentation workflows and deployed low-latency inference endpoints for operational decision-making
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Responsible AI Senior Analyst} | \textit{Accenture, India} \hfill July 2022 -- July 2025 \\
+
+\begin{itemize}
+    \item Spearheaded Responsible AI advisory for a Fortune 500 pharmaceutical client, aligning AI governance frameworks with the EU AI Act
+    \item Delivered 5+ end-to-end Generative AI solutions using LLMs, PyTorch, TensorFlow, and OpenCV across pharma, finance, FMCG, and automotive verticals
+    \item Architected a RAG pipeline with vector databases and semantic embeddings, reducing token consumption by 80\%
+    \item Developed quantitative Responsible AI evaluation metrics and overhauled model review workflows for systematic safety assessments
+    \item Applied MLOps best practices using MLflow, Docker, and CI/CD pipelines for model training, versioning, and deployment
+\end{itemize}
+
+\vspace{-5pt}
+
+% ---------- PROJECTS ----------
+\section{Projects}
+\vspace{-6pt}\hrule\vspace{4pt}
+\textbf{Product Market Profiling Dashboard} | \textit{Python, FastAPI, Groq LPU, OpenAI}
+\begin{itemize}
+    \item Engineered a product-focused sentiment analysis engine using NLP key-phrase extraction and source filtering across social media discussions and news reviews
+    \item Built a high-performance FastAPI backend leveraging Groq LPU for inference and async endpoints for parallel API orchestration
+    \item Delivered near real-time insight delivery for stakeholder dashboards in finance-focused workflows
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Stock Prediction} | \textit{Python, NLP, Finance}
+\begin{itemize}
+    \item Built a pipeline combining market news signals and price features to forecast short-term equity direction
+    \item Evaluated models with rolling-window validation and generated daily prediction snapshots for decision support
+    \item Integrated sentiment signals to improve market context for directional forecasts
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Manufacturing Defect Detection} | \textit{PyTorch, OpenCV, Deep Learning}
+\begin{itemize}
+    \item Trained CNN-based vision models for vehicle manufacturing defect detection using PyTorch
+    \item Deployed an OpenCV pipeline to automate quality checks on production lines
+    \item Increased quality assurance throughput by automating defect screening in production imagery
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Bias and Toxicity Detection} | \textit{PyTorch, Hugging Face, Transformers}
+\begin{itemize}
+    \item Fine-tuned transformer models using Hugging Face for multi-label toxicity and bias classification in AI-generated text
+    \item Developed mitigation algorithms that improved harmful content detection accuracy, strengthening model safety review pipelines
+    \item Improved safety review coverage for GenAI outputs with automated bias and toxicity checks
+\end{itemize}
+
+\vspace{2pt}
+\textbf{GenAI Q\&A with Multi-Document Extraction} | \textit{Python, LangChain, OCR, Vector DB}
+\begin{itemize}
+    \item Architected a RAG pipeline integrating OCR extraction, vector database indexing, and semantic search for multi-document retrieval
+    \item Implemented dynamic prompt engineering and LLM summarization with GPT-3.5 Turbo, reducing token cost by 80\%
+    \item Accelerated multi-document lookups for business analysts with semantic search workflows
+\end{itemize}
+
+\vspace{-3pt}
+
+% ---------- PUBLICATIONS ----------
+\section{Publications}
+\vspace{-6pt}\hrule\vspace{4pt}
+\begin{itemize}
+    \item \textbf{IEEE Big Data 2024} -- ``Factual Accuracy Checking by Validating Numerical Values in Financial Summaries,'' \textit{IEEE Workshop on LLM for Finance.} \href{https://ieeexplore.ieee.org/document/10825697/}{[Paper]}
+\end{itemize}
+
+\vspace{-3pt}
+
+% ---------- ACHIEVEMENTS ----------
+\section{Achievements}
+\vspace{-6pt}\hrule\vspace{4pt}
+\begin{itemize}
+    \item \textbf{Harvard HPAIR Delegate (2024--2025):} Harvard College Project for Asian and International Relations
+    \item \textbf{Accenture ACE Award -- Inspiring Innovator (2023):} Highest individual recognition; Innovation and Technical Excellence
+    \item \textbf{Top 20 Prospect 100:} Recognized among top emerging technology professionals globally
+    \item \textbf{VIT Special Achievers Award (2021):} Represented university in international technical competitions
+\end{itemize}
+
+\vspace{-3pt}
+
+% ---------- CERTIFICATES ----------
+\begin{multicols}{2}
+\section{Technical Skills}
+\vspace{-6pt}\hrule\vspace{4pt}
+\textbf{AI/ML:} Responsible AI, LLMs, Generative AI, NLP, Computer Vision, Deep Learning, Machine Learning, RAG, Vector Databases, Embeddings, Semantic Search \\
+\textbf{Languages \& Frameworks:} Python, PyTorch, TensorFlow, Hugging Face, LangChain, FastAPI, Scikit-learn, OpenCV \\
+\textbf{MLOps \& Cloud:} Docker, MLflow, AWS SageMaker, Azure ML, Weights \& Biases, DVC, CI/CD for ML, Model Monitoring
+
+\columnbreak
+
+\section{Certificates}
+\vspace{-6pt}\hrule\vspace{4pt}
+\begin{itemize}
+    \item McKinsey Forward Program (2025)
+    \item Finetuning Large Language Models (2024)
+    \item Introduction to Project Management (2020)
+    \item Machine Learning with Python -- IBM (2020)
+\end{itemize}
+\end{multicols}
+
+\vspace{-5pt}
+
+
+\end{document}
