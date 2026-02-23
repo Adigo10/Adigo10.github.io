@@ -23,6 +23,7 @@
     --font-serif: "Newsreader", "Times New Roman", serif;
     --transition-fast: 0.18s ease;
     --transition-smooth: 0.4s ease;
+    --hero-ring: linear-gradient(135deg, rgba(15, 118, 110, 0.65), rgba(194, 107, 42, 0.55));
 }
 
 * {
@@ -68,6 +69,7 @@ body.theme-alt {
         radial-gradient(circle at 15% 20%, rgba(99, 179, 166, 0.18), transparent 35%),
         radial-gradient(circle at 85% 10%, rgba(224, 167, 107, 0.14), transparent 40%),
         linear-gradient(180deg, rgba(12, 17, 22, 0.9), rgba(17, 24, 33, 0.8));
+    --hero-ring: linear-gradient(135deg, rgba(99, 179, 166, 0.7), rgba(224, 167, 107, 0.6));
 }
 
 a {
@@ -307,10 +309,35 @@ section {
 .profile-pic {
     width: 200px;
     height: 200px;
+    display: block;
     border-radius: 50%;
     object-fit: cover;
     border: 6px solid rgba(255, 255, 255, 0.85);
     box-shadow: var(--shadow);
+}
+
+.profile-pic-wrap {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+.profile-pic-wrap::before {
+    content: "";
+    position: absolute;
+    inset: -10px;
+    border-radius: 50%;
+    background: var(--hero-ring);
+    z-index: -1;
+    opacity: 0.35;
+    filter: blur(1px);
+    transition: opacity var(--transition-smooth);
+}
+
+.profile-pic-wrap:hover::before {
+    opacity: 0.55;
 }
 
 .theme-alt .profile-pic {
@@ -872,7 +899,7 @@ img.education-logo:hover {
         justify-content: center;
     }
 
-    .profile-pic {
+    .profile-pic-wrap {
         margin: 0 auto;
     }
 }
