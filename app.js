@@ -7,30 +7,52 @@ document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('.nav-link');
     const themeToggles = document.querySelectorAll('.theme-toggle');
     const themeKey = 'portfolio-theme';
+    const prefersDarkQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
     function applyTheme(theme) {
         const isAlt = theme === 'alt';
         document.body.classList.toggle('theme-alt', isAlt);
         themeToggles.forEach(toggle => {
-            toggle.setAttribute('aria-pressed', String(isAlt));
+            toggle.setAttribute('aria-checked', String(isAlt));
             toggle.setAttribute('aria-label', isAlt ? 'Switch to light theme' : 'Switch to dark theme');
+            toggle.setAttribute('title', isAlt ? 'Switch to light theme' : 'Switch to dark theme');
         });
     }
 
-    if (themeToggles.length > 0) {
+    function getStoredTheme() {
         const savedTheme = localStorage.getItem(themeKey);
-        if (savedTheme) {
-            applyTheme(savedTheme);
-        } else {
-            applyTheme('default');
+        if (savedTheme === 'alt' || savedTheme === 'default') {
+            return savedTheme;
         }
+        return null;
+    }
+
+    function getPreferredTheme() {
+        return prefersDarkQuery.matches ? 'alt' : 'default';
+    }
+
+    function setTheme(theme, shouldPersist = true) {
+        applyTheme(theme);
+        if (shouldPersist) {
+            localStorage.setItem(themeKey, theme);
+        }
+    }
+
+    if (themeToggles.length > 0) {
+        const initialTheme = getStoredTheme() ?? getPreferredTheme();
+        setTheme(initialTheme, Boolean(getStoredTheme()));
 
         themeToggles.forEach(toggle => {
             toggle.addEventListener('click', function () {
-                const isAlt = document.body.classList.toggle('theme-alt');
-                applyTheme(isAlt ? 'alt' : 'default');
-                localStorage.setItem(themeKey, isAlt ? 'alt' : 'default');
+                const nextTheme = document.body.classList.contains('theme-alt') ? 'default' : 'alt';
+                setTheme(nextTheme);
             });
+        });
+
+        prefersDarkQuery.addEventListener('change', function () {
+            if (!getStoredTheme()) {
+                setTheme(getPreferredTheme(), false);
+            }
         });
     }
 

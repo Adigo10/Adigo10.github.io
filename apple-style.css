@@ -194,30 +194,38 @@ section {
     transition: var(--transition-fast);
 }
 
+/* ── Theme Toggle ─────────────────────────────────────────── */
+/*
+  Fixed layout: width=68px, height=32px
+  Thumb: 24px circle, 4px inset on each side
+  Travel: 68 - 24 - 4 - 4 = 36px
+  Sun icon anchored left, Moon icon anchored right
+*/
 .theme-toggle {
     position: relative;
     border: 1px solid var(--border);
-    background: rgba(15, 118, 110, 0.12);
-    color: var(--muted);
-    padding: 6px 10px;
+    background: rgba(15, 118, 110, 0.15);
+    padding: 0;
     border-radius: 999px;
-    font-size: 12px;
-    font-weight: 700;
     cursor: pointer;
-    transition: all var(--transition-fast);
-    width: 84px;
+    width: 68px;
     height: 32px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
+    flex-shrink: 0;
+    isolation: isolate;
+    transition: background var(--transition-fast), border-color var(--transition-fast);
 }
 
 .theme-toggle:hover {
     border-color: var(--accent);
-    color: var(--accent);
+    background: rgba(15, 118, 110, 0.22);
 }
 
+.theme-toggle:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+/* Sliding thumb */
 .theme-toggle::after {
     content: "";
     position: absolute;
@@ -227,36 +235,61 @@ section {
     height: 24px;
     border-radius: 50%;
     background: var(--card-strong);
-    box-shadow: 0 4px 10px rgba(11, 15, 20, 0.2);
+    box-shadow: 0 2px 6px rgba(11, 15, 20, 0.22);
     transform: translateY(-50%);
-    transition: transform var(--transition-fast), background var(--transition-fast);
+    transition: left 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
 }
 
+.theme-toggle[aria-checked="true"]::after {
+    left: 40px; /* 68 - 24 - 4 = 40 */
+    background: var(--card-strong);
+    box-shadow: 0 4px 12px rgba(79, 156, 145, 0.38);
+}
+
+/* Sun + Moon icons */
 .theme-icon {
-    width: 18px;
-    height: 18px;
-    display: inline-flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--muted);
-    transition: color var(--transition-fast);
     z-index: 1;
+    pointer-events: none;
+    transition: opacity var(--transition-fast), color var(--transition-fast);
 }
 
 .theme-icon i {
-    font-size: 14px;
+    font-size: 12px;
 }
 
-.theme-toggle .theme-icon--sun {
+/* Sun on left side (light mode = sun side active) */
+.theme-icon--sun {
+    left: 8px;
     color: var(--accent-strong);
 }
 
-.theme-alt .theme-toggle .theme-icon--sun {
+/* Moon on right side (dark mode = moon side active) */
+.theme-icon--moon {
+    right: 8px;
     color: var(--muted);
 }
 
-.theme-alt .theme-toggle .theme-icon--moon {
-    color: var(--ink);
+/* In dark mode: moon becomes active, sun fades */
+.theme-toggle[aria-checked="true"] .theme-icon--sun {
+    color: var(--muted);
+}
+
+.theme-toggle[aria-checked="true"] .theme-icon--moon {
+    color: var(--accent-strong);
+}
+
+/* Dark-mode track tint shift */
+.theme-alt .theme-toggle {
+    background: rgba(99, 179, 166, 0.2);
+    border-color: rgba(245, 243, 238, 0.2);
 }
 
 .theme-alt .navbar {
@@ -269,15 +302,15 @@ section {
     border-color: rgba(245, 243, 238, 0.2);
 }
 
-.theme-alt .theme-toggle {
-    background: rgba(99, 179, 166, 0.22);
-    color: var(--ink);
-    border-color: rgba(245, 243, 238, 0.2);
+.theme-alt .theme-toggle:focus-visible {
+    outline-color: var(--accent-strong);
 }
 
-.theme-alt .theme-toggle::after {
-    transform: translate(44px, -50%);
-    background: rgba(245, 243, 238, 0.9);
+@media (prefers-reduced-motion: reduce) {
+    .theme-toggle::after,
+    .theme-icon {
+        transition: none;
+    }
 }
 
 
@@ -585,11 +618,12 @@ section {
 }
 
 img.company-logo {
-    background: #ffffff;
+    background: var(--card-strong);
     object-fit: contain;
     padding: 4px;
+    border: 1px solid var(--border);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
 }
 
 img.company-logo:hover {
@@ -722,11 +756,19 @@ img.company-logo:hover {
 }
 
 img.education-logo {
-    background: #ffffff;
+    background: var(--card-strong);
     object-fit: contain;
     padding: 4px;
+    border: 1px solid var(--border);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.theme-alt img.company-logo,
+.theme-alt img.education-logo {
+    background: var(--card-strong);
+    border-color: rgba(245, 243, 238, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
 }
 
 img.education-logo:hover {
@@ -882,10 +924,6 @@ img.education-logo:hover {
     .nav-link {
         font-size: 11px;
         padding: 6px 10px;
-    }
-
-    .theme-toggle {
-        width: 78px;
     }
 }
 
