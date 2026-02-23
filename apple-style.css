@@ -313,6 +313,10 @@ section {
     box-shadow: var(--shadow);
 }
 
+.theme-alt .profile-pic {
+    border-color: rgba(30, 30, 30, 0.85);
+}
+
 .hero-title {
     margin-bottom: 16px;
 }
@@ -520,6 +524,12 @@ section {
     flex-wrap: wrap;
 }
 
+.timeline-company-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 .timeline-company {
     color: var(--accent);
     font-weight: 600;
@@ -545,6 +555,19 @@ section {
     align-items: center;
     justify-content: center;
     font-weight: 700;
+}
+
+img.company-logo {
+    background: #ffffff;
+    object-fit: contain;
+    padding: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img.company-logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-achievements .achievement {
@@ -648,9 +671,15 @@ section {
     display: flex;
     justify-content: space-between;
     gap: 12px;
-    align-items: baseline;
+    align-items: center;
     flex-wrap: wrap;
     margin-bottom: 8px;
+}
+
+.education-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .education-logo {
@@ -663,6 +692,19 @@ section {
     align-items: center;
     justify-content: center;
     font-weight: 700;
+}
+
+img.education-logo {
+    background: #ffffff;
+    object-fit: contain;
+    padding: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img.education-logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .education-header span {
