@@ -1,267 +1,341 @@
-// Portfolio Website JavaScript functionality
+/* ============================================================
+   Aditya Kumar Goel — Portfolio interactions
+   ============================================================ */
+(function () {
+    'use strict';
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Mobile Navigation Toggle
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const themeToggles = document.querySelectorAll('.theme-toggle');
-    const themeKey = 'portfolio-theme';
-    const prefersDarkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    function applyTheme(theme) {
-        const isAlt = theme === 'alt';
-        document.body.classList.toggle('theme-alt', isAlt);
-        themeToggles.forEach(toggle => {
-            toggle.setAttribute('aria-checked', String(isAlt));
-            toggle.setAttribute('aria-label', isAlt ? 'Switch to light theme' : 'Switch to dark theme');
-            toggle.setAttribute('title', isAlt ? 'Switch to light theme' : 'Switch to dark theme');
-        });
-    }
+    document.addEventListener('DOMContentLoaded', function () {
+        initTheme();
+        initNav();
+        initScroll();
+        initReveals();
+        initMarquee();
+        initOrbs();
+        initMagnetic();
+        initSpotlight();
+        initTilt();
+        initCounters();
+        initScramble();
+        initToTop();
+        loadLatestMediumPost();
+        // page fade-in
+        requestAnimationFrame(() => document.body.classList.add('loaded'));
+    });
 
-    function getStoredTheme() {
-        const savedTheme = localStorage.getItem(themeKey);
-        if (savedTheme === 'alt' || savedTheme === 'default') {
-            return savedTheme;
-        }
-        return null;
-    }
+    /* ---------- Theme ---------- */
+    function initTheme() {
+        const toggle = document.getElementById('theme-toggle');
+        const key = 'portfolio-theme';
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 
-    function getPreferredTheme() {
-        return prefersDarkQuery.matches ? 'alt' : 'default';
-    }
-
-    function setTheme(theme, shouldPersist = true) {
-        applyTheme(theme);
-        if (shouldPersist) {
-            localStorage.setItem(themeKey, theme);
-        }
-    }
-
-    if (themeToggles.length > 0) {
-        const initialTheme = getStoredTheme() ?? getPreferredTheme();
-        setTheme(initialTheme, Boolean(getStoredTheme()));
-
-        themeToggles.forEach(toggle => {
-            toggle.addEventListener('click', function () {
-                const nextTheme = document.body.classList.contains('theme-alt') ? 'default' : 'alt';
-                setTheme(nextTheme);
-            });
-        });
-
-        prefersDarkQuery.addEventListener('change', function () {
-            if (!getStoredTheme()) {
-                setTheme(getPreferredTheme(), false);
+        function apply(theme) {
+            const alt = theme === 'alt';
+            document.body.classList.toggle('theme-alt', alt);
+            if (toggle) {
+                toggle.setAttribute('aria-checked', String(alt));
+                toggle.setAttribute('aria-label', alt ? 'Switch to light theme' : 'Switch to dark theme');
             }
-        });
+        }
+        function stored() {
+            const s = localStorage.getItem(key);
+            return (s === 'alt' || s === 'default') ? s : null;
+        }
+        // Light is the primary experience; only follow a stored user choice.
+        const initial = stored() ?? 'default';
+        apply(initial);
+
+        if (toggle) {
+            toggle.addEventListener('click', function () {
+                const next = document.body.classList.contains('theme-alt') ? 'default' : 'alt';
+                apply(next);
+                localStorage.setItem(key, next);
+            });
+        }
+        // System preference intentionally ignored — light is primary, dark is opt-in.
     }
 
-    // Toggle mobile menu
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function () {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
-        });
+    /* ---------- Nav ---------- */
+    function initNav() {
+        const burger = document.getElementById('nav-burger');
+        const menu = document.getElementById('nav-menu');
+        const links = document.querySelectorAll('.nav-link');
 
-        // Close mobile menu when clicking on nav links
-        navLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
+        if (burger && menu) {
+            burger.addEventListener('click', () => menu.classList.toggle('open'));
+        }
+
+        links.forEach(link => {
+            link.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        const top = target.getBoundingClientRect().top + window.scrollY - 70;
+                        window.scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
+                        if (menu) menu.classList.remove('open');
+                    }
+                }
             });
         });
-    }
 
-    // Smooth Scrolling for ALL links (including buttons)
-    function addSmoothScrolling() {
-        // Get all links that start with #
-        const allScrollLinks = document.querySelectorAll('a[href^="#"]');
-
-        allScrollLinks.forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-
-                if (targetSection) {
-                    const offsetTop = targetSection.offsetTop - 60; // Account for fixed navbar
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
-
-                    // Close mobile menu if open
-                    if (navMenu && navToggle) {
-                        navMenu.classList.remove('active');
-                        navToggle.classList.remove('active');
+        // also smooth-scroll hero buttons / any in-page anchor
+        document.querySelectorAll('a[href^="#"]:not(.nav-link)').forEach(a => {
+            a.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.length > 1) {
+                    const t = document.querySelector(href);
+                    if (t) {
+                        e.preventDefault();
+                        const top = t.getBoundingClientRect().top + window.scrollY - 70;
+                        window.scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
                     }
                 }
             });
         });
     }
 
-    // Initialize smooth scrolling
-    addSmoothScrolling();
+    /* ---------- Scroll: progress, nav state, active link ---------- */
+    function initScroll() {
+        const nav = document.getElementById('nav');
+        const progress = document.getElementById('scroll-progress');
+        const sections = Array.from(document.querySelectorAll('section[id]'));
+        const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+        let ticking = false;
 
-    // Active Navigation Link Updates
-    function updateActiveNavLink() {
-        const sections = document.querySelectorAll('section[id]');
-        const scrollPos = window.scrollY + 100;
+        function update() {
+            const y = window.scrollY;
+            const h = document.documentElement.scrollHeight - window.innerHeight;
+            if (progress) progress.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
+            if (nav) nav.classList.toggle('scrolled', y > 24);
 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
-            const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-
-            if (scrollPos >= sectionTop && scrollPos <= sectionTop + sectionHeight) {
-                // Remove active class from all nav links
-                navLinks.forEach(link => link.classList.remove('active'));
-                // Add active class to current nav link
-                if (navLink) {
-                    navLink.classList.add('active');
-                }
+            const pos = y + 120;
+            let current = sections[0] ? sections[0].id : null;
+            for (const sec of sections) {
+                if (pos >= sec.offsetTop) current = sec.id;
             }
-        });
-    }
-
-    // Update active nav link on scroll
-    window.addEventListener('scroll', updateActiveNavLink);
-
-    // Update active nav link on page load
-    updateActiveNavLink();
-
-    // Scroll-triggered animations (Intersection Observer)
-    function observeElements() {
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function (entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all elements that should fade in
-        const elementsToAnimate = document.querySelectorAll('.animate-fade-up, .glass-card, .project-card, .timeline-item, .award-card');
-
-        elementsToAnimate.forEach(element => {
-            // Set initial styles for animation
-            element.style.opacity = '0';
-            element.style.transform = 'translateY(20px)';
-            element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-
-            observer.observe(element);
-        });
-    }
-
-    // Initialize external links
-    observeElements();
-
-    // Navbar background on scroll
-    const navbar = document.getElementById('navbar');
-
-    function updateNavbarBackground() {
-        // In the new CSS, navbar already has glass effect.
-        // We can just add a shadow on scroll.
-        if (window.scrollY > 20) {
-            navbar.style.boxShadow = '0 1px 0 rgba(0,0,0,0.05)';
-        } else {
-            navbar.style.boxShadow = 'none';
+            navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
+            ticking = false;
         }
-    }
-
-    window.addEventListener('scroll', updateNavbarBackground);
-
-    // Scroll to top functionality
-    function createScrollToTopButton() {
-        const scrollBtn = document.createElement('button');
-        scrollBtn.innerHTML = '↑';
-        scrollBtn.className = 'scroll-to-top';
-        scrollBtn.setAttribute('aria-label', 'Scroll to top');
-        scrollBtn.style.cssText = `
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 44px;
-            height: 44px;
-            background-color: var(--system-blue);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            opacity: 0;
-            visibility: hidden;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        `;
-
-        scrollBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        document.body.appendChild(scrollBtn);
-
-        // Show/hide scroll button
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                scrollBtn.style.opacity = '1';
-                scrollBtn.style.visibility = 'visible';
-                scrollBtn.style.transform = 'translateY(0)';
-            } else {
-                scrollBtn.style.opacity = '0';
-                scrollBtn.style.visibility = 'hidden';
-                scrollBtn.style.transform = 'translateY(10px)';
-            }
-        });
+            if (!ticking) { requestAnimationFrame(update); ticking = true; }
+        }, { passive: true });
+        update();
     }
 
-    // Initialize scroll to top button
-    createScrollToTopButton();
-
-    // Latest Medium post
-    function stripHtml(html) {
-        const temp = document.createElement('div');
-        temp.innerHTML = html;
-        return (temp.textContent || temp.innerText || '').trim();
-    }
-
-    function loadLatestMediumPost() {
-        const container = document.getElementById('latest-blog');
-        if (!container) {
+    /* ---------- Reveal on scroll (with stagger) ---------- */
+    function initReveals() {
+        const items = document.querySelectorAll('.reveal');
+        if (reduceMotion || !('IntersectionObserver' in window)) {
+            items.forEach(i => i.classList.add('in'));
             return;
         }
+        // Arm: hide reveals only now that JS is running (graceful if JS fails).
+        document.body.classList.add('reveals-armed');
+        // stagger siblings within a shared parent group
+        const groups = new Map();
+        items.forEach(item => {
+            const parent = item.parentElement;
+            if (!groups.has(parent)) groups.set(parent, 0);
+        });
 
-        const mediumRssUrl = 'https://medium.com/feed/@adityagoel1999';
-        const rssToJsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(mediumRssUrl)}`;
-
-        fetch(rssToJsonUrl)
-            .then(response => response.json())
-            .then(data => {
-                if (!data || !data.items || data.items.length === 0) {
-                    throw new Error('No posts found');
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const siblings = Array.from(el.parentElement.children).filter(c => c.classList.contains('reveal'));
+                    const idx = siblings.indexOf(el);
+                    el.style.transitionDelay = Math.min(idx, 6) * 0.08 + 's';
+                    el.classList.add('in');
+                    obs.unobserve(el);
                 }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
 
+        items.forEach(i => obs.observe(i));
+    }
+
+    /* ---------- Marquee: duplicate-safe, speed from data ---------- */
+    function initMarquee() {
+        // Track already duplicated in markup; nothing needed unless paused state desired.
+    }
+
+    /* ---------- Orb parallax ---------- */
+    function initOrbs() {
+        if (reduceMotion) return;
+        const orbs = document.querySelectorAll('.orb');
+        let ticking = false;
+        function move() {
+            const y = window.scrollY;
+            orbs.forEach((orb, i) => {
+                const speed = (i + 1) * 0.04;
+                orb.style.transform = `translate3d(0, ${y * speed}px, 0)`;
+            });
+            ticking = false;
+        }
+        window.addEventListener('scroll', () => {
+            if (!ticking) { requestAnimationFrame(move); ticking = true; }
+        }, { passive: true });
+    }
+
+    /* ---------- Magnetic buttons ---------- */
+    function initMagnetic() {
+        if (reduceMotion || window.matchMedia('(pointer: coarse)').matches) return;
+        document.querySelectorAll('.btn--primary, .btn--ghost').forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const r = btn.getBoundingClientRect();
+                const mx = e.clientX - r.left - r.width / 2;
+                const my = e.clientY - r.top - r.height / 2;
+                btn.style.transform = `translate(${mx * 0.18}px, ${my * 0.28}px)`;
+            });
+            btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+        });
+    }
+
+    /* ---------- Cursor spotlight on cards ---------- */
+    function initSpotlight() {
+        const cards = document.querySelectorAll('.impact-card, .proj-card, .edu-card, .award-card, .pub-card, .ac, .blog-card');
+        cards.forEach(card => {
+            card.classList.add('spotlight');
+            card.addEventListener('pointermove', (e) => {
+                const r = card.getBoundingClientRect();
+                card.style.setProperty('--mx', ((e.clientX - r.left) / r.width) * 100 + '%');
+                card.style.setProperty('--my', ((e.clientY - r.top) / r.height) * 100 + '%');
+            });
+        });
+    }
+
+    /* ---------- Subtle 3D tilt on hover ---------- */
+    function initTilt() {
+        if (reduceMotion || window.matchMedia('(pointer: coarse)').matches) return;
+        const MAX = 6; // degrees
+        document.querySelectorAll('.proj-card, .impact-card').forEach(card => {
+            card.classList.add('tilt');
+            let raf = null;
+            card.addEventListener('pointermove', (e) => {
+                const r = card.getBoundingClientRect();
+                const px = (e.clientX - r.left) / r.width - 0.5;
+                const py = (e.clientY - r.top) / r.height - 0.5;
+                if (raf) cancelAnimationFrame(raf);
+                raf = requestAnimationFrame(() => {
+                    card.classList.add('tilting');
+                    card.style.setProperty('--ry', (px * MAX) + 'deg');
+                    card.style.setProperty('--rx', (-py * MAX) + 'deg');
+                });
+            });
+            card.addEventListener('pointerleave', () => {
+                card.classList.remove('tilting');
+                card.style.setProperty('--rx', '0deg');
+                card.style.setProperty('--ry', '0deg');
+            });
+        });
+    }
+
+    /* ---------- Animated count-up for hero stats ---------- */
+    function initCounters() {
+        const nodes = document.querySelectorAll('.hstat .n .grad-text');
+        const targets = [];
+        nodes.forEach(node => {
+            const m = /^(\d+)(.*)$/.exec(node.textContent.trim());
+            if (m) {
+                targets.push({ node: node, value: parseInt(m[1], 10), suffix: m[2] || '' });
+                node.setAttribute('data-count', m[1]);
+            }
+        });
+        if (!targets.length) return;
+        if (reduceMotion || !('IntersectionObserver' in window) || document.body.classList.contains('motion-off')) {
+            return; // leave final values in place
+        }
+        function run(t) {
+            const dur = 1100;
+            const start = performance.now();
+            function step(now) {
+                const p = Math.min((now - start) / dur, 1);
+                const eased = 1 - Math.pow(1 - p, 3);
+                t.node.textContent = Math.round(eased * t.value) + t.suffix;
+                if (p < 1) requestAnimationFrame(step);
+                else t.node.textContent = t.value + t.suffix;
+            }
+            requestAnimationFrame(step);
+        }
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const t = targets.find(x => x.node === entry.target);
+                    if (t) { run(t); obs.unobserve(entry.target); }
+                }
+            });
+        }, { threshold: 0.6 });
+        targets.forEach(t => obs.observe(t.node));
+    }
+
+    /* ---------- Scramble decode (hero sub) ---------- */
+    function initScramble() {
+        const el = document.querySelector('.hero-sub');
+        if (!el || reduceMotion || document.body.classList.contains('motion-off')) return;
+        const target = el.textContent;
+        const chars = '!<>-_\\/[]{}=+*^?#________';
+        el.classList.add('scramble');
+        let frame = 0;
+        const queue = [];
+        for (let i = 0; i < target.length; i++) {
+            const startFrame = Math.floor(Math.random() * 18);
+            const endFrame = startFrame + Math.floor(Math.random() * 18) + 8;
+            queue.push({ to: target[i], start: startFrame, end: endFrame, ch: '' });
+        }
+        function tick() {
+            let out = '';
+            let done = 0;
+            for (const q of queue) {
+                if (frame >= q.end) { out += q.to; done++; }
+                else if (frame >= q.start) {
+                    if (!q.ch || Math.random() < 0.28) q.ch = chars[Math.floor(Math.random() * chars.length)];
+                    out += '<span style="color:var(--accent)">' + q.ch + '</span>';
+                } else { out += '<span style="opacity:0">' + q.to + '</span>'; }
+            }
+            el.innerHTML = out;
+            if (done < queue.length) { frame++; requestAnimationFrame(tick); }
+            else { el.textContent = target; }
+        }
+        // brief hold so the entrance reads, then decode
+        setTimeout(() => requestAnimationFrame(tick), 360);
+    }
+
+    /* ---------- Scroll to top ---------- */
+    function initToTop() {
+        const btn = document.getElementById('to-top');
+        if (!btn) return;
+        window.addEventListener('scroll', () => {
+            btn.classList.toggle('show', window.scrollY > 600);
+        }, { passive: true });
+        btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
+    }
+
+    /* ---------- Latest Medium post ---------- */
+    function stripHtml(html) {
+        const t = document.createElement('div');
+        t.innerHTML = html;
+        return (t.textContent || t.innerText || '').trim();
+    }
+    function loadLatestMediumPost() {
+        const container = document.getElementById('latest-blog');
+        if (!container) return;
+        const rss = 'https://medium.com/feed/@adityagoel1999';
+        const url = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rss)}`;
+
+        fetch(url)
+            .then(r => r.json())
+            .then(data => {
+                if (!data || !data.items || !data.items.length) throw new Error('No posts');
                 const post = data.items[0];
                 const title = post.title || 'Latest post';
                 const link = post.link || 'https://medium.com/@adityagoel1999';
-                const pubDate = post.pubDate ? new Date(post.pubDate) : null;
-                const dateText = pubDate ? pubDate.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' }) : 'Recent';
-                const rawExcerpt = post.description || '';
-                const excerpt = stripHtml(rawExcerpt).slice(0, 180).trim();
-                const safeExcerpt = excerpt.length === 0 ? 'Read the latest article on Medium.' : `${excerpt}${excerpt.length >= 180 ? '...' : ''}`;
-
+                const d = post.pubDate ? new Date(post.pubDate) : null;
+                const dateText = d ? d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' }) : 'Recent';
+                const raw = stripHtml(post.description || '').slice(0, 180).trim();
+                const excerpt = raw.length ? `${raw}${raw.length >= 180 ? '…' : ''}` : 'Read the latest article on Medium.';
                 container.innerHTML = `
                     <div class="publication-header">
                         <span class="publication-type">Medium</span>
@@ -269,11 +343,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                     <h3 class="publication-title">${title}</h3>
                     <p class="publication-meta">${dateText}</p>
-                    <p class="publication-summary">${safeExcerpt}</p>
-                    <div>
-                        <a href="${link}" target="_blank" class="btn btn--primary">Read on Medium</a>
-                    </div>
-                `;
+                    <p class="publication-summary">${excerpt}</p>
+                    <a href="${link}" target="_blank" rel="noopener" class="btn btn--primary" style="align-self:flex-start;">Read on Medium <i class="fa-solid fa-arrow-up-right-from-square"></i></a>`;
             })
             .catch(() => {
                 container.innerHTML = `
@@ -281,26 +352,10 @@ document.addEventListener('DOMContentLoaded', function () {
                         <span class="publication-type">Medium</span>
                         <span class="publication-venue">@adityagoel1999</span>
                     </div>
-                    <h3 class="publication-title">Latest post</h3>
+                    <h3 class="publication-title">Stories on Medium</h3>
                     <p class="publication-meta">Medium</p>
-                    <p class="publication-summary">Read the latest article on Medium.</p>
-                    <div>
-                        <a href="https://medium.com/@adityagoel1999" target="_blank" class="btn btn--primary">Visit Medium</a>
-                    </div>
-                `;
+                    <p class="publication-summary">I write about Responsible AI, LLMs, and lessons from shipping GenAI systems. Read the latest on Medium.</p>
+                    <a href="https://medium.com/@adityagoel1999" target="_blank" rel="noopener" class="btn btn--primary" style="align-self:flex-start;">Visit Medium <i class="fa-solid fa-arrow-up-right-from-square"></i></a>`;
             });
     }
-
-    loadLatestMediumPost();
-
-    // Debug: Log successful initialization
-    console.log('Portfolio website loaded successfully (Apple Design Version)!');
-
-    // Add a subtle fade-in effect to the entire page
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease-in-out';
-
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
-});
+})();

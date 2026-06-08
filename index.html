@@ -2,714 +2,659 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aditya Kumar Goel - AI/ML | Innovator | Explorer</title>
-    <meta name="description"
-        content="Portfolio of Aditya Kumar Goel, AI/ML Innovator pursuing MSAI at NTU Singapore, ex-Responsible AI Senior Analyst at Accenture">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="apple-style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="dp.jpeg" type="image/jpeg">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aditya Kumar Goel — AI/ML Engineer</title>
+    <meta name="description" content="Portfolio of Aditya Kumar Goel — AI/ML Engineer. MSAI at NTU Singapore, ex-Responsible AI Senior Analyst at Accenture. Building trustworthy, production-ready GenAI systems." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/dp.jpeg" type="image/jpeg" />
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <a href="#home">Aditya</a>
-            </div>
+    <div class="bg-field"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- ============ NAV ============ -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#home" class="brand">
+                <span class="mark">AG</span>
+                <span>Aditya Goel</span>
+            </a>
             <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#impact" class="nav-link">Impact</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#publications" class="nav-link">Publications</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#education" class="nav-link">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#awards" class="nav-link">Awards</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#blog" class="nav-link">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#photography" class="nav-link">Photography</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#impact" class="nav-link">Impact</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#awards" class="nav-link">Awards</a></li>
+                <li><a href="#media" class="nav-link">Media</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-actions">
-                    <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-label="Toggle dark theme" aria-checked="false">
-                        <span class="theme-icon theme-icon--sun"><i class="fa-regular fa-sun"></i></span>
-                        <span class="theme-icon theme-icon--moon"><i class="fa-regular fa-moon"></i></span>
-                    </button>
-                <div class="nav-toggle" id="nav-toggle">
+                <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-label="Toggle dark theme" aria-checked="false">
+                    <span class="ti ti-sun"><i class="fa-regular fa-sun"></i></span>
+                    <span class="ti ti-moon"><i class="fa-regular fa-moon"></i></span>
+                </button>
+                <button class="nav-burger" id="nav-burger" type="button" aria-label="Open menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
-                </div>
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero animate-fade-up">
+    <!-- ============ HERO ============ -->
+    <section id="home" class="hero" data-screen-label="Hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="profile-pic-wrap">
-                    <img src="dp.jpeg" alt="Profile Picture" class="profile-pic" />
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <p class="eyebrow hero-eyebrow reveal">AI / ML Engineer · NTU Singapore</p>
+                    <h1 class="hero-title reveal">
+                        <span class="line"><span>Aditya</span></span>
+                        <span class="line"><span>Kumar</span></span>
+                        <span class="line"><span class="stroke">Goel</span></span>
+                    </h1>
+                    <p class="hero-sub reveal">Responsible AI · LLMs · Computer Vision</p>
+                    <p class="hero-desc reveal">I build trustworthy, production-ready GenAI systems — from data pipelines and RAG to safety evaluation. MSAI candidate at NTU, formerly Responsible AI Senior Analyst at Accenture.</p>
+                    <div class="hero-cta reveal">
+                        <a href="#contact" class="btn btn--primary">Get in touch <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="#work" class="btn btn--ghost">View work</a>
+                    </div>
+                    <div class="hero-stats reveal">
+                        <div class="hstat">
+                            <div class="n"><span class="grad-text">30+</span></div>
+                            <div class="l">AI use cases evaluated</div>
+                        </div>
+                        <div class="hstat">
+                            <div class="n"><span class="grad-text">5+</span></div>
+                            <div class="l">GenAI solutions shipped</div>
+                        </div>
+                        <div class="hstat">
+                            <div class="n"><span class="grad-text">IEEE</span></div>
+                            <div class="l">Big Data 2024 author</div>
+                        </div>
+                    </div>
                 </div>
-                <div style="margin-top: 32px;">
-                    <h1 class="hero-title">Aditya Kumar Goel</h1>
-                    <h2 class="hero-subtitle">AI/ML | Innovator | Explorer</h2>
-                    <p class="hero-description">MSAI candidate at Nanyang Technological University, Singapore.<br>Former Responsible AI Senior Analyst at Accenture.</p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn--primary">Get In Touch</a>
-                        <a href="#projects" class="btn btn--outline">View Work</a>
+                <div class="hero-photo-wrap reveal">
+                    <div class="hero-photo-block"></div>
+                    <img src="assets/dp.jpeg" alt="Aditya Kumar Goel" class="hero-photo" />
+                    <div class="hero-badge">
+                        <span class="dot"></span>
+                        <div>
+                            <div class="bt">Currently</div>
+                            <div class="bv">AI Engineer @ Go-Genie</div>
+                        </div>
+                        <span class="badge-time" id="sg-clock" aria-label="Local time in Singapore"></span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Impact Section -->
-    <section id="impact" class="impact">
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <span>Responsible AI</span><span>LLMs</span><span>RAG</span><span>Computer Vision</span><span>MLOps</span><span>NLP</span><span>Generative AI</span>
+            <span>Responsible AI</span><span>LLMs</span><span>RAG</span><span>Computer Vision</span><span>MLOps</span><span>NLP</span><span>Generative AI</span>
+        </div>
+    </div>
+
+    <!-- ============ IMPACT ============ -->
+    <section id="impact" class="impact" data-screen-label="Impact">
         <div class="container">
-            <div class="section-header animate-fade-up">
-                <h2 class="section-title">Impact Snapshot</h2>
-                <p class="section-subtitle">Quick view of focus areas and outcomes</p>
+            <div class="section-head reveal">
+                <div class="section-head-l">
+                    <div class="section-index">01 — Impact</div>
+                    <h2 class="section-title">Snapshot of <span class="grad-text">focus & outcomes</span></h2>
+                </div>
+                <p class="section-sub">A quick read on where I work and the results I drive.</p>
             </div>
-            <div class="impact-grid animate-fade-up">
-                <div class="impact-card">
-                    <p class="impact-label">Focus</p>
-                    <h3 class="impact-value">Responsible AI, LLMs, CV</h3>
-                    <p class="impact-note">End-to-end GenAI solutions with safety evaluation</p>
+            <div class="impact-grid">
+                <div class="impact-card reveal">
+                    <div class="impact-label">Focus</div>
+                    <div class="impact-value">Responsible AI, LLMs, CV</div>
+                    <p class="impact-note">End-to-end GenAI solutions with built-in safety evaluation.</p>
                 </div>
-                <div class="impact-card">
-                    <p class="impact-label">Industry Work</p>
-                    <h3 class="impact-value">Pharma, Finance</h3>
-                    <p class="impact-note">Modernized risk reviews and built quantitative metrics</p>
+                <div class="impact-card reveal">
+                    <div class="impact-label">Industry</div>
+                    <div class="impact-value">Pharma & Finance</div>
+                    <p class="impact-note">Modernized risk reviews and built quantitative metrics.</p>
                 </div>
-                <div class="impact-card">
-                    <p class="impact-label">Research</p>
-                    <h3 class="impact-value">IEEE Big Data 2024</h3>
-                    <p class="impact-note">Numerical validation for financial summaries</p>
+                <div class="impact-card reveal">
+                    <div class="impact-label">Research</div>
+                    <div class="impact-value">IEEE Big Data 2024</div>
+                    <p class="impact-note">Numerical validation for financial summaries.</p>
                 </div>
-                <div class="impact-card">
-                    <p class="impact-label">Delivery</p>
-                    <h3 class="impact-value">Multiple GenAI PoCs</h3>
-                    <p class="impact-note">LLM apps from data to deployment</p>
+                <div class="impact-card reveal">
+                    <div class="impact-label">Delivery</div>
+                    <div class="impact-value">Multiple GenAI PoCs</div>
+                    <p class="impact-note">LLM apps taken from data to deployment.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="about" data-screen-label="About">
         <div class="container">
-            <div class="section-header animate-fade-up">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">AI/ML specialist building reliable, scalable systems</p>
+            <div class="section-head reveal">
+                <div class="section-head-l">
+                    <div class="section-index">02 — About</div>
+                    <h2 class="section-title">Building reliable AI</h2>
+                </div>
             </div>
-            <div class="about-content animate-fade-up">
-                <div class="about-grid">
-                    <div class="about-card">
-                        <h3>Who I am</h3>
-                        <p>AI/ML engineer focused on trustworthy systems and production-ready delivery. I translate research into workflows teams can adopt.</p>
-                    </div>
-                    <div class="about-card">
-                        <h3>What I specialize in</h3>
-                        <p>LLM fine-tuning, retrieval-augmented generation, and evaluation pipelines. Focused on Responsible AI and safety for high-stakes domains.</p>
-                    </div>
-                    <div class="about-card">
-                        <h3>What I'm seeking</h3>
-                        <p>Collaborations and roles where reliability, governance, and measurable impact are core product requirements.</p>
+            <div class="about-grid">
+                <div class="reveal">
+                    <p class="about-lead">I'm an AI/ML engineer focused on <em class="grad-text">trustworthy systems</em> and production-ready delivery — translating research into workflows teams can actually adopt.</p>
+                    <div class="about-body">
+                        <p>My work centers on LLM fine-tuning, retrieval-augmented generation, and evaluation pipelines, with a deep emphasis on Responsible AI and safety for high-stakes domains like pharma and finance.</p>
+                        <p>I'm seeking collaborations and roles where reliability, governance, and measurable impact are core product requirements — not afterthoughts.</p>
                     </div>
                 </div>
+                <div class="about-cards reveal">
+                    <div class="ac">
+                        <h4>Who I am</h4>
+                        <p>An engineer who turns research into dependable, deployable systems.</p>
+                    </div>
+                    <div class="ac">
+                        <h4>What I specialize in</h4>
+                        <p>LLM fine-tuning, RAG, and evaluation pipelines — safety-first.</p>
+                    </div>
+                    <div class="ac">
+                        <h4>What I'm seeking</h4>
+                        <p>Roles where governance and measurable impact are first-class.</p>
+                    </div>
+                </div>
+            </div>
 
-                <div class="skills-section">
-                    <div class="skill-category">
-                        <h3>Artificial Intelligence</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Responsible AI</span>
-                            <span class="skill-tag">GenAI</span>
-                            <span class="skill-tag">LLMs</span>
-                            <span class="skill-tag">Computer Vision</span>
-                            <span class="skill-tag">Vector Database</span>
-                            <span class="skill-tag">Semantic Search</span>
-                            <span class="skill-tag">Embeddings</span>
-                            <span class="skill-tag">Machine Learning</span>
-                            <span class="skill-tag">Deep Learning</span>
-                            <span class="skill-tag">NLP</span>
-                            <span class="skill-tag">RAG</span>
-                        </div>
+            <div class="skills">
+                <div class="skill-cluster reveal">
+                    <h4>Artificial Intelligence</h4>
+                    <div class="skill-tags">
+                        <span class="tag">Responsible AI</span>
+                        <span class="tag">GenAI</span>
+                        <span class="tag">LLMs</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Vector Database</span>
+                        <span class="tag">Semantic Search</span>
+                        <span class="tag">Embeddings</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">RAG</span>
                     </div>
-                    <div class="skill-category">
-                        <h3>Languages & Frameworks</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">PyTorch</span>
-                            <span class="skill-tag">TensorFlow</span>
-                            <span class="skill-tag">OpenCV</span>
-                            <span class="skill-tag">FastAPI</span>
-                            <span class="skill-tag">Hugging Face</span>
-                            <span class="skill-tag">LangChain</span>
-                            <span class="skill-tag">Scikit-learn</span>
-                            <span class="skill-tag">Postman</span>
-                        </div>
+                </div>
+                <div class="skill-cluster reveal">
+                    <h4>Languages & Frameworks</h4>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">OpenCV</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">Hugging Face</span>
+                        <span class="tag">LangChain</span>
+                        <span class="tag">Scikit-learn</span>
+                        <span class="tag">Postman</span>
                     </div>
-                    <div class="skill-category">
-                        <h3>MLOps & Cloud</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">CI/CD for ML</span>
-                            <span class="skill-tag">Azure ML</span>
-                            <span class="skill-tag">AWS SageMaker</span>
-                            <span class="skill-tag">DVC</span>
-                            <span class="skill-tag">Weights & Biases</span>
-                            <span class="skill-tag">Model Monitoring</span>
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">MLflow</span>
-                        </div>
+                </div>
+                <div class="skill-cluster reveal">
+                    <h4>MLOps & Cloud</h4>
+                    <div class="skill-tags">
+                        <span class="tag">CI/CD for ML</span>
+                        <span class="tag">Azure ML</span>
+                        <span class="tag">AWS SageMaker</span>
+                        <span class="tag">DVC</span>
+                        <span class="tag">Weights & Biases</span>
+                        <span class="tag">Model Monitoring</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">MLflow</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="experience" data-screen-label="Experience">
         <div class="container">
-            <div class="section-header animate-fade-up">
-                <h2 class="section-title">Experience</h2>
-                <p class="section-subtitle">Professional roles and leadership</p>
+            <div class="section-head reveal">
+                <div class="section-head-l">
+                    <div class="section-index">03 — Experience</div>
+                    <h2 class="section-title">Where I've <span class="grad-text">worked</span></h2>
+                </div>
+                <p class="section-sub">Professional roles, research, and leadership.</p>
             </div>
-            <div class="timeline animate-fade-up">
+            <div class="timeline">
                 <!-- Go-Genie -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div class="timeline-company-wrap">
-                                <img src="assets/gogenie_logo.jpg" alt="Go-Genie Logo" class="company-logo">
-                                <div>
-                                    <div class="timeline-company">Go-Genie</div>
-                                    <div class="timeline-location">Singapore</div>
-                                </div>
-                            </div>
-                            <div class="timeline-dates">Jan 2026 - Present</div>
-                        </div>
-                        <h3 class="timeline-title">AI Engineer Intern</h3>
-                        <div class="timeline-achievements" style="margin-top:12px;">
-                            <div class="achievement">
-                                <span>•</span>
-                                <span>Develop ML models using Scikit-learn and PyTorch for logistics demand forecasting, route optimization, and load balancing.</span>
-                            </div>
-                            <div class="achievement">
-                                <span>•</span>
-                                <span>Engineer data pipelines and integrate AI model inference into backend microservices via REST APIs for scalable deployment.</span>
-                            </div>
-                            <div class="achievement">
-                                <span>•</span>
-                                <span>Design a dynamic RAG pipeline using Gemini, LangChain, and BM25, featuring sequential API triggering and dynamic prompting based on generation context.</span>
-                            </div>
-                            <div class="achievement">
-                                <span>•</span>
-                                <span>Developed an AI-powered HRMS chatbot enabling employees to manage leaves, access payslips, and query personalized FAQs, while allowing admins to approve requests and track employee status, significantly reducing administrative overhead.</span>
+                <div class="tl-item reveal">
+                    <div class="tl-left">
+                        <div class="tl-dates">Jan 2026 — Present</div>
+                        <div class="tl-co">
+                            <img src="assets/gogenie_logo.jpg" alt="Go-Genie" class="tl-logo" />
+                            <div>
+                                <div class="tl-coname">Go-Genie</div>
+                                <div class="tl-loc">Singapore</div>
                             </div>
                         </div>
                     </div>
+                    <div class="tl-right">
+                        <h3 class="tl-role">AI Engineer Intern</h3>
+                        <div class="tl-points">
+                            <div class="tl-point"><span class="mk">→</span><span>Develop ML models with Scikit-learn and PyTorch for logistics demand forecasting, route optimization, and load balancing.</span></div>
+                            <div class="tl-point"><span class="mk">→</span><span>Engineer data pipelines and integrate AI inference into backend microservices via REST APIs for scalable deployment.</span></div>
+                            <div class="tl-point"><span class="mk">→</span><span>Design a dynamic RAG pipeline using Gemini, LangChain, and BM25, with sequential API triggering and context-aware prompting.</span></div>
+                            <div class="tl-point"><span class="mk">→</span><span>Built an AI-powered HRMS chatbot for leave management, payslips, and personalized FAQs — cutting administrative overhead.</span></div>
+                        </div>
+                    </div>
                 </div>
-
                 <!-- Accenture -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div class="timeline-company-wrap">
-                                <img src="assets/accenture_logo.jpg" alt="Accenture Logo" class="company-logo">
-                                <div>
-                                    <div class="timeline-company">Accenture</div>
-                                    <div class="timeline-location">Bengaluru, India</div>
-                                </div>
-                            </div>
-                            <div class="timeline-dates">Jul 2022 - Jul 2025</div>
-                        </div>
-                        <h3 class="timeline-title">Responsible AI Senior Analyst</h3>
-
-                        <div class="timeline-achievements">
-                            <div class="achievement">
-                                <span>•</span>
-                                <span>Evaluated 30+ AI business use cases and collaborated with EU representatives to interpret the AI Act, creating self-service evaluation workflows and authoring reports to ensure strict data privacy compliance.</span>
-                            </div>
-                            <div class="achievement">
-                                <span>•</span>
-                                <span>Delivered 5+ end-to-end Generative AI solutions, including automating knowledge management with RAG, significantly reducing client time spent on database lookups.</span>
-                            </div>
-                            <div class="achievement">
-                                <span>•</span>
-                                <span>Developed a Computer Vision pipeline using Tesseract OCR to automatically extract and structure data from invoices into a database, enabling downstream RAG implementations.</span>
-                            </div>
-                            <div class="achievement">
-                                <span>•</span>
-                                <span>Developed a quantitative Responsible AI evaluation solution capable of handling 1000s of batch requests with auto-prioritization.</span>
-                            </div>
-                            <div class="achievement">
-                                <span>•</span>
-                                <span>Applied MLOps best practices using Azure (DevBoards, CI/CD) and AWS (EC2, ECS, SageMaker, Bedrock, S3) for end-to-end model training, versioning, and deployment.</span>
+                <div class="tl-item reveal">
+                    <div class="tl-left">
+                        <div class="tl-dates">Jul 2022 — Jul 2025</div>
+                        <div class="tl-co">
+                            <img src="assets/accenture_logo.jpg" alt="Accenture" class="tl-logo" />
+                            <div>
+                                <div class="tl-coname">Accenture</div>
+                                <div class="tl-loc">Bengaluru, India</div>
                             </div>
                         </div>
                     </div>
+                    <div class="tl-right">
+                        <h3 class="tl-role">Responsible AI Senior Analyst</h3>
+                        <div class="tl-points">
+                            <div class="tl-point"><span class="mk">→</span><span>Evaluated 30+ AI business use cases and collaborated with EU representatives to interpret the AI Act, creating self-service evaluation workflows and compliance reports.</span></div>
+                            <div class="tl-point"><span class="mk">→</span><span>Delivered 5+ end-to-end GenAI solutions, including automating knowledge management with RAG to cut client time spent on database lookups.</span></div>
+                            <div class="tl-point"><span class="mk">→</span><span>Developed a Computer Vision pipeline using Tesseract OCR to extract and structure invoice data for downstream RAG.</span></div>
+                            <div class="tl-point"><span class="mk">→</span><span>Built a quantitative Responsible AI evaluation system handling thousands of batch requests with auto-prioritization.</span></div>
+                            <div class="tl-point"><span class="mk">→</span><span>Applied MLOps best practices across Azure (CI/CD) and AWS (EC2, ECS, SageMaker, Bedrock, S3) for training, versioning, and deployment.</span></div>
+                        </div>
+                    </div>
                 </div>
-
                 <!-- OP Venture -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div class="timeline-company-wrap">
-                                <span class="company-logo">OP</span>
-                                <div>
-                                    <div class="timeline-company">OP Venture Cooperative</div>
-                                    <div class="timeline-location">Remote</div>
-                                </div>
+                <div class="tl-item reveal">
+                    <div class="tl-left">
+                        <div class="tl-dates">Mar 2024 — Mar 2025</div>
+                        <div class="tl-co">
+                            <span class="tl-logo-text">OP</span>
+                            <div>
+                                <div class="tl-coname">OP Venture Cooperative</div>
+                                <div class="tl-loc">Remote</div>
                             </div>
-                            <div class="timeline-dates">Mar 2024 - Mar 2025</div>
                         </div>
-                        <h3 class="timeline-title">CO Venture Fellow | Cohort 6</h3>
-                        <p style="margin-top:12px;">
-                            Participated in venture capital education and investment processes, supporting due
-                            diligence and early stage founders.
-                        </p>
+                    </div>
+                    <div class="tl-right">
+                        <h3 class="tl-role">CO Venture Fellow · Cohort 6</h3>
+                        <div class="tl-points">
+                            <div class="tl-point"><span class="mk">→</span><span>Participated in venture capital education and investment processes, supporting due diligence and early-stage founders.</span></div>
+                        </div>
                     </div>
                 </div>
-
                 <!-- VentureOps -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div class="timeline-company-wrap">
-                                <span class="company-logo">VO</span>
-                                <div>
-                                    <div class="timeline-company">VentureOps</div>
-                                    <div class="timeline-location">India</div>
-                                </div>
-                            </div>
-                            <div class="timeline-dates">Oct 2020 - May 2021</div>
-                        </div>
-                        <h3 class="timeline-title">President</h3>
-                        <div class="timeline-achievements">
-                            <div class="achievement">
-                                <span>•</span>
-                                <span>Hackathon Lead for 'Hello World 4.0' (Oct 2020).</span>
-                            </div>
-                            <div class="achievement">
-                                <span>•</span>
-                                <span>Built the club website: venturesityvit.github.io.</span>
+                <div class="tl-item reveal">
+                    <div class="tl-left">
+                        <div class="tl-dates">Oct 2020 — May 2021</div>
+                        <div class="tl-co">
+                            <span class="tl-logo-text">VO</span>
+                            <div>
+                                <div class="tl-coname">VentureOps</div>
+                                <div class="tl-loc">India</div>
                             </div>
                         </div>
                     </div>
+                    <div class="tl-right">
+                        <h3 class="tl-role">President</h3>
+                        <div class="tl-points">
+                            <div class="tl-point"><span class="mk">→</span><span>Hackathon Lead for 'Hello World 4.0' (Oct 2020).</span></div>
+                            <div class="tl-point"><span class="mk">→</span><span>Built the club website: venturesityvit.github.io.</span></div>
+                        </div>
+                    </div>
                 </div>
-
                 <!-- ARC-VIT -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div class="timeline-company-wrap">
-                                <img src="assets/arcvit_logo.jpg" alt="ARC-VIT Logo" class="company-logo">
-                                <div>
-                                    <div class="timeline-company">Centre of Excellence for Autonomous Vehicles Research</div>
-                                    <div class="timeline-location">India</div>
-                                </div>
-                            </div>
-                            <div class="timeline-dates">Aug 2019 - Feb 2020</div>
-                        </div>
-                        <h3 class="timeline-title">Student R&D Engineer</h3>
-                        <div class="timeline-achievements">
-                            <div class="achievement">
-                                <span>•</span>
-                                <span>Developed computer vision for autonomous EV.</span>
-                            </div>
-                            <div class="achievement">
-                                <span>•</span>
-                                <span>Built optical flow for vehicle direction estimation.</span>
+                <div class="tl-item reveal">
+                    <div class="tl-left">
+                        <div class="tl-dates">Aug 2019 — Feb 2020</div>
+                        <div class="tl-co">
+                            <img src="assets/arcvit_logo.jpg" alt="ARC-VIT" class="tl-logo" />
+                            <div>
+                                <div class="tl-coname">Centre of Excellence for Autonomous Vehicles Research</div>
+                                <div class="tl-loc">India</div>
                             </div>
                         </div>
                     </div>
+                    <div class="tl-right">
+                        <h3 class="tl-role">Student R&D Engineer</h3>
+                        <div class="tl-points">
+                            <div class="tl-point"><span class="mk">→</span><span>Developed computer vision for an autonomous EV.</span></div>
+                            <div class="tl-point"><span class="mk">→</span><span>Built optical flow for vehicle direction estimation.</span></div>
+                        </div>
+                    </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Publications Section -->
-    <section id="publications" class="publications">
+    <!-- ============ WORK (Publications + Projects) ============ -->
+    <section id="work" class="work" data-screen-label="Work">
         <div class="container">
-            <div class="section-header animate-fade-up">
-                <h2 class="section-title">Publications</h2>
-                <p class="section-subtitle">Research contributions</p>
+            <div class="section-head reveal">
+                <div class="section-head-l">
+                    <div class="section-index">04 — Research</div>
+                    <h2 class="section-title">Published <span class="grad-text">research</span></h2>
+                </div>
             </div>
-            <div style="max-width: 800px; margin: 0 auto;" class="animate-fade-up">
-                <div class="glass-card">
-                    <div class="publication-header">
-                        <span class="publication-type">Conference Paper</span>
-                        <span class="publication-venue">IEEE Big Data 2024</span>
+            <div class="pub-card reveal">
+                <div class="pub-tags">
+                    <span class="pub-chip solid">Conference Paper</span>
+                    <span class="pub-chip">IEEE Big Data 2024</span>
+                </div>
+                <h3 class="pub-title">Factual Accuracy Checking by Validating Numerical Values in Financial Summaries</h3>
+                <p class="pub-meta">Aditya Kumar Goel et al. · 2024</p>
+                <p class="pub-summary">Validates numerical accuracy in financial summaries through automated checks and transformer-based reasoning — reducing factual errors in generated financial reporting.</p>
+                <div class="pub-actions">
+                    <a href="https://ieeexplore.ieee.org/document/10825697/" target="_blank" rel="noopener" class="btn btn--ghost">View paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://scholar.google.com/citations?user=U_htYhgAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn--ghost">Google Scholar <i class="fa-solid fa-graduation-cap"></i></a>
+                </div>
+            </div>
+
+            <div class="section-head reveal" style="margin-top: var(--section-y);">
+                <div class="section-head-l">
+                    <div class="section-index">05 — Projects</div>
+                    <h2 class="section-title">Featured <span class="grad-text">projects</span></h2>
+                </div>
+                <p class="section-sub">Innovation across the AI/ML stack — from product to research.</p>
+            </div>
+            <a class="proj-featured reveal" href="https://www.linkedin.com/posts/webgl-webgpu_walking-inside-a-deepsdf-latent-space-in-activity-7467932702520844288-rsqy" target="_blank" rel="noopener">
+                <div class="pf-body">
+                    <div class="proj-top">
+                        <span class="proj-cat">Graphics · WebGPU</span>
+                        <span class="pf-flag"><i class="fa-solid fa-star"></i> Featured</span>
                     </div>
-                    <h3 class="publication-title">Factual Accuracy Checking by Validating Numerical Values in Financial Summaries</h3>
-                    <p class="publication-meta">Aditya Kumar Goel et al. | 2024</p>
-                    <p class="publication-summary">
-                        Research contribution that validates numerical accuracy in financial summaries through automated checks and transformer-based reasoning.
-                    </p>
-                    <div class="skill-tags" style="margin-bottom:20px;">
-                        <span class="skill-tag">AI/ML</span>
-                        <span class="skill-tag">Financial Analysis</span>
-                        <span class="skill-tag">Transformers</span>
-                        <span class="skill-tag">Numerical Validation</span>
+                    <h3 class="pf-title">Walking inside a DeepSDF latent space</h3>
+                    <p class="proj-desc">A real-time WebGL / WebGPU visualization that flies through a learned DeepSDF latent space — morphing smoothly between 3D shapes to make a neural shape representation tangible and explorable.</p>
+                    <div class="proj-stack"><span class="tag">WebGPU</span><span class="tag">WebGL</span><span class="tag">DeepSDF</span><span class="tag">3D</span><span class="tag">Latent Space</span></div>
+                </div>
+                <span class="pf-cta">Read on LinkedIn <i class="fa-brands fa-linkedin"></i></span>
+            </a>
+            <div class="proj-grid">
+                <div class="proj-card reveal">
+                    <div class="proj-top">
+                        <span class="proj-cat">Product</span>
+                        <span class="proj-num">01</span>
                     </div>
-                    <div>
-                        <a href="https://ieeexplore.ieee.org/document/10825697/" target="_blank" class="btn btn--primary">View Paper</a>
+                    <h3 class="proj-title">Doorlah</h3>
+                    <p class="proj-desc">A platform focused on better discovery and engagement for local services — designed for fast navigation and clear calls to action.</p>
+                    <p class="proj-outcome"><span>Outcome</span>Public launch with a live site experience.</p>
+                    <div class="proj-foot">
+                        <div class="proj-stack"><span class="tag">Web</span><span class="tag">Product</span><span class="tag">UX</span></div>
+                        <a href="https://doorlah.github.io" target="_blank" rel="noopener" class="proj-link">Visit <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="proj-card reveal">
+                    <div class="proj-top">
+                        <span class="proj-cat">NLP</span>
+                        <span class="proj-num">02</span>
+                    </div>
+                    <h3 class="proj-title">Product Market Profiling Dashboard</h3>
+                    <p class="proj-desc">A product-focused sentiment engine using NLP key-phrase extraction and source filtering across social media and news, with a high-performance FastAPI backend on Groq LPU and async orchestration.</p>
+                    <p class="proj-outcome"><span>Outcome</span>Near real-time insight delivery for stakeholder dashboards.</p>
+                    <div class="proj-foot">
+                        <div class="proj-stack"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Groq LPU</span><span class="tag">OpenAI</span></div>
+                    </div>
+                </div>
+                <div class="proj-card reveal">
+                    <div class="proj-top">
+                        <span class="proj-cat">Finance + NLP</span>
+                        <span class="proj-num">03</span>
+                    </div>
+                    <h3 class="proj-title">Stock Prediction</h3>
+                    <p class="proj-desc">A pipeline combining market news signals and price features to forecast short-term equity direction, evaluated with rolling-window validation and daily prediction snapshots for decision support.</p>
+                    <p class="proj-outcome"><span>Outcome</span>Faster sentiment snapshots for market context.</p>
+                    <div class="proj-foot">
+                        <div class="proj-stack"><span class="tag">Python</span><span class="tag">NLP</span><span class="tag">Finance</span></div>
+                        <a href="https://github.com/Adigo10/stock_market_sentiment_analyzer" target="_blank" rel="noopener" class="proj-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="proj-card reveal">
+                    <div class="proj-top">
+                        <span class="proj-cat">Responsible AI</span>
+                        <span class="proj-num">04</span>
+                    </div>
+                    <h3 class="proj-title">Bias & Toxicity Detection</h3>
+                    <p class="proj-desc">Fine-tuned transformer models with Hugging Face for multi-label toxicity and bias classification in AI-generated text, plus a synthetic data pipeline to study and mitigate adversarial attacks.</p>
+                    <p class="proj-outcome"><span>Outcome</span>Improved safety review coverage for GenAI outputs.</p>
+                    <div class="proj-foot">
+                        <div class="proj-stack"><span class="tag">PyTorch</span><span class="tag">Hugging Face</span><span class="tag">Transformers</span></div>
+                    </div>
+                </div>
+                <div class="proj-card reveal">
+                    <div class="proj-top">
+                        <span class="proj-cat">Document Intelligence</span>
+                        <span class="proj-num">05</span>
+                    </div>
+                    <h3 class="proj-title">GenAI Q&A with Multi-Doc Extraction</h3>
+                    <p class="proj-desc">A RAG pipeline integrating OCR extraction, vector indexing, and semantic search for multi-document retrieval, with dynamic prompting and GPT-3.5 Turbo summarization — cutting token cost by 80%.</p>
+                    <p class="proj-outcome"><span>Outcome</span>Accelerated multi-document lookups for analysts.</p>
+                    <div class="proj-foot">
+                        <div class="proj-stack"><span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">OCR</span><span class="tag">Vector DB</span></div>
+                    </div>
+                </div>
+                <div class="proj-card reveal">
+                    <div class="proj-top">
+                        <span class="proj-cat">Computer Vision</span>
+                        <span class="proj-num">06</span>
+                    </div>
+                    <h3 class="proj-title">Manufacturing Defect Detection</h3>
+                    <p class="proj-desc">CNN-based vision models trained in PyTorch for vehicle manufacturing defect detection, deployed via an OpenCV pipeline to automate quality checks on production lines.</p>
+                    <p class="proj-outcome"><span>Outcome</span>Higher QA throughput through automated screening.</p>
+                    <div class="proj-foot">
+                        <div class="proj-stack"><span class="tag">PyTorch</span><span class="tag">OpenCV</span><span class="tag">Deep Learning</span></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <!-- ============ EDUCATION ============ -->
+    <section id="education" class="education" data-screen-label="Education">
         <div class="container">
-            <div class="section-header animate-fade-up">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Innovation across AI/ML</p>
+            <div class="section-head reveal">
+                <div class="section-head-l">
+                    <div class="section-index">06 — Education</div>
+                    <h2 class="section-title">Academic <span class="grad-text">foundation</span></h2>
+                </div>
             </div>
-            <div class="projects-grid animate-fade-up">
-                <!-- Project 0 -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-category">Product</div>
-                        <h3 class="project-title">Doorlah</h3>
-                        <p style="flex:1;">
-                            Built a platform focused on better discovery and engagement for local services.
-                            Designed for fast navigation and clear calls to action.
-                        </p>
-                        <p class="project-outcome">Outcome: Public launch with live site experience.</p>
-                        <div class="skill-tags" style="margin-top:20px;">
-                            <span class="skill-tag">Web</span>
-                            <span class="skill-tag">Product</span>
-                            <span class="skill-tag">UX</span>
-                        </div>
-                        <div style="margin-top:16px;">
-                            <a href="https://doorlah.github.io" target="_blank" class="btn btn--outline">Visit Doorlah</a>
+            <div class="edu-grid">
+                <div class="edu-card reveal">
+                    <div class="edu-head">
+                        <img src="assets/ntu_logo.jpg" alt="NTU" class="edu-logo" />
+                        <div>
+                            <div class="edu-degree">M.Sc. in Artificial Intelligence</div>
                         </div>
                     </div>
+                    <div class="edu-school">Nanyang Technological University, Singapore</div>
+                    <div class="edu-dates">Aug 2025 — Jun 2026</div>
+                    <p class="edu-note">CGPA 3.9 / 5. Advanced coursework in LLMs, trustworthy AI, and applied research.</p>
                 </div>
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-category">NLP</div>
-                        <h3 class="project-title">Product Market Profiling Dashboard</h3>
-                        <p style="flex:1;">
-                            Engineered a product-focused sentiment analysis engine using NLP key-phrase extraction and source filtering across social media discussions and news reviews.
-                            Built a high-performance FastAPI backend leveraging Groq LPU for inference and async endpoints for parallel API orchestration.
-                        </p>
-                        <p class="project-outcome">Outcome: Near real-time insight delivery for stakeholder dashboards in finance-focused workflows.</p>
-                        <div class="skill-tags" style="margin-top:20px;">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">FastAPI</span>
-                            <span class="skill-tag">Groq LPU</span>
-                            <span class="skill-tag">OpenAI</span>
+                <div class="edu-card reveal">
+                    <div class="edu-head">
+                        <img src="assets/vit_logo.jpg" alt="VIT" class="edu-logo" />
+                        <div>
+                            <div class="edu-degree">B.Tech. in Information Technology</div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Project 1b -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-category">Finance + NLP</div>
-                        <h3 class="project-title">Stock Prediction</h3>
-                        <p style="flex:1;">
-                            Built a pipeline combining market news signals and price features to forecast short-term equity direction. Evaluated models with rolling-window validation and generated daily prediction snapshots for decision support. Integrated sentiment signals to improve market context for directional forecasts.
-                        </p>
-                        <p class="project-outcome">Outcome: Faster sentiment snapshots for market context.</p>
-                        <div class="skill-tags" style="margin-top:20px;">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">NLP</span>
-                            <span class="skill-tag">Finance</span>
-                        </div>
-                        <div style="margin-top:16px;">
-                            <a href="https://github.com/Adigo10/stock_market_sentiment_analyzer" target="_blank" class="btn btn--outline">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-category">Responsible AI</div>
-                        <h3 class="project-title">Bias & Toxicity Detection</h3>
-                        <p style="flex:1;">
-                            Fine-tuned transformer models using Hugging Face for multi-label toxicity and bias classification in AI-generated text. Developed a synthetic dataset generation pipeline to study and mitigate adversarial attack possibilities on models.
-                        </p>
-                        <p class="project-outcome">Outcome: Improved safety review coverage for GenAI outputs with automated bias and toxicity checks.</p>
-                        <div class="skill-tags" style="margin-top:20px;">
-                            <span class="skill-tag">PyTorch</span>
-                            <span class="skill-tag">Hugging Face</span>
-                            <span class="skill-tag">Transformers</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-category">Document Intelligence</div>
-                        <h3 class="project-title">GenAI Q&A with Multi-Doc Extraction</h3>
-                        <p style="flex:1;">
-                            Architected a RAG pipeline integrating OCR extraction, vector database indexing, and semantic search for multi-document retrieval. Implemented dynamic prompt engineering and LLM summarization with GPT-3.5 Turbo, reducing token cost by 80%.
-                        </p>
-                        <p class="project-outcome">Outcome: Accelerated multi-document lookups for business analysts with semantic search workflows.</p>
-                        <div class="skill-tags" style="margin-top:20px;">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">LangChain</span>
-                            <span class="skill-tag">OCR</span>
-                            <span class="skill-tag">Vector DB</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-category">Computer Vision</div>
-                        <h3 class="project-title">Manufacturing Defect Detection</h3>
-                        <p style="flex:1;">
-                            Trained CNN-based vision models for vehicle manufacturing defect detection using PyTorch. Deployed an OpenCV pipeline to automate quality checks on production lines.
-                        </p>
-                        <p class="project-outcome">Outcome: Increased quality assurance throughput by automating defect screening in production imagery.</p>
-                        <div class="skill-tags" style="margin-top:20px;">
-                            <span class="skill-tag">PyTorch</span>
-                            <span class="skill-tag">OpenCV</span>
-                            <span class="skill-tag">Deep Learning</span>
-                        </div>
-                    </div>
+                    <div class="edu-school">Vellore Institute of Technology</div>
+                    <div class="edu-dates">Jul 2018 — Jun 2022</div>
+                    <p class="edu-note">CGPA 4.1 / 5. Special Achiever's Award 2020–21.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education">
+    <!-- ============ AWARDS ============ -->
+    <section id="awards" class="awards" data-screen-label="Awards">
         <div class="container">
-            <div class="section-header animate-fade-up">
-                <h2 class="section-title">Education</h2>
-                <p class="section-subtitle">Academic foundation and focus areas</p>
-            </div>
-            <div class="education-grid animate-fade-up">
-                <div class="education-card">
-                    <div class="education-header">
-                        <div class="education-title-wrap">
-                            <img src="assets/ntu_logo.jpg" alt="NTU Logo" class="education-logo">
-                            <h3>Master of Science in Artificial Intelligence</h3>
-                        </div>
-                        <span>Aug 2025 - Jun 2026</span>
-                    </div>
-                    <p class="education-school">Nanyang Technological University, Singapore</p>
-                    <p>CGPA: 3.9/5. Advanced coursework in LLMs, trustworthy AI, and applied research.</p>
+            <div class="section-head reveal">
+                <div class="section-head-l">
+                    <div class="section-index">07 — Awards</div>
+                    <h2 class="section-title">Awards & <span class="grad-text">honors</span></h2>
                 </div>
-                <div class="education-card">
-                    <div class="education-header">
-                        <div class="education-title-wrap">
-                            <img src="assets/vit_logo.jpg" alt="VIT Logo" class="education-logo">
-                            <h3>Bachelor of Technology - Information Technology</h3>
+            </div>
+            <div class="award-group reveal">
+                <div class="award-group-title">Accenture</div>
+                <div class="awards-grid">
+                    <div class="award-card">
+                        <div class="award-ic"><i class="fa-solid fa-trophy"></i></div>
+                        <div>
+                            <div class="award-name">ACE Inspiring Innovator</div>
+                            <div class="award-org">Accenture</div>
                         </div>
-                        <span>Jul 2018 - Jun 2022</span>
                     </div>
-                    <p class="education-school">Vellore Institute of Technology</p>
-                    <p>CGPA: 4.1/5. Special Achiever's Award 2020-21.</p>
+                    <div class="award-card">
+                        <div class="award-ic"><i class="fa-solid fa-star"></i></div>
+                        <div>
+                            <div class="award-name">Innovation Excellence</div>
+                            <div class="award-org">Accenture</div>
+                        </div>
+                    </div>
+                    <div class="award-card">
+                        <div class="award-ic"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                        <div>
+                            <div class="award-name">Technical Excellence</div>
+                            <div class="award-org">Accenture</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="award-group reveal">
+                <div class="award-group-title">Academia</div>
+                <div class="awards-grid">
+                    <div class="award-card">
+                        <div class="award-ic"><i class="fa-solid fa-landmark"></i></div>
+                        <div>
+                            <div class="award-name">HPAIR Delegate</div>
+                            <div class="award-org">Harvard College Project for Asian & International Relations</div>
+                        </div>
+                    </div>
+                    <div class="award-card">
+                        <div class="award-ic"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <div>
+                            <div class="award-name">Special Achiever's Award</div>
+                            <div class="award-org">VIT University</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="award-group reveal">
+                <div class="award-group-title">External</div>
+                <div class="awards-grid">
+                    <div class="award-card">
+                        <div class="award-ic"><i class="fa-solid fa-code"></i></div>
+                        <div>
+                            <div class="award-name">Top 20 · Prospect 100</div>
+                            <div class="award-org">Global Tech Innovation</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Awards Section -->
-    <section id="awards" class="awards">
+    <!-- ============ MEDIA (Blog + Photography) ============ -->
+    <section id="media" class="media" data-screen-label="Media">
         <div class="container">
-            <div class="section-header animate-fade-up">
-                <h2 class="section-title">Awards & Honors</h2>
+            <div class="section-head reveal">
+                <div class="section-head-l">
+                    <div class="section-index">08 — Beyond work</div>
+                    <h2 class="section-title">Writing & <span class="grad-text">photography</span></h2>
+                </div>
+                <p class="section-sub">Thoughts on Medium, and moments captured on Instagram.</p>
             </div>
-            <div class="award-groups animate-fade-up">
-                <div class="award-group">
-                    <h3 class="award-group-title">Accenture</h3>
-                    <div class="awards-grid">
-                        <div class="award-card">
-                            <div class="award-icon">🏆</div>
-                            <h3>ACE Inspiring Innovator</h3>
-                            <p>Accenture</p>
+            <div class="feature-2col">
+                <div class="reveal">
+                    <div class="blog-card" id="latest-blog">
+                        <div class="publication-header">
+                            <span class="publication-type">Medium</span>
+                            <span class="publication-venue">@adityagoel1999</span>
                         </div>
-                        <div class="award-card">
-                            <div class="award-icon">⭐</div>
-                            <h3>Innovation Excellence</h3>
-                            <p>Accenture</p>
-                        </div>
-                        <div class="award-card">
-                            <div class="award-icon">🔧</div>
-                            <h3>Technical Excellence</h3>
-                            <p>Accenture</p>
-                        </div>
+                        <h3 class="publication-title">Loading latest post…</h3>
+                        <p class="publication-meta">Fetching from Medium</p>
+                        <p class="publication-summary">Hang tight while the latest story loads.</p>
+                    </div>
+                    <div class="media-foot">
+                        <a href="https://medium.com/@adityagoel1999" target="_blank" rel="noopener" class="btn btn--ghost">Visit Medium <i class="fa-brands fa-medium"></i></a>
                     </div>
                 </div>
-                <div class="award-group">
-                    <h3 class="award-group-title">Academia</h3>
-                    <div class="awards-grid">
-                        <div class="award-card">
-                            <div class="award-icon">🏛️</div>
-                            <h3>HPAIR Delegate</h3>
-                            <p>Harvard College Project for Asian and International Relations</p>
-                        </div>
-                        <div class="award-card">
-                            <div class="award-icon">🎓</div>
-                            <h3>Special Achiever's Award</h3>
-                            <p>VIT University</p>
-                        </div>
+                <div class="reveal">
+                    <div class="insta-card">
+                        <iframe src="https://www.instagram.com/adigo.captures/embed" title="@adigo.captures on Instagram" loading="lazy" allowtransparency="true" allowfullscreen scrolling="no"></iframe>
                     </div>
-                </div>
-                <div class="award-group">
-                    <h3 class="award-group-title">External</h3>
-                    <div class="awards-grid">
-                        <div class="award-card">
-                            <div class="award-icon">💻</div>
-                            <h3>Top 20 Prospect 100</h3>
-                            <p>Global Tech Innovation</p>
-                        </div>
+                    <div class="media-foot">
+                        <a href="https://www.instagram.com/adigo.captures/" target="_blank" rel="noopener" class="btn btn--ghost">View on Instagram <i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="blog">
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="contact" data-screen-label="Contact">
         <div class="container">
-            <div class="section-header animate-fade-up">
-                <h2 class="section-title">Latest Blog</h2>
-                <p class="section-subtitle">Insights from Medium</p>
-            </div>
-            <div class="blog-content animate-fade-up">
-                <div class="glass-card blog-card" id="latest-blog">
-                    <div class="publication-header">
-                        <span class="publication-type">Medium</span>
-                        <span class="publication-venue">@adityagoel1999</span>
-                    </div>
-                    <h3 class="publication-title">Loading latest post...</h3>
-                    <p class="publication-meta">Fetching from Medium</p>
-                    <p class="publication-summary">Hang tight while the latest story loads.</p>
+            <div class="contact-card reveal">
+                <p class="eyebrow contact-eyebrow">09 — Contact</p>
+                <h2 class="contact-title">Let's build<br />something</h2>
+                <p class="contact-sub">Open to AI/ML research and product roles starting in 2026. Always happy to talk about trustworthy AI.</p>
+                <a href="mailto:adityaku003@e.ntu.edu.sg" class="contact-email"><i class="fa-regular fa-envelope"></i> adityaku003@e.ntu.edu.sg</a>
+                <button class="copy-email" id="copy-email" type="button" data-email="adityaku003@e.ntu.edu.sg" aria-label="Copy email address"><i class="fa-regular fa-copy"></i> Copy</button>
+                <div class="contact-details">
+                    <div class="cd"><span>Location</span>NTU, Singapore</div>
+                    <div class="cd"><span>Phone</span>+65 8846 5661</div>
+                    <div class="cd"><span>Status</span>Available 2026</div>
                 </div>
-                <div class="blog-cta">
-                    <a href="https://medium.com/@adityagoel1999" target="_blank" class="btn btn--outline">Visit Medium</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Photography Section -->
-    <section id="photography" class="photography">
-        <div class="container">
-            <div class="section-header animate-fade-up">
-                <h2 class="section-title">Photography</h2>
-                <p class="section-subtitle">Latest captures from Instagram</p>
-            </div>
-            <div class="photography-content animate-fade-up">
-                <div class="glass-card instagram-card">
-                    <iframe
-                        src="https://www.instagram.com/adigo.captures/embed"
-                        title="@adigo.captures on Instagram"
-                        loading="lazy"
-                        allowtransparency="true"
-                        allowfullscreen
-                        scrolling="no"
-                    ></iframe>
-                </div>
-                <div class="photography-cta">
-                    <a href="https://www.instagram.com/adigo.captures/" target="_blank" class="btn btn--primary">View on Instagram</a>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/adigo10/" target="_blank" rel="noopener" class="social"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/Adigo10" target="_blank" rel="noopener" class="social"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://scholar.google.com/citations?user=U_htYhgAAAAJ&hl=en" target="_blank" rel="noopener" class="social"><i class="fa-solid fa-graduation-cap"></i> Scholar</a>
+                    <a href="https://medium.com/@adityagoel1999" target="_blank" rel="noopener" class="social"><i class="fa-brands fa-medium"></i> Medium</a>
+                    <a href="https://www.instagram.com/adigo.captures/" target="_blank" rel="noopener" class="social"><i class="fa-brands fa-instagram"></i> Instagram</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header animate-fade-up">
-                <h2 class="section-title">Get In Touch</h2>
-            </div>
-            <div class="contact-content animate-fade-up">
-                <div class="contact-info">
-                    <div style="margin-bottom: 32px;">
-                        <h3 style="font-size:24px; margin-bottom:16px;">Let's Connect</h3>
-                        <p>Open to AI/ML research and product roles starting in 2026.</p>
-                    </div>
-
-                    <div style="margin-bottom: 24px;">
-                        <strong>Location:</strong> NTU, Singapore
-                    </div>
-                    <div style="margin-bottom: 24px;">
-                        <strong>Email:</strong> adityaku003@e.ntu.edu.sg
-                    </div>
-                    <div style="margin-bottom: 24px;">
-                        <strong>Phone:</strong> +65 88465661
-                    </div>
-
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/adigo10/" target="_blank" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="https://github.com/Adigo10" target="_blank" class="social-link">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
-                        </a>
-                        <a href="https://medium.com/@adityagoel1999" target="_blank" class="social-link">
-                            <i class="fab fa-medium"></i>
-                            <span>Medium</span>
-                        </a>
-                        <a href="https://www.instagram.com/adigo.captures/" target="_blank" class="social-link">
-                            <i class="fab fa-instagram"></i>
-                            <span>Instagram</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- ============ FOOTER ============ -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Aditya Kumar Goel. All rights reserved.</p>
+            <div class="footer-inner">
+                <a href="#home" class="brand">
+                    <span class="mark">AG</span>
+                    <span>Aditya Goel</span>
+                </a>
+                <p>© 2026 Aditya Kumar Goel — Designed & built with intent.</p>
+            </div>
         </div>
     </footer>
 
+    <button class="to-top" id="to-top" aria-label="Scroll to top">
+        <svg class="to-top-ring" viewBox="0 0 44 44" aria-hidden="true"><circle class="track" cx="22" cy="22" r="19"></circle><circle class="bar" cx="22" cy="22" r="19"></circle></svg>
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
     <script src="app.js"></script>
+    <script src="enhancements.js"></script>
 </body>
 
 </html>
