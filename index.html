@@ -1,660 +1,624 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aditya Kumar Goel — AI/ML Engineer</title>
-    <meta name="description" content="Portfolio of Aditya Kumar Goel — AI/ML Engineer. MSAI at NTU Singapore, ex-Responsible AI Senior Analyst at Accenture. Building trustworthy, production-ready GenAI systems." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="assets/dp.jpeg" type="image/jpeg" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aditya Kumar Goel | AI Product Engineer</title>
+<meta name="description" content="Portfolio of Aditya Kumar Goel, AI Product Engineer at Go-Genie, M.Sc. AI graduate of NTU Singapore, ex-Responsible AI at Accenture.">
+<link rel="icon" href="assets/dp.jpeg">
+<script src="./sdf-field.js"></script>
+<script src="./support.js"></script>
 </head>
-
 <body>
-    <div class="bg-field"></div>
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <div class="scroll-progress" id="scroll-progress"></div>
+<x-dc>
+<helmet>
+<title>Aditya Kumar Goel | AI Product Engineer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="assets/dp.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ECEEF1;--on-ink:#FFFFFF;--plate:rgba(255,255,255,0.55);--rim:rgba(255,255,255,0.9);--frost:blur(24px) saturate(160%);--sd:rgba(28,36,48,0.12);--sd2:rgba(28,36,48,0.2);--sl:rgba(255,255,255,0.75);--ink:#15181C;--ink2:#383E46;--mute:#59606A;--mute2:#666D77;--glass:rgba(255,255,255,0.62);--hl:rgba(255,255,255,0.9);--hover:rgba(20,30,45,0.06);--line:rgba(20,30,45,0.12);--lift:0;--drop:0;color-scheme:light}
+html{scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none}
+html::-webkit-scrollbar,body::-webkit-scrollbar{display:none;width:0;height:0}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Geist',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;letter-spacing:-0.01em}
+/* ambient pastel light behind the glass, so backdrop-filter has something to blur */
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(60% 50% at 10% 4%,rgba(255,255,255,0.75),transparent 70%),radial-gradient(55% 45% at 8% 10%,rgba(170,190,215,0.22),transparent 72%),radial-gradient(45% 40% at 96% 42%,rgba(185,180,215,0.16),transparent 72%),radial-gradient(50% 42% at 6% 94%,rgba(170,205,200,0.16),transparent 72%),linear-gradient(165deg,#EEF0F3,#E6E9ED 50%,#DDE1E6)}
+/* faint frost: fine grain + sheen over the whole surface (kept subtle so it never greys the light background) */
+body::after{content:"";position:fixed;inset:0;z-index:40;pointer-events:none;background:radial-gradient(120% 80% at 18% -10%,rgba(196,214,226,0.07),transparent 55%),radial-gradient(90% 70% at 105% 100%,rgba(140,162,178,0.05),transparent 60%),url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27180%27 height=%27180%27%3E%3Cfilter id=%27n%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%270.9%27 numOctaves=%273%27 stitchTiles=%27stitch%27/%3E%3CfeColorMatrix values=%270 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0%27/%3E%3C/filter%3E%3Crect width=%27100%25%27 height=%27100%25%27 filter=%27url(%23n)%27/%3E%3C/svg%3E");opacity:0.5;mix-blend-mode:soft-light}
+a{color:oklch(calc(0.50 + var(--lift)) 0.18 255);text-decoration:none}
+a:hover{color:oklch(calc(0.42 + var(--lift)) 0.18 255)}
+::selection{background:oklch(0.62 0.19 255);color:#fff}
+/* header nav: corner glass pills */
+.hd-nav{position:fixed;top:12px;left:0;right:0;z-index:50;padding:0 12px;box-sizing:border-box;display:flex;justify-content:space-between;align-items:flex-start;gap:8px;pointer-events:none}
+.hd-pill{pointer-events:auto;box-sizing:border-box;border-radius:999px;background:var(--glass);-webkit-backdrop-filter:var(--frost);backdrop-filter:var(--frost);border:1px solid var(--rim);box-shadow:0 14px 34px -16px var(--sd2),inset 0 1px 0 var(--hl);color:var(--ink)}
+.hd-right{display:flex;flex-direction:column;align-items:flex-end;min-width:0}
+.hd a:focus-visible,.hd button:focus-visible{outline:2px solid var(--ink)!important;outline-offset:3px!important}
+@media (prefers-reduced-motion:reduce){.hd *{transition-duration:0s!important;transition-delay:0s!important}}
+/* hero facts: detached light glass strip just below the dark island */
+.hero-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:20px 0 0;padding:6px;border-radius:28px;background:var(--plate);-webkit-backdrop-filter:var(--frost);backdrop-filter:var(--frost);box-shadow:0 18px 40px -20px var(--sd2),inset 0 1px 0 var(--rim),inset 0 0 0 1px rgba(255,255,255,0.6)}
+.hero-fact{margin:0;padding:16px 22px;min-width:0}
+.hero-fact+.hero-fact{box-shadow:inset 1px 0 0 rgba(20,30,45,0.09)}
+.hero-fact dt{font-size:13px;color:var(--mute)}
+.hero-fact dd{margin:4px 0 0;font-size:clamp(14px,1.3vw,16px);font-weight:600;letter-spacing:-0.01em;color:var(--ink)}
+@media (max-width:760px){.hero-facts{grid-template-columns:1fr 1fr}.hero-fact{padding:14px 16px}.hero-fact:nth-child(3){box-shadow:inset 0 1px 0 rgba(20,30,45,0.09)}.hero-fact:nth-child(4){box-shadow:inset 1px 0 0 rgba(20,30,45,0.09),inset 0 1px 0 rgba(20,30,45,0.09)}}
+</style>
+</helmet>
 
-    <!-- ============ NAV ============ -->
-    <nav class="nav" id="nav">
-        <div class="nav-inner">
-            <a href="#home" class="brand">
-                <span class="mark">AG</span>
-                <span>Aditya Goel</span>
-            </a>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#impact" class="nav-link">Impact</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#work" class="nav-link">Work</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#awards" class="nav-link">Awards</a></li>
-                <li><a href="#media" class="nav-link">Media</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-label="Toggle dark theme" aria-checked="false">
-                    <span class="ti ti-sun"><i class="fa-regular fa-sun"></i></span>
-                    <span class="ti ti-moon"><i class="fa-regular fa-moon"></i></span>
-                </button>
-                <button class="nav-burger" id="nav-burger" type="button" aria-label="Open menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-            </div>
+<nav class="hd hd-nav" aria-label="Main" onKeyDown="{{ navKey }}">
+  <a href="#top" class="hd-pill" aria-label="Aditya Goel, back to top" style="flex:0 1 auto;min-width:0;display:flex;align-items:center;gap:10px;height:48px;padding:0 16px 0 6px;color:var(--ink);transition:background .3s ease" style-hover="background:rgba(255,255,255,0.82);color:var(--ink)">
+    <img src="assets/dp.jpeg" alt="" style="flex:0 0 auto;width:34px;height:34px;border-radius:999px;object-fit:cover;object-position:center top;box-shadow:0 0 0 2px rgba(255,255,255,0.9),0 3px 8px var(--sd2)">
+    <sc-if value="{{ showName }}" hint-placeholder-val="{{ true }}"><span style="font-size:15px;font-weight:600;letter-spacing:-0.015em;white-space:nowrap">Aditya Goel</span></sc-if>
+  </a>
+  <div class="hd-right">
+    <div class="hd-pill" onMouseEnter="{{ navEnter }}" onMouseLeave="{{ navLeave }}" style="max-width:100%;display:flex;align-items:center;height:48px;padding:3px">
+      <button type="button" onClick="{{ navToggle }}" aria-expanded="{{ navExpanded }}" aria-label="{{ navLabel }}" style="all:unset;box-sizing:border-box;flex:0 0 auto;cursor:pointer;display:flex;align-items:center;gap:9px;height:40px;padding:0 12px 0 14px;border-radius:999px;font-size:14px;font-weight:500;white-space:nowrap;color:var(--ink);transition:background .3s ease" style-hover="background:var(--hover)">
+        <span ref="{{ secRef }}" style="display:inline-block">{{ sectionName }}</span>
+        <span aria-hidden="true" style="display:inline-flex;width:14px;height:14px;align-items:center;justify-content:center;font-size:18px;line-height:1;color:var(--mute);transition:transform .6s cubic-bezier(.16,1,.3,1);transform:{{ navIcon }}">+</span>
+      </button>
+      <div style="flex:0 0 auto;display:grid;grid-template-columns:{{ navCols }};transition:grid-template-columns .7s cubic-bezier(.16,1,.3,1)">
+        <div style="overflow:hidden;min-width:0">
+          <div style="display:flex;gap:2px;padding:0 4px 0 0;opacity:{{ navOpacity }};visibility:{{ navVis }};transition:opacity .45s ease,visibility .7s">
+            <sc-for list="{{ navLinks }}" as="l" hint-placeholder-count="5">
+              <a href="{{ l.href }}" onClick="{{ navClose }}" aria-current="{{ l.current }}" style="display:flex;align-items:center;height:40px;padding:0 13px;border-radius:999px;background:{{ l.bg }};color:var(--ink);font-size:14px;font-weight:500;white-space:nowrap;transition:background .3s ease" style-hover="background:var(--hover);color:var(--ink)">{{ l.label }}</a>
+            </sc-for>
+          </div>
         </div>
-    </nav>
-
-    <!-- ============ HERO ============ -->
-    <section id="home" class="hero" data-screen-label="Hero">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-text">
-                    <p class="eyebrow hero-eyebrow reveal">AI / ML Engineer · NTU Singapore</p>
-                    <h1 class="hero-title reveal">
-                        <span class="line"><span>Aditya</span></span>
-                        <span class="line"><span>Kumar</span></span>
-                        <span class="line"><span class="stroke">Goel</span></span>
-                    </h1>
-                    <p class="hero-sub reveal">Responsible AI · LLMs · Computer Vision</p>
-                    <p class="hero-desc reveal">I build trustworthy, production-ready GenAI systems — from data pipelines and RAG to safety evaluation. MSAI candidate at NTU, formerly Responsible AI Senior Analyst at Accenture.</p>
-                    <div class="hero-cta reveal">
-                        <a href="#contact" class="btn btn--primary">Get in touch <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        <a href="#work" class="btn btn--ghost">View work</a>
-                    </div>
-                    <div class="hero-stats reveal">
-                        <div class="hstat">
-                            <div class="n"><span class="grad-text">30+</span></div>
-                            <div class="l">AI use cases evaluated</div>
-                        </div>
-                        <div class="hstat">
-                            <div class="n"><span class="grad-text">5+</span></div>
-                            <div class="l">GenAI solutions shipped</div>
-                        </div>
-                        <div class="hstat">
-                            <div class="n"><span class="grad-text">IEEE</span></div>
-                            <div class="l">Big Data 2024 author</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-photo-wrap reveal">
-                    <div class="hero-photo-block"></div>
-                    <img src="assets/dp.jpeg" alt="Aditya Kumar Goel" class="hero-photo" />
-                    <div class="hero-badge">
-                        <span class="dot"></span>
-                        <div>
-                            <div class="bt">Currently</div>
-                            <div class="bv">AI Engineer @ Go-Genie</div>
-                        </div>
-                        <span class="badge-time" id="sg-clock" aria-label="Local time in Singapore"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ MARQUEE ============ -->
-    <div class="marquee" aria-hidden="true">
-        <div class="marquee-track">
-            <span>Responsible AI</span><span>LLMs</span><span>RAG</span><span>Computer Vision</span><span>MLOps</span><span>NLP</span><span>Generative AI</span>
-            <span>Responsible AI</span><span>LLMs</span><span>RAG</span><span>Computer Vision</span><span>MLOps</span><span>NLP</span><span>Generative AI</span>
-        </div>
+      </div>
+      <a href="#contact" style="flex:0 0 auto;display:flex;align-items:center;height:40px;padding:0 18px;margin-left:2px;border-radius:999px;background:var(--ink);color:var(--on-ink);font-size:14px;font-weight:600;white-space:nowrap;transition:background .3s ease" style-hover="background:#2E343B;color:var(--on-ink)">Contact</a>
     </div>
-
-    <!-- ============ IMPACT ============ -->
-    <section id="impact" class="impact" data-screen-label="Impact">
-        <div class="container">
-            <div class="section-head reveal">
-                <div class="section-head-l">
-                    <div class="section-index">01 — Impact</div>
-                    <h2 class="section-title">Snapshot of <span class="grad-text">focus & outcomes</span></h2>
-                </div>
-                <p class="section-sub">A quick read on where I work and the results I drive.</p>
-            </div>
-            <div class="impact-grid">
-                <div class="impact-card reveal">
-                    <div class="impact-label">Focus</div>
-                    <div class="impact-value">Responsible AI, LLMs, CV</div>
-                    <p class="impact-note">End-to-end GenAI solutions with built-in safety evaluation.</p>
-                </div>
-                <div class="impact-card reveal">
-                    <div class="impact-label">Industry</div>
-                    <div class="impact-value">Pharma & Finance</div>
-                    <p class="impact-note">Modernized risk reviews and built quantitative metrics.</p>
-                </div>
-                <div class="impact-card reveal">
-                    <div class="impact-label">Research</div>
-                    <div class="impact-value">IEEE Big Data 2024</div>
-                    <p class="impact-note">Numerical validation for financial summaries.</p>
-                </div>
-                <div class="impact-card reveal">
-                    <div class="impact-label">Delivery</div>
-                    <div class="impact-value">Multiple GenAI PoCs</div>
-                    <p class="impact-note">LLM apps taken from data to deployment.</p>
-                </div>
-            </div>
+    <div style="pointer-events:{{ panelPE }};visibility:{{ panelVis }};width:min(calc(100vw - 24px),340px);display:grid;grid-template-rows:{{ panelRows }};transition:grid-template-rows .6s cubic-bezier(.16,1,.3,1),visibility .6s">
+      <div style="overflow:hidden;min-height:0;padding:0 2px">
+        <div style="margin:8px 0 28px;padding:6px;border-radius:26px;background:rgba(255,255,255,0.8);-webkit-backdrop-filter:var(--frost);backdrop-filter:var(--frost);border:1px solid var(--rim);box-shadow:0 24px 44px -18px var(--sd2);display:flex;flex-direction:column;gap:2px;opacity:{{ panelOpacity }};transition:opacity .4s ease">
+          <sc-for list="{{ navLinks }}" as="l" hint-placeholder-count="5">
+            <a href="{{ l.href }}" onClick="{{ navClose }}" aria-current="{{ l.current }}" style="display:flex;align-items:center;height:50px;padding:0 16px;border-radius:20px;background:{{ l.bg }};color:var(--ink);font-size:17px;font-weight:600;letter-spacing:-0.015em">{{ l.label }}</a>
+          </sc-for>
         </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section id="top" data-screen-label="Hero" style="padding:76px 16px 16px">
+    <div style="position:relative;overflow:hidden;border-radius:40px;background:#12171A;box-shadow:-16px -16px 36px rgba(255,255,255,0.9),18px 18px 40px rgba(28,36,48,0.24),inset 1px 1px 1px rgba(255,255,255,0.1),inset -2px -2px 6px rgba(0,0,0,0.5);min-height:min(780px,calc(100svh - 210px));display:flex;flex-direction:column;color:#F5F5F7">
+      <x-import component-from-global-scope="sdf-field" variant="hero" finish="{{ heroFinish }}" style="position:absolute;inset:0" hint-size="100%,100%"></x-import>
+      <div style="position:relative;flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:28px;padding:clamp(56px,8vw,110px) clamp(20px,4vw,52px) clamp(32px,4.5vw,56px);pointer-events:none">
+        <h1 style="margin:0;font-size:clamp(44px,12vw,148px);font-weight:700;letter-spacing:-0.05em;line-height:0.92">
+          <span style="display:block;overflow:hidden;padding-bottom:0.06em"><span data-reveal="rise" data-delay="80" style="display:block">Aditya</span></span>
+          <span style="display:block;overflow:hidden;padding-bottom:0.06em"><span data-reveal="rise" data-delay="180" style="display:block">Kumar Goel.</span></span>
+        </h1>
+        <p data-reveal="" data-delay="320" style="margin:0;max-width:580px;font-size:clamp(19px,1.8vw,24px);line-height:1.38;font-weight:500;color:#A1A1A6;letter-spacing:-0.015em;text-wrap:pretty"><span style="color:#F5F5F7">AI Product Engineer at Go-Genie.</span> I build language and vision systems that can be trusted in production, and the evaluation that proves it.</p>
+        <div data-reveal="" data-delay="420" style="display:flex;flex-wrap:wrap;gap:10px;pointer-events:auto">
+          <a href="#contact" style="display:flex;align-items:center;height:48px;padding:0 24px;border-radius:999px;background:#F5F5F7;color:#1D1D1F;font-size:16px;font-weight:600;transition:transform .5s cubic-bezier(.16,1,.3,1),background .3s ease" style-hover="transform:scale(1.04);background:#FFFFFF;color:#1D1D1F">Get in touch</a>
+          <a href="#work" style="display:flex;align-items:center;height:48px;padding:0 24px;border-radius:999px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.14);color:#F5F5F7;font-size:16px;font-weight:600;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transition:transform .5s cubic-bezier(.16,1,.3,1),background .3s ease" style-hover="transform:scale(1.04);background:rgba(255,255,255,0.16);color:#FFFFFF">See the work</a>
+          <a href="https://www.linkedin.com/in/adigo10/" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:999px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.14);color:#F5F5F7;font-size:19px;font-weight:700;letter-spacing:-0.03em;box-sizing:border-box;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transition:transform .5s cubic-bezier(.16,1,.3,1),background .3s ease" style-hover="transform:scale(1.08);background:oklch(0.52 0.14 245);color:#FFFFFF">in</a>
+        </div>
+      </div>
+    </div>
+    <dl class="hero-facts">
+        <div class="hero-fact" data-reveal="" data-delay="500"><dt>Currently</dt><dd>AI Product Engineer, Go-Genie</dd></div>
+        <div class="hero-fact" data-reveal="" data-delay="570"><dt>Previously</dt><dd>Responsible AI, Accenture</dd></div>
+        <div class="hero-fact" data-reveal="" data-delay="640"><dt>Graduated</dt><dd>M.Sc. AI, NTU Singapore</dd></div>
+        <div class="hero-fact" data-reveal="" data-delay="710"><dt>Singapore</dt><dd style="font-variant-numeric:tabular-nums">{{ sgTime }}</dd></div>
+    </dl>
+  </section>
+
+  <div style="overflow:hidden;padding:32px 0 24px">
+    <div ref="{{ ribbonRef }}" style="display:flex;gap:24px;width:max-content;padding-left:16px">
+      <span style="padding:12px 22px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:oklch(calc(0.50 + var(--lift)) 0.18 255);font-size:17px;font-weight:600;white-space:nowrap">Responsible AI</span>
+      <span style="padding:12px 22px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:oklch(calc(0.53 + var(--lift)) 0.15 45);font-size:17px;font-weight:600;white-space:nowrap">Large language models</span>
+      <span style="padding:12px 22px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:oklch(calc(0.48 + var(--lift)) 0.12 150);font-size:17px;font-weight:600;white-space:nowrap">Retrieval-augmented generation</span>
+      <span style="padding:12px 22px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:oklch(calc(0.50 + var(--lift)) 0.18 300);font-size:17px;font-weight:600;white-space:nowrap">Computer vision</span>
+      <span style="padding:12px 22px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:oklch(calc(0.52 + var(--lift)) 0.17 15);font-size:17px;font-weight:600;white-space:nowrap">MLOps</span>
+      <span style="padding:12px 22px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:oklch(calc(0.50 + var(--lift)) 0.18 255);font-size:17px;font-weight:600;white-space:nowrap">Safety evaluation</span>
+      <span style="padding:12px 22px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:oklch(calc(0.53 + var(--lift)) 0.15 45);font-size:17px;font-weight:600;white-space:nowrap">NLP</span>
+      <span style="padding:12px 22px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:oklch(calc(0.48 + var(--lift)) 0.12 150);font-size:17px;font-weight:600;white-space:nowrap">Generative AI</span>
+      <span style="padding:12px 22px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:oklch(calc(0.50 + var(--lift)) 0.18 255);font-size:17px;font-weight:600;white-space:nowrap">Responsible AI</span>
+      <span style="padding:12px 22px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:oklch(calc(0.53 + var(--lift)) 0.15 45);font-size:17px;font-weight:600;white-space:nowrap">Large language models</span>
+      <span style="padding:12px 22px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:oklch(calc(0.48 + var(--lift)) 0.12 150);font-size:17px;font-weight:600;white-space:nowrap">Retrieval-augmented generation</span>
+      <span style="padding:12px 22px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:oklch(calc(0.50 + var(--lift)) 0.18 300);font-size:17px;font-weight:600;white-space:nowrap">Computer vision</span>
+      <span style="padding:12px 22px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:oklch(calc(0.52 + var(--lift)) 0.17 15);font-size:17px;font-weight:600;white-space:nowrap">MLOps</span>
+      <span style="padding:12px 22px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:oklch(calc(0.50 + var(--lift)) 0.18 255);font-size:17px;font-weight:600;white-space:nowrap">Safety evaluation</span>
+      <span style="padding:12px 22px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:oklch(calc(0.53 + var(--lift)) 0.15 45);font-size:17px;font-weight:600;white-space:nowrap">NLP</span>
+      <span style="padding:12px 22px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:oklch(calc(0.48 + var(--lift)) 0.12 150);font-size:17px;font-weight:600;white-space:nowrap">Generative AI</span>
+    </div>
+  </div>
+
+  <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,32px)">
+
+    <section id="profile" data-screen-label="Profile" style="padding-top:clamp(88px,11vw,150px)">
+      <div data-reveal="" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 40px;margin-bottom:32px;padding:0 8px">
+        <div>
+          <div style="font-size:17px;font-weight:600;color:oklch(calc(0.49 + var(--lift)) 0.19 255)">Profile</div>
+          <h2 style="margin:6px 0 0;font-size:clamp(34px,6vw,72px);font-weight:700;letter-spacing:-0.04em;line-height:1.02">Reliable AI, by design.</h2>
+        </div>
+        <p style="margin:0;max-width:380px;font-size:19px;line-height:1.45;color:var(--mute);text-wrap:pretty">Based in Singapore. Shipping GenAI for logistics, pharma and finance.</p>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:24px">
+        <div data-reveal="" style="flex:2 1 520px;min-width:0;background:var(--plate);box-shadow:0 18px 40px -20px var(--sd2),inset 0 1px 0 var(--rim),inset 0 0 0 1px rgba(255,255,255,0.6);backdrop-filter:var(--frost);-webkit-backdrop-filter:var(--frost);border-radius:32px;padding:clamp(28px,4vw,48px);box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+          <p style="margin:0;font-size:clamp(26px,2.9vw,36px);font-weight:600;line-height:1.18;letter-spacing:-0.025em;text-wrap:pretty">I turn research into products teams can actually adopt, <span style="color:var(--mute2)">with governance and measurable impact built in from the start.</span></p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px 32px;font-size:17px;line-height:1.55;color:var(--mute)">
+            <p style="margin:0;text-wrap:pretty">My work centres on LLM fine-tuning, retrieval-augmented generation and evaluation pipelines, with particular attention to Responsible AI in high-stakes domains.</p>
+            <p style="margin:0;text-wrap:pretty">I care about reliability as a product feature. A model is finished only once it can be explained, audited and trusted.</p>
+          </div>
+        </div>
+        <div data-reveal="" data-delay="100" style="flex:1 1 300px;min-width:0;background:var(--plate);box-shadow:0 18px 40px -20px var(--sd2),inset 0 1px 0 var(--rim),inset 0 0 0 1px rgba(255,255,255,0.6);backdrop-filter:var(--frost);-webkit-backdrop-filter:var(--frost);border-radius:32px;padding:8px;box-sizing:border-box;display:flex">
+          <div style="position:relative;flex:1;min-height:420px;border-radius:24px;overflow:hidden;background:var(--plate)">
+            <div ref="{{ portraitRef }}" style="position:absolute;left:0;right:0;top:0;height:116%">
+              <sc-if value="{{ mono }}" hint-placeholder-val="{{ false }}">
+                <img src="assets/dp.jpeg" alt="Aditya Kumar Goel" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;filter:grayscale(1)">
+              </sc-if>
+              <sc-if value="{{ colour }}" hint-placeholder-val="{{ true }}">
+                <img src="assets/dp.jpeg" alt="Aditya Kumar Goel" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
+              </sc-if>
+            </div>
+            <div style="position:absolute;left:12px;right:12px;bottom:12px;display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 16px;border-radius:12px;background:var(--glass);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);font-size:14px">
+              <span style="font-weight:600">Aditya Kumar Goel</span>
+              <span style="color:var(--mute)">Singapore</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:24px;margin-top:24px">
+        <div data-reveal="" style="flex:1 1 300px;min-width:0;background:var(--plate);box-shadow:0 18px 40px -20px var(--sd2),inset 0 1px 0 var(--rim),inset 0 0 0 1px rgba(255,255,255,0.6);backdrop-filter:var(--frost);-webkit-backdrop-filter:var(--frost);border-radius:32px;padding:28px;box-sizing:border-box">
+          <div style="font-size:21px;font-weight:700;letter-spacing:-0.02em;color:oklch(calc(0.50 + var(--lift)) 0.18 255)">Intelligence</div>
+          <p style="margin:6px 0 20px;font-size:15px;line-height:1.5;color:var(--ink2)">Models, retrieval and the science of keeping them honest.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px">
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">Responsible AI</span>
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">LLMs</span>
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">RAG</span>
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">Embeddings</span>
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">Semantic search</span>
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">Computer vision</span>
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">NLP</span>
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">Deep learning</span>
+          </div>
+        </div>
+        <div data-reveal="" data-delay="80" style="flex:1 1 300px;min-width:0;background:var(--plate);box-shadow:0 18px 40px -20px var(--sd2),inset 0 1px 0 var(--rim),inset 0 0 0 1px rgba(255,255,255,0.6);backdrop-filter:var(--frost);-webkit-backdrop-filter:var(--frost);border-radius:32px;padding:28px;box-sizing:border-box">
+          <div style="font-size:21px;font-weight:700;letter-spacing:-0.02em;color:oklch(calc(0.53 + var(--lift)) 0.15 45)">Toolkit</div>
+          <p style="margin:6px 0 20px;font-size:15px;line-height:1.5;color:var(--ink2)">The languages and frameworks I reach for daily.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px">
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">Python</span>
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">PyTorch</span>
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">TensorFlow</span>
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">Hugging Face</span>
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">LangChain</span>
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">scikit-learn</span>
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">OpenCV</span>
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">FastAPI</span>
+          </div>
+        </div>
+        <div data-reveal="" data-delay="160" style="flex:1 1 300px;min-width:0;background:var(--plate);box-shadow:0 18px 40px -20px var(--sd2),inset 0 1px 0 var(--rim),inset 0 0 0 1px rgba(255,255,255,0.6);backdrop-filter:var(--frost);-webkit-backdrop-filter:var(--frost);border-radius:32px;padding:28px;box-sizing:border-box">
+          <div style="font-size:21px;font-weight:700;letter-spacing:-0.02em;color:oklch(calc(0.48 + var(--lift)) 0.12 150)">Operations</div>
+          <p style="margin:6px 0 20px;font-size:15px;line-height:1.5;color:var(--ink2)">Getting models into production, and keeping them there.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px">
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">CI/CD for ML</span>
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">Azure ML</span>
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">SageMaker</span>
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">Bedrock</span>
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">Docker</span>
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">MLflow</span>
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">DVC</span>
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">W&amp;B</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- ============ ABOUT ============ -->
-    <section id="about" class="about" data-screen-label="About">
-        <div class="container">
-            <div class="section-head reveal">
-                <div class="section-head-l">
-                    <div class="section-index">02 — About</div>
-                    <h2 class="section-title">Building reliable AI</h2>
-                </div>
-            </div>
-            <div class="about-grid">
-                <div class="reveal">
-                    <p class="about-lead">I'm an AI/ML engineer focused on <em class="grad-text">trustworthy systems</em> and production-ready delivery — translating research into workflows teams can actually adopt.</p>
-                    <div class="about-body">
-                        <p>My work centers on LLM fine-tuning, retrieval-augmented generation, and evaluation pipelines, with a deep emphasis on Responsible AI and safety for high-stakes domains like pharma and finance.</p>
-                        <p>I'm seeking collaborations and roles where reliability, governance, and measurable impact are core product requirements — not afterthoughts.</p>
-                    </div>
-                </div>
-                <div class="about-cards reveal">
-                    <div class="ac">
-                        <h4>Who I am</h4>
-                        <p>An engineer who turns research into dependable, deployable systems.</p>
-                    </div>
-                    <div class="ac">
-                        <h4>What I specialize in</h4>
-                        <p>LLM fine-tuning, RAG, and evaluation pipelines — safety-first.</p>
-                    </div>
-                    <div class="ac">
-                        <h4>What I'm seeking</h4>
-                        <p>Roles where governance and measurable impact are first-class.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skills">
-                <div class="skill-cluster reveal">
-                    <h4>Artificial Intelligence</h4>
-                    <div class="skill-tags">
-                        <span class="tag">Responsible AI</span>
-                        <span class="tag">GenAI</span>
-                        <span class="tag">LLMs</span>
-                        <span class="tag">Computer Vision</span>
-                        <span class="tag">Vector Database</span>
-                        <span class="tag">Semantic Search</span>
-                        <span class="tag">Embeddings</span>
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">Deep Learning</span>
-                        <span class="tag">NLP</span>
-                        <span class="tag">RAG</span>
-                    </div>
-                </div>
-                <div class="skill-cluster reveal">
-                    <h4>Languages & Frameworks</h4>
-                    <div class="skill-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">PyTorch</span>
-                        <span class="tag">TensorFlow</span>
-                        <span class="tag">OpenCV</span>
-                        <span class="tag">FastAPI</span>
-                        <span class="tag">Hugging Face</span>
-                        <span class="tag">LangChain</span>
-                        <span class="tag">Scikit-learn</span>
-                        <span class="tag">Postman</span>
-                    </div>
-                </div>
-                <div class="skill-cluster reveal">
-                    <h4>MLOps & Cloud</h4>
-                    <div class="skill-tags">
-                        <span class="tag">CI/CD for ML</span>
-                        <span class="tag">Azure ML</span>
-                        <span class="tag">AWS SageMaker</span>
-                        <span class="tag">DVC</span>
-                        <span class="tag">Weights & Biases</span>
-                        <span class="tag">Model Monitoring</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">MLflow</span>
-                    </div>
-                </div>
-            </div>
+    <section id="experience" data-screen-label="Experience" style="padding-top:clamp(88px,11vw,150px)">
+      <div data-reveal="" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 40px;margin-bottom:32px;padding:0 8px">
+        <div>
+          <div style="font-size:17px;font-weight:600;color:oklch(calc(0.52 + var(--lift)) 0.15 50)">Experience</div>
+          <h2 style="margin:6px 0 0;font-size:clamp(34px,6vw,72px);font-weight:700;letter-spacing:-0.04em;line-height:1.02">Where I've worked.</h2>
         </div>
+        <p style="margin:0;max-width:380px;font-size:19px;line-height:1.45;color:var(--mute);text-wrap:pretty">Select a role to see what I did there.</p>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:stretch">
+        <div data-reveal="" style="flex:1 1 340px;min-width:0;background:var(--plate);box-shadow:0 18px 40px -20px var(--sd2),inset 0 1px 0 var(--rim),inset 0 0 0 1px rgba(255,255,255,0.6);backdrop-filter:var(--frost);-webkit-backdrop-filter:var(--frost);border-radius:32px;padding:8px;box-sizing:border-box;display:flex;flex-direction:column;gap:2px">
+          <sc-for list="{{ roles }}" as="r" hint-placeholder-count="2">
+            <button type="button" onClick="{{ r.select }}" style="all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:14px;padding:14px;border-radius:24px;box-shadow:{{ r.shadow }};transition:box-shadow .5s cubic-bezier(.16,1,.3,1)">
+              <span style="flex:0 0 44px;width:44px;height:44px;border-radius:10px;overflow:hidden;background:{{ r.soft }};color:{{ r.ink }};display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700">
+                <sc-if value="{{ r.logo }}" hint-placeholder-val="{{ false }}"><img src="{{ r.logo }}" alt="" style="width:100%;height:100%;object-fit:cover"></sc-if>
+                <sc-if value="{{ r.noLogo }}"><span>{{ r.mono }}</span></sc-if>
+              </span>
+              <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
+                <span style="font-size:16px;font-weight:600;color:var(--ink)">{{ r.org }}</span>
+                <span style="font-size:14px;color:var(--mute)">{{ r.role }}</span>
+              </span>
+              <span style="font-size:13px;color:var(--mute);white-space:nowrap;font-variant-numeric:tabular-nums">{{ r.years }}</span>
+            </button>
+          </sc-for>
+        </div>
+
+        <div data-reveal="" data-delay="100" style="flex:2 1 520px;min-width:0;display:flex">
+          <div ref="{{ detailRef }}" style="flex:1;background:var(--plate);box-shadow:0 18px 40px -20px var(--sd2),inset 0 1px 0 var(--rim),inset 0 0 0 1px rgba(255,255,255,0.6);backdrop-filter:var(--frost);-webkit-backdrop-filter:var(--frost);border-radius:32px;padding:clamp(28px,4vw,44px);box-sizing:border-box">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
+              <span style="width:64px;height:64px;border-radius:16px;overflow:hidden;background:{{ d.soft }};color:{{ d.ink }};display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700">
+                <sc-if value="{{ d.logo }}" hint-placeholder-val="{{ false }}"><img src="{{ d.logo }}" alt="" style="width:100%;height:100%;object-fit:cover"></sc-if>
+                <sc-if value="{{ d.noLogo }}"><span>{{ d.mono }}</span></sc-if>
+              </span>
+              <span style="padding:8px 14px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);color:{{ d.ink }};font-size:14px;font-weight:600">{{ d.dates }}</span>
+            </div>
+            <h3 style="margin:28px 0 0;font-size:clamp(28px,3.4vw,40px);font-weight:700;letter-spacing:-0.03em;line-height:1.08">{{ d.role }}</h3>
+            <div style="margin-top:8px;font-size:17px;color:var(--mute)">{{ d.org }} · {{ d.loc }}</div>
+            <ul style="margin:32px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:24px">
+              <sc-for list="{{ d.points }}" as="pt" hint-placeholder-count="4">
+                <li style="display:flex;gap:14px;font-size:17px;line-height:1.55;color:var(--ink2)">
+                  <span style="flex:0 0 8px;width:8px;height:8px;margin-top:9px;border-radius:999px;background:{{ d.vivid }}"></span>
+                  <span style="text-wrap:pretty">{{ pt }}</span>
+                </li>
+              </sc-for>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- ============ EXPERIENCE ============ -->
-    <section id="experience" class="experience" data-screen-label="Experience">
-        <div class="container">
-            <div class="section-head reveal">
-                <div class="section-head-l">
-                    <div class="section-index">03 — Experience</div>
-                    <h2 class="section-title">Where I've <span class="grad-text">worked</span></h2>
-                </div>
-                <p class="section-sub">Professional roles, research, and leadership.</p>
-            </div>
-            <div class="timeline">
-                <!-- Go-Genie -->
-                <div class="tl-item reveal">
-                    <div class="tl-left">
-                        <div class="tl-dates">Jan 2026 — Present</div>
-                        <div class="tl-co">
-                            <img src="assets/gogenie_logo.jpg" alt="Go-Genie" class="tl-logo" />
-                            <div>
-                                <div class="tl-coname">Go-Genie</div>
-                                <div class="tl-loc">Singapore</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tl-right">
-                        <h3 class="tl-role">AI Engineer Intern</h3>
-                        <div class="tl-points">
-                            <div class="tl-point"><span class="mk">→</span><span>Develop ML models with Scikit-learn and PyTorch for logistics demand forecasting, route optimization, and load balancing.</span></div>
-                            <div class="tl-point"><span class="mk">→</span><span>Engineer data pipelines and integrate AI inference into backend microservices via REST APIs for scalable deployment.</span></div>
-                            <div class="tl-point"><span class="mk">→</span><span>Design a dynamic RAG pipeline using Gemini, LangChain, and BM25, with sequential API triggering and context-aware prompting.</span></div>
-                            <div class="tl-point"><span class="mk">→</span><span>Built an AI-powered HRMS chatbot for leave management, payslips, and personalized FAQs — cutting administrative overhead.</span></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Accenture -->
-                <div class="tl-item reveal">
-                    <div class="tl-left">
-                        <div class="tl-dates">Jul 2022 — Jul 2025</div>
-                        <div class="tl-co">
-                            <img src="assets/accenture_logo.jpg" alt="Accenture" class="tl-logo" />
-                            <div>
-                                <div class="tl-coname">Accenture</div>
-                                <div class="tl-loc">Bengaluru, India</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tl-right">
-                        <h3 class="tl-role">Responsible AI Senior Analyst</h3>
-                        <div class="tl-points">
-                            <div class="tl-point"><span class="mk">→</span><span>Evaluated 30+ AI business use cases and collaborated with EU representatives to interpret the AI Act, creating self-service evaluation workflows and compliance reports.</span></div>
-                            <div class="tl-point"><span class="mk">→</span><span>Delivered 5+ end-to-end GenAI solutions, including automating knowledge management with RAG to cut client time spent on database lookups.</span></div>
-                            <div class="tl-point"><span class="mk">→</span><span>Developed a Computer Vision pipeline using Tesseract OCR to extract and structure invoice data for downstream RAG.</span></div>
-                            <div class="tl-point"><span class="mk">→</span><span>Built a quantitative Responsible AI evaluation system handling thousands of batch requests with auto-prioritization.</span></div>
-                            <div class="tl-point"><span class="mk">→</span><span>Applied MLOps best practices across Azure (CI/CD) and AWS (EC2, ECS, SageMaker, Bedrock, S3) for training, versioning, and deployment.</span></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- OP Venture -->
-                <div class="tl-item reveal">
-                    <div class="tl-left">
-                        <div class="tl-dates">Mar 2024 — Mar 2025</div>
-                        <div class="tl-co">
-                            <span class="tl-logo-text">OP</span>
-                            <div>
-                                <div class="tl-coname">OP Venture Cooperative</div>
-                                <div class="tl-loc">Remote</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tl-right">
-                        <h3 class="tl-role">CO Venture Fellow · Cohort 6</h3>
-                        <div class="tl-points">
-                            <div class="tl-point"><span class="mk">→</span><span>Participated in venture capital education and investment processes, supporting due diligence and early-stage founders.</span></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- VentureOps -->
-                <div class="tl-item reveal">
-                    <div class="tl-left">
-                        <div class="tl-dates">Oct 2020 — May 2021</div>
-                        <div class="tl-co">
-                            <span class="tl-logo-text">VO</span>
-                            <div>
-                                <div class="tl-coname">VentureOps</div>
-                                <div class="tl-loc">India</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tl-right">
-                        <h3 class="tl-role">President</h3>
-                        <div class="tl-points">
-                            <div class="tl-point"><span class="mk">→</span><span>Hackathon Lead for 'Hello World 4.0' (Oct 2020).</span></div>
-                            <div class="tl-point"><span class="mk">→</span><span>Built the club website: venturesityvit.github.io.</span></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ARC-VIT -->
-                <div class="tl-item reveal">
-                    <div class="tl-left">
-                        <div class="tl-dates">Aug 2019 — Feb 2020</div>
-                        <div class="tl-co">
-                            <img src="assets/arcvit_logo.jpg" alt="ARC-VIT" class="tl-logo" />
-                            <div>
-                                <div class="tl-coname">Centre of Excellence for Autonomous Vehicles Research</div>
-                                <div class="tl-loc">India</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tl-right">
-                        <h3 class="tl-role">Student R&D Engineer</h3>
-                        <div class="tl-points">
-                            <div class="tl-point"><span class="mk">→</span><span>Developed computer vision for an autonomous EV.</span></div>
-                            <div class="tl-point"><span class="mk">→</span><span>Built optical flow for vehicle direction estimation.</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="work" data-screen-label="Work" style="padding-top:clamp(88px,11vw,150px)">
+      <div data-reveal="" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 40px;margin-bottom:32px;padding:0 8px">
+        <div>
+          <div style="font-size:17px;font-weight:600;color:oklch(calc(0.49 + var(--lift)) 0.2 300)">Work</div>
+          <h2 style="margin:6px 0 0;font-size:clamp(34px,6vw,72px);font-weight:700;letter-spacing:-0.04em;line-height:1.02">Things I've made.</h2>
         </div>
+        <p style="margin:0;max-width:380px;font-size:19px;line-height:1.45;color:var(--mute);text-wrap:pretty">Across the stack, from product to research to real-time graphics.</p>
+      </div>
+
+      <div data-reveal="" style="background:var(--plate);box-shadow:0 18px 40px -20px var(--sd2),inset 0 1px 0 var(--rim),inset 0 0 0 1px rgba(255,255,255,0.6);backdrop-filter:var(--frost);-webkit-backdrop-filter:var(--frost);border-radius:40px;padding:12px;display:flex;flex-wrap:wrap;gap:12px">
+        <div style="flex:1 1 360px;min-width:0;padding:clamp(20px,3vw,36px);display:flex;flex-direction:column;justify-content:space-between;gap:32px">
+          <div>
+            <span style="display:inline-flex;padding:7px 14px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);color:oklch(calc(0.50 + var(--lift)) 0.18 300);font-size:13px;font-weight:600">Featured · WebGPU</span>
+            <h3 style="margin:20px 0 0;font-size:clamp(32px,4vw,48px);font-weight:700;letter-spacing:-0.035em;line-height:1.04;text-wrap:balance">Walking inside a DeepSDF latent space.</h3>
+            <p style="margin:16px 0 0;font-size:17px;line-height:1.55;color:var(--mute);text-wrap:pretty">A real-time WebGL and WebGPU piece that travels through a learned DeepSDF latent space, morphing smoothly between 3D forms. The sculpture alongside is a live miniature of the idea.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:20px;align-items:flex-start">
+            <div style="display:flex;flex-wrap:wrap;gap:6px">
+              <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">WebGPU</span>
+              <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">WebGL</span>
+              <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">DeepSDF</span>
+              <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:500">Latent space</span>
+            </div>
+            <a href="https://www.linkedin.com/posts/webgl-webgpu_walking-inside-a-deepsdf-latent-space-in-activity-7467932702520844288-rsqy" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;height:44px;padding:0 20px;border-radius:999px;background:var(--ink);color:var(--on-ink);font-size:15px;font-weight:600;transition:transform .5s cubic-bezier(.16,1,.3,1)" style-hover="transform:scale(1.04);color:var(--on-ink)">Watch on LinkedIn ↗</a>
+          </div>
+        </div>
+        <div style="flex:1 1 420px;min-width:0;min-height:clamp(300px,50vw,440px);position:relative;border-radius:28px;overflow:hidden;background:var(--plate);box-shadow:inset 6px 6px 14px var(--sd),inset -6px -6px 14px var(--sl)">
+          <x-import component-from-global-scope="sdf-field" variant="latent" finish="violet" style="position:absolute;inset:0" hint-size="100%,100%"></x-import>
+        </div>
+      </div>
+
+      <div style="margin-top:24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:24px">
+        <sc-for list="{{ projects }}" as="p" hint-placeholder-count="6">
+          <div data-reveal="" data-delay="{{ p.delay }}" style="display:flex">
+            <div style="flex:1;background:var(--plate);box-shadow:0 18px 40px -20px var(--sd2),inset 0 1px 0 var(--rim),inset 0 0 0 1px rgba(255,255,255,0.6);backdrop-filter:var(--frost);-webkit-backdrop-filter:var(--frost);border-radius:32px;padding:8px;display:flex;flex-direction:column;transition:transform .6s cubic-bezier(.16,1,.3,1),box-shadow .6s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-4px);box-shadow:0 28px 52px -20px var(--sd2),inset 0 1px 0 var(--rim),inset 0 0 0 1px rgba(255,255,255,0.7)">
+              <div style="position:relative;height:150px;border-radius:24px;background:var(--plate);box-shadow:inset 5px 5px 12px var(--sd),inset -5px -5px 12px var(--sl);padding:18px 20px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start">
+                <span style="padding:6px 12px;border-radius:999px;background:var(--plate);box-shadow:3px 3px 7px var(--sd),-3px -3px 7px var(--sl);color:{{ p.ink }};font-size:13px;font-weight:600">{{ p.cat }}</span>
+                <span style="font-size:56px;font-weight:700;letter-spacing:-0.05em;line-height:1;color:{{ p.ink }}">{{ p.no }}</span>
+              </div>
+              <div style="flex:1;padding:20px 16px 16px;display:flex;flex-direction:column;gap:10px">
+                <h3 style="margin:0;font-size:22px;font-weight:700;letter-spacing:-0.025em;line-height:1.15">{{ p.title }}</h3>
+                <p style="margin:0;font-size:15px;line-height:1.55;color:var(--mute);text-wrap:pretty">{{ p.desc }}</p>
+                <div style="margin-top:auto;padding-top:8px;font-size:13px;font-weight:500;color:var(--mute2)">{{ p.stack }}</div>
+              </div>
+              <sc-if value="{{ p.link }}" hint-placeholder-val="{{ false }}">
+                <a href="{{ p.link }}" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;height:48px;padding:0 20px;border-radius:24px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:var(--ink);font-size:15px;font-weight:600;transition:box-shadow .35s ease" style-hover="box-shadow:inset 4px 4px 10px var(--sd),inset -4px -4px 10px var(--sl);color:var(--ink)"><span>{{ p.linkLabel }}</span><span>↗</span></a>
+              </sc-if>
+            </div>
+          </div>
+        </sc-for>
+      </div>
     </section>
 
-    <!-- ============ WORK (Publications + Projects) ============ -->
-    <section id="work" class="work" data-screen-label="Work">
-        <div class="container">
-            <div class="section-head reveal">
-                <div class="section-head-l">
-                    <div class="section-index">04 — Research</div>
-                    <h2 class="section-title">Published <span class="grad-text">research</span></h2>
-                </div>
-            </div>
-            <div class="pub-card reveal">
-                <div class="pub-tags">
-                    <span class="pub-chip solid">Conference Paper</span>
-                    <span class="pub-chip">IEEE Big Data 2024</span>
-                </div>
-                <h3 class="pub-title">Factual Accuracy Checking by Validating Numerical Values in Financial Summaries</h3>
-                <p class="pub-meta">Aditya Kumar Goel et al. · 2024</p>
-                <p class="pub-summary">Validates numerical accuracy in financial summaries through automated checks and transformer-based reasoning — reducing factual errors in generated financial reporting.</p>
-                <div class="pub-actions">
-                    <a href="https://ieeexplore.ieee.org/document/10825697/" target="_blank" rel="noopener" class="btn btn--ghost">View paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    <a href="https://scholar.google.com/citations?user=U_htYhgAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn--ghost">Google Scholar <i class="fa-solid fa-graduation-cap"></i></a>
-                </div>
-            </div>
-
-            <div class="section-head reveal" style="margin-top: var(--section-y);">
-                <div class="section-head-l">
-                    <div class="section-index">05 — Projects</div>
-                    <h2 class="section-title">Featured <span class="grad-text">projects</span></h2>
-                </div>
-                <p class="section-sub">Innovation across the AI/ML stack — from product to research.</p>
-            </div>
-            <a class="proj-featured reveal" href="https://www.linkedin.com/posts/webgl-webgpu_walking-inside-a-deepsdf-latent-space-in-activity-7467932702520844288-rsqy" target="_blank" rel="noopener">
-                <div class="pf-body">
-                    <div class="proj-top">
-                        <span class="proj-cat">Graphics · WebGPU</span>
-                        <span class="pf-flag"><i class="fa-solid fa-star"></i> Featured</span>
-                    </div>
-                    <h3 class="pf-title">Walking inside a DeepSDF latent space</h3>
-                    <p class="proj-desc">A real-time WebGL / WebGPU visualization that flies through a learned DeepSDF latent space — morphing smoothly between 3D shapes to make a neural shape representation tangible and explorable.</p>
-                    <div class="proj-stack"><span class="tag">WebGPU</span><span class="tag">WebGL</span><span class="tag">DeepSDF</span><span class="tag">3D</span><span class="tag">Latent Space</span></div>
-                </div>
-                <span class="pf-cta">Read on LinkedIn <i class="fa-brands fa-linkedin"></i></span>
-            </a>
-            <div class="proj-grid">
-                <div class="proj-card reveal">
-                    <div class="proj-top">
-                        <span class="proj-cat">Product</span>
-                        <span class="proj-num">01</span>
-                    </div>
-                    <h3 class="proj-title">Doorlah</h3>
-                    <p class="proj-desc">A platform focused on better discovery and engagement for local services — designed for fast navigation and clear calls to action.</p>
-                    <p class="proj-outcome"><span>Outcome</span>Public launch with a live site experience.</p>
-                    <div class="proj-foot">
-                        <div class="proj-stack"><span class="tag">Web</span><span class="tag">Product</span><span class="tag">UX</span></div>
-                        <a href="https://doorlah.github.io" target="_blank" rel="noopener" class="proj-link">Visit <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="proj-card reveal">
-                    <div class="proj-top">
-                        <span class="proj-cat">NLP</span>
-                        <span class="proj-num">02</span>
-                    </div>
-                    <h3 class="proj-title">Product Market Profiling Dashboard</h3>
-                    <p class="proj-desc">A product-focused sentiment engine using NLP key-phrase extraction and source filtering across social media and news, with a high-performance FastAPI backend on Groq LPU and async orchestration.</p>
-                    <p class="proj-outcome"><span>Outcome</span>Near real-time insight delivery for stakeholder dashboards.</p>
-                    <div class="proj-foot">
-                        <div class="proj-stack"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Groq LPU</span><span class="tag">OpenAI</span></div>
-                    </div>
-                </div>
-                <div class="proj-card reveal">
-                    <div class="proj-top">
-                        <span class="proj-cat">Finance + NLP</span>
-                        <span class="proj-num">03</span>
-                    </div>
-                    <h3 class="proj-title">Stock Prediction</h3>
-                    <p class="proj-desc">A pipeline combining market news signals and price features to forecast short-term equity direction, evaluated with rolling-window validation and daily prediction snapshots for decision support.</p>
-                    <p class="proj-outcome"><span>Outcome</span>Faster sentiment snapshots for market context.</p>
-                    <div class="proj-foot">
-                        <div class="proj-stack"><span class="tag">Python</span><span class="tag">NLP</span><span class="tag">Finance</span></div>
-                        <a href="https://github.com/Adigo10/stock_market_sentiment_analyzer" target="_blank" rel="noopener" class="proj-link">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="proj-card reveal">
-                    <div class="proj-top">
-                        <span class="proj-cat">Responsible AI</span>
-                        <span class="proj-num">04</span>
-                    </div>
-                    <h3 class="proj-title">Bias & Toxicity Detection</h3>
-                    <p class="proj-desc">Fine-tuned transformer models with Hugging Face for multi-label toxicity and bias classification in AI-generated text, plus a synthetic data pipeline to study and mitigate adversarial attacks.</p>
-                    <p class="proj-outcome"><span>Outcome</span>Improved safety review coverage for GenAI outputs.</p>
-                    <div class="proj-foot">
-                        <div class="proj-stack"><span class="tag">PyTorch</span><span class="tag">Hugging Face</span><span class="tag">Transformers</span></div>
-                    </div>
-                </div>
-                <div class="proj-card reveal">
-                    <div class="proj-top">
-                        <span class="proj-cat">Document Intelligence</span>
-                        <span class="proj-num">05</span>
-                    </div>
-                    <h3 class="proj-title">GenAI Q&A with Multi-Doc Extraction</h3>
-                    <p class="proj-desc">A RAG pipeline integrating OCR extraction, vector indexing, and semantic search for multi-document retrieval, with dynamic prompting and GPT-3.5 Turbo summarization — cutting token cost by 80%.</p>
-                    <p class="proj-outcome"><span>Outcome</span>Accelerated multi-document lookups for analysts.</p>
-                    <div class="proj-foot">
-                        <div class="proj-stack"><span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">OCR</span><span class="tag">Vector DB</span></div>
-                    </div>
-                </div>
-                <div class="proj-card reveal">
-                    <div class="proj-top">
-                        <span class="proj-cat">Computer Vision</span>
-                        <span class="proj-num">06</span>
-                    </div>
-                    <h3 class="proj-title">Manufacturing Defect Detection</h3>
-                    <p class="proj-desc">CNN-based vision models trained in PyTorch for vehicle manufacturing defect detection, deployed via an OpenCV pipeline to automate quality checks on production lines.</p>
-                    <p class="proj-outcome"><span>Outcome</span>Higher QA throughput through automated screening.</p>
-                    <div class="proj-foot">
-                        <div class="proj-stack"><span class="tag">PyTorch</span><span class="tag">OpenCV</span><span class="tag">Deep Learning</span></div>
-                    </div>
-                </div>
-            </div>
+    <section id="research" data-screen-label="Research" style="padding-top:clamp(88px,11vw,150px)">
+      <div data-reveal="" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 40px;margin-bottom:32px;padding:0 8px">
+        <div>
+          <div style="font-size:17px;font-weight:600;color:oklch(calc(0.47 + var(--lift)) 0.12 150)">Research</div>
+          <h2 style="margin:6px 0 0;font-size:clamp(34px,6vw,72px);font-weight:700;letter-spacing:-0.04em;line-height:1.02">Published work.</h2>
         </div>
+      </div>
+      <div data-reveal="" style="background:var(--plate);box-shadow:0 18px 40px -20px var(--sd2),inset 0 1px 0 var(--rim),inset 0 0 0 1px rgba(255,255,255,0.6);backdrop-filter:var(--frost);-webkit-backdrop-filter:var(--frost);color:var(--ink);border-radius:40px;padding:12px;display:flex;flex-wrap:wrap;gap:12px">
+        <div style="flex:2 1 480px;min-width:0;padding:clamp(20px,3vw,36px)">
+          <span style="display:inline-flex;padding:7px 14px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);font-size:13px;font-weight:600">Conference paper · 2024</span>
+          <h3 style="margin:20px 0 0;font-size:clamp(28px,3.4vw,42px);font-weight:700;letter-spacing:-0.03em;line-height:1.1;text-wrap:balance">Factual Accuracy Checking by Validating Numerical Values in Financial Summaries</h3>
+          <p style="margin:12px 0 0;font-size:15px;color:var(--mute)">Aditya Kumar Goel et al.</p>
+          <p style="margin:20px 0 0;max-width:60ch;font-size:17px;line-height:1.55;color:var(--ink2);text-wrap:pretty">Validates numerical accuracy in generated financial summaries through automated checks and transformer-based reasoning, reducing factual errors in financial reporting.</p>
+          <div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:10px">
+            <a href="https://ieeexplore.ieee.org/document/10825697/" target="_blank" rel="noopener" style="display:flex;align-items:center;height:44px;padding:0 20px;border-radius:999px;background:var(--ink);color:var(--on-ink);font-size:15px;font-weight:600;transition:transform .5s cubic-bezier(.16,1,.3,1)" style-hover="transform:scale(1.04);color:var(--on-ink)">Read the paper ↗</a>
+            <a href="https://scholar.google.com/citations?user=U_htYhgAAAAJ&amp;hl=en" target="_blank" rel="noopener" style="display:flex;align-items:center;height:44px;padding:0 20px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:var(--ink);font-size:15px;font-weight:600;transition:box-shadow .35s ease" style-hover="box-shadow:inset 4px 4px 10px var(--sd),inset -4px -4px 10px var(--sl);color:var(--ink)">Google Scholar ↗</a>
+          </div>
+        </div>
+        <div style="flex:1 1 280px;min-width:0;min-height:260px;border-radius:28px;background:var(--plate);box-shadow:inset 6px 6px 14px var(--sd),inset -6px -6px 14px var(--sl);color:oklch(calc(0.45 + var(--lift)) 0.12 150);padding:28px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between">
+          <span style="font-size:15px;font-weight:600">Published at</span>
+          <div>
+            <div style="font-size:clamp(44px,5vw,64px);font-weight:700;letter-spacing:-0.05em;line-height:0.95">IEEE<br>Big Data</div>
+            <div style="margin-top:10px;font-size:17px;font-weight:600">International Conference, 2024</div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- ============ EDUCATION ============ -->
-    <section id="education" class="education" data-screen-label="Education">
-        <div class="container">
-            <div class="section-head reveal">
-                <div class="section-head-l">
-                    <div class="section-index">06 — Education</div>
-                    <h2 class="section-title">Academic <span class="grad-text">foundation</span></h2>
-                </div>
-            </div>
-            <div class="edu-grid">
-                <div class="edu-card reveal">
-                    <div class="edu-head">
-                        <img src="assets/ntu_logo.jpg" alt="NTU" class="edu-logo" />
-                        <div>
-                            <div class="edu-degree">M.Sc. in Artificial Intelligence</div>
-                        </div>
-                    </div>
-                    <div class="edu-school">Nanyang Technological University, Singapore</div>
-                    <div class="edu-dates">Aug 2025 — Jun 2026</div>
-                    <p class="edu-note">CGPA 3.9 / 5. Advanced coursework in LLMs, trustworthy AI, and applied research.</p>
-                </div>
-                <div class="edu-card reveal">
-                    <div class="edu-head">
-                        <img src="assets/vit_logo.jpg" alt="VIT" class="edu-logo" />
-                        <div>
-                            <div class="edu-degree">B.Tech. in Information Technology</div>
-                        </div>
-                    </div>
-                    <div class="edu-school">Vellore Institute of Technology</div>
-                    <div class="edu-dates">Jul 2018 — Jun 2022</div>
-                    <p class="edu-note">CGPA 4.1 / 5. Special Achiever's Award 2020–21.</p>
-                </div>
-            </div>
+    <section id="education" data-screen-label="Education" style="padding-top:clamp(88px,11vw,150px)">
+      <div data-reveal="" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 40px;margin-bottom:32px;padding:0 8px">
+        <div>
+          <div style="font-size:17px;font-weight:600;color:oklch(calc(0.50 + var(--lift)) 0.18 15)">Education &amp; honours</div>
+          <h2 style="margin:6px 0 0;font-size:clamp(34px,6vw,72px);font-weight:700;letter-spacing:-0.04em;line-height:1.02">Foundations.</h2>
         </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:24px">
+        <div data-reveal="" style="flex:1 1 340px;min-width:0;background:var(--plate);box-shadow:0 18px 40px -20px var(--sd2),inset 0 1px 0 var(--rim),inset 0 0 0 1px rgba(255,255,255,0.6);backdrop-filter:var(--frost);-webkit-backdrop-filter:var(--frost);border-radius:32px;padding:8px;display:flex;flex-direction:column">
+          <div style="border-radius:24px;background:var(--plate);box-shadow:inset 5px 5px 12px var(--sd),inset -5px -5px 12px var(--sl);padding:20px;display:flex;justify-content:space-between;align-items:center;gap:12px">
+            <img src="assets/ntu_logo.jpg" alt="NTU" style="width:56px;height:56px;border-radius:14px;object-fit:cover;background:#FFFFFF">
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:3px 3px 7px var(--sd),-3px -3px 7px var(--sl);color:oklch(calc(0.50 + var(--lift)) 0.18 255);font-size:13px;font-weight:600">2025 to 2026</span>
+          </div>
+          <div style="padding:24px 20px 20px">
+            <h3 style="margin:0;font-size:24px;font-weight:700;letter-spacing:-0.025em">M.Sc. Artificial Intelligence</h3>
+            <div style="margin-top:6px;font-size:16px;color:var(--mute)">Nanyang Technological University, Singapore</div>
+            <p style="margin:16px 0 0;font-size:15px;line-height:1.55;color:var(--ink2)">Graduated 2026 with a CGPA of 3.9 / 5. Advanced coursework in LLMs, trustworthy AI and applied research.</p>
+          </div>
+        </div>
+        <div data-reveal="" data-delay="80" style="flex:1 1 340px;min-width:0;background:var(--plate);box-shadow:0 18px 40px -20px var(--sd2),inset 0 1px 0 var(--rim),inset 0 0 0 1px rgba(255,255,255,0.6);backdrop-filter:var(--frost);-webkit-backdrop-filter:var(--frost);border-radius:32px;padding:8px;display:flex;flex-direction:column">
+          <div style="border-radius:24px;background:var(--plate);box-shadow:inset 5px 5px 12px var(--sd),inset -5px -5px 12px var(--sl);padding:20px;display:flex;justify-content:space-between;align-items:center;gap:12px">
+            <img src="assets/vit_logo.jpg" alt="VIT" style="width:56px;height:56px;border-radius:14px;object-fit:cover;background:#FFFFFF">
+            <span style="padding:7px 12px;border-radius:999px;background:var(--plate);box-shadow:3px 3px 7px var(--sd),-3px -3px 7px var(--sl);color:oklch(calc(0.53 + var(--lift)) 0.15 45);font-size:13px;font-weight:600">2018 to 2022</span>
+          </div>
+          <div style="padding:24px 20px 20px">
+            <h3 style="margin:0;font-size:24px;font-weight:700;letter-spacing:-0.025em">B.Tech. Information Technology</h3>
+            <div style="margin-top:6px;font-size:16px;color:var(--mute)">Vellore Institute of Technology</div>
+            <p style="margin:16px 0 0;font-size:15px;line-height:1.55;color:var(--ink2)">CGPA 4.1 / 5. Special Achiever's Award, 2020/21.</p>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="" style="margin-top:24px;background:var(--plate);box-shadow:0 18px 40px -20px var(--sd2),inset 0 1px 0 var(--rim),inset 0 0 0 1px rgba(255,255,255,0.6);backdrop-filter:var(--frost);-webkit-backdrop-filter:var(--frost);border-radius:32px;padding:8px">
+        <div style="padding:20px 20px 12px;font-size:21px;font-weight:700;letter-spacing:-0.02em">Honours</div>
+        <sc-for list="{{ honours }}" as="h" hint-placeholder-count="6">
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;padding:16px 20px;border-radius:24px;box-shadow:inset 0 0 0 var(--sd),inset 0 0 0 #FFFFFF;transition:box-shadow .4s cubic-bezier(.16,1,.3,1)" style-hover="box-shadow:inset 4px 4px 10px var(--sd),inset -4px -4px 10px var(--sl)">
+            <span style="flex:0 0 10px;width:10px;height:10px;border-radius:999px;background:{{ h.vivid }}"></span>
+            <span style="flex:1 1 240px;font-size:17px;font-weight:600">{{ h.name }}</span>
+            <span style="flex:1 1 240px;font-size:15px;color:var(--mute)">{{ h.org }}</span>
+            <span style="padding:6px 12px;border-radius:999px;background:var(--plate);box-shadow:inset 2px 2px 5px var(--sd),inset -2px -2px 5px var(--sl);color:{{ h.ink }};font-size:13px;font-weight:600">{{ h.group }}</span>
+          </div>
+        </sc-for>
+      </div>
     </section>
 
-    <!-- ============ AWARDS ============ -->
-    <section id="awards" class="awards" data-screen-label="Awards">
-        <div class="container">
-            <div class="section-head reveal">
-                <div class="section-head-l">
-                    <div class="section-index">07 — Awards</div>
-                    <h2 class="section-title">Awards & <span class="grad-text">honors</span></h2>
-                </div>
-            </div>
-            <div class="award-group reveal">
-                <div class="award-group-title">Accenture</div>
-                <div class="awards-grid">
-                    <div class="award-card">
-                        <div class="award-ic"><i class="fa-solid fa-trophy"></i></div>
-                        <div>
-                            <div class="award-name">ACE Inspiring Innovator</div>
-                            <div class="award-org">Accenture</div>
-                        </div>
-                    </div>
-                    <div class="award-card">
-                        <div class="award-ic"><i class="fa-solid fa-star"></i></div>
-                        <div>
-                            <div class="award-name">Innovation Excellence</div>
-                            <div class="award-org">Accenture</div>
-                        </div>
-                    </div>
-                    <div class="award-card">
-                        <div class="award-ic"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                        <div>
-                            <div class="award-name">Technical Excellence</div>
-                            <div class="award-org">Accenture</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="award-group reveal">
-                <div class="award-group-title">Academia</div>
-                <div class="awards-grid">
-                    <div class="award-card">
-                        <div class="award-ic"><i class="fa-solid fa-landmark"></i></div>
-                        <div>
-                            <div class="award-name">HPAIR Delegate</div>
-                            <div class="award-org">Harvard College Project for Asian & International Relations</div>
-                        </div>
-                    </div>
-                    <div class="award-card">
-                        <div class="award-ic"><i class="fa-solid fa-graduation-cap"></i></div>
-                        <div>
-                            <div class="award-name">Special Achiever's Award</div>
-                            <div class="award-org">VIT University</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="award-group reveal">
-                <div class="award-group-title">External</div>
-                <div class="awards-grid">
-                    <div class="award-card">
-                        <div class="award-ic"><i class="fa-solid fa-code"></i></div>
-                        <div>
-                            <div class="award-name">Top 20 · Prospect 100</div>
-                            <div class="award-org">Global Tech Innovation</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section data-screen-label="Elsewhere" style="padding-top:clamp(88px,11vw,150px)">
+      <div style="display:flex;flex-wrap:wrap;gap:24px">
+        <div data-reveal="" style="flex:1 1 340px;min-width:0;background:var(--plate);box-shadow:0 18px 40px -20px var(--sd2),inset 0 1px 0 var(--rim),inset 0 0 0 1px rgba(255,255,255,0.6);backdrop-filter:var(--frost);-webkit-backdrop-filter:var(--frost);border-radius:32px;padding:clamp(24px,3vw,36px);box-sizing:border-box;display:flex;flex-direction:column;gap:14px">
+          <div style="font-size:15px;font-weight:600;color:oklch(calc(0.53 + var(--lift)) 0.15 45)">Writing · Medium</div>
+          <h3 style="margin:0;font-size:clamp(24px,2.6vw,32px);font-weight:700;letter-spacing:-0.03em;line-height:1.15;text-wrap:balance">{{ postTitle }}</h3>
+          <p style="margin:0;font-size:16px;line-height:1.55;color:var(--ink2);text-wrap:pretty">{{ postExcerpt }}</p>
+          <a href="{{ postLink }}" target="_blank" rel="noopener" style="margin-top:auto;align-self:flex-start;display:flex;align-items:center;height:44px;padding:0 20px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:oklch(calc(0.48 + var(--lift)) 0.15 45);font-size:15px;font-weight:600;transition:box-shadow .35s ease" style-hover="box-shadow:inset 4px 4px 10px var(--sd),inset -4px -4px 10px var(--sl);color:oklch(calc(0.48 + var(--lift)) 0.15 45)">{{ postCta }} ↗</a>
         </div>
+        <div data-reveal="" data-delay="80" style="flex:1 1 340px;min-width:0;background:var(--plate);box-shadow:0 18px 40px -20px var(--sd2),inset 0 1px 0 var(--rim),inset 0 0 0 1px rgba(255,255,255,0.6);backdrop-filter:var(--frost);-webkit-backdrop-filter:var(--frost);border-radius:32px;padding:clamp(24px,3vw,36px);box-sizing:border-box;display:flex;flex-direction:column;gap:14px">
+          <div style="font-size:15px;font-weight:600;color:oklch(calc(0.50 + var(--lift)) 0.18 300)">Photography · Instagram</div>
+          <h3 style="margin:0;font-size:clamp(24px,2.6vw,32px);font-weight:700;letter-spacing:-0.03em;line-height:1.15">@adigo.captures</h3>
+          <p style="margin:0;font-size:16px;line-height:1.55;color:var(--ink2);text-wrap:pretty">Away from the terminal: moments, light and places, captured on camera.</p>
+          <a href="https://www.instagram.com/adigo.captures/" target="_blank" rel="noopener" style="margin-top:auto;align-self:flex-start;display:flex;align-items:center;height:44px;padding:0 20px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:oklch(calc(0.48 + var(--lift)) 0.18 300);font-size:15px;font-weight:600;transition:box-shadow .35s ease" style-hover="box-shadow:inset 4px 4px 10px var(--sd),inset -4px -4px 10px var(--sl);color:oklch(calc(0.48 + var(--lift)) 0.18 300)">View the gallery ↗</a>
+        </div>
+      </div>
     </section>
+  </div>
 
-    <!-- ============ MEDIA (Blog + Photography) ============ -->
-    <section id="media" class="media" data-screen-label="Media">
-        <div class="container">
-            <div class="section-head reveal">
-                <div class="section-head-l">
-                    <div class="section-index">08 — Beyond work</div>
-                    <h2 class="section-title">Writing & <span class="grad-text">photography</span></h2>
-                </div>
-                <p class="section-sub">Thoughts on Medium, and moments captured on Instagram.</p>
-            </div>
-            <div class="feature-2col">
-                <div class="reveal">
-                    <div class="blog-card" id="latest-blog">
-                        <div class="publication-header">
-                            <span class="publication-type">Medium</span>
-                            <span class="publication-venue">@adityagoel1999</span>
-                        </div>
-                        <h3 class="publication-title">Loading latest post…</h3>
-                        <p class="publication-meta">Fetching from Medium</p>
-                        <p class="publication-summary">Hang tight while the latest story loads.</p>
-                    </div>
-                    <div class="media-foot">
-                        <a href="https://medium.com/@adityagoel1999" target="_blank" rel="noopener" class="btn btn--ghost">Visit Medium <i class="fa-brands fa-medium"></i></a>
-                    </div>
-                </div>
-                <div class="reveal">
-                    <div class="insta-card">
-                        <iframe src="https://www.instagram.com/adigo.captures/embed" title="@adigo.captures on Instagram" loading="lazy" allowtransparency="true" allowfullscreen scrolling="no"></iframe>
-                    </div>
-                    <div class="media-foot">
-                        <a href="https://www.instagram.com/adigo.captures/" target="_blank" rel="noopener" class="btn btn--ghost">View on Instagram <i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ CONTACT ============ -->
-    <section id="contact" class="contact" data-screen-label="Contact">
-        <div class="container">
-            <div class="contact-card reveal">
-                <p class="eyebrow contact-eyebrow">09 — Contact</p>
-                <h2 class="contact-title">Let's build<br />something</h2>
-                <p class="contact-sub">Open to AI/ML research and product roles starting in 2026. Always happy to talk about trustworthy AI.</p>
-                <a href="mailto:adityaku003@e.ntu.edu.sg" class="contact-email"><i class="fa-regular fa-envelope"></i> adityaku003@e.ntu.edu.sg</a>
-                <button class="copy-email" id="copy-email" type="button" data-email="adityaku003@e.ntu.edu.sg" aria-label="Copy email address"><i class="fa-regular fa-copy"></i> Copy</button>
-                <div class="contact-details">
-                    <div class="cd"><span>Location</span>NTU, Singapore</div>
-                    <div class="cd"><span>Phone</span>+65 8846 5661</div>
-                    <div class="cd"><span>Status</span>Available 2026</div>
-                </div>
-                <div class="socials">
-                    <a href="https://www.linkedin.com/in/adigo10/" target="_blank" rel="noopener" class="social"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                    <a href="https://github.com/Adigo10" target="_blank" rel="noopener" class="social"><i class="fa-brands fa-github"></i> GitHub</a>
-                    <a href="https://scholar.google.com/citations?user=U_htYhgAAAAJ&hl=en" target="_blank" rel="noopener" class="social"><i class="fa-solid fa-graduation-cap"></i> Scholar</a>
-                    <a href="https://medium.com/@adityagoel1999" target="_blank" rel="noopener" class="social"><i class="fa-brands fa-medium"></i> Medium</a>
-                    <a href="https://www.instagram.com/adigo.captures/" target="_blank" rel="noopener" class="social"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ FOOTER ============ -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-inner">
-                <a href="#home" class="brand">
-                    <span class="mark">AG</span>
-                    <span>Aditya Goel</span>
-                </a>
-                <p>© 2026 Aditya Kumar Goel — Designed & built with intent.</p>
-            </div>
-        </div>
+  <section id="contact" data-screen-label="Contact" style="max-width:1200px;margin:0 auto;padding:clamp(88px,11vw,150px) clamp(16px,4vw,32px) 0;box-sizing:border-box">
+    <div data-reveal="" style="background:var(--plate);box-shadow:0 18px 40px -20px var(--sd2),inset 0 1px 0 var(--rim),inset 0 0 0 1px rgba(255,255,255,0.6);backdrop-filter:var(--frost);-webkit-backdrop-filter:var(--frost);border-radius:40px;padding:clamp(28px,5vw,64px);display:flex;flex-direction:column;gap:24px;align-items:flex-start">
+      <div style="font-size:17px;font-weight:600;color:oklch(calc(0.49 + var(--lift)) 0.19 255)">Contact</div>
+      <h2 style="margin:0;font-size:clamp(44px,8vw,104px);font-weight:700;letter-spacing:-0.05em;line-height:0.95;max-width:10ch">Let's build something.</h2>
+      <p style="margin:0;max-width:440px;font-size:19px;line-height:1.45;color:var(--mute)">Always happy to talk about trustworthy AI, products and research.</p>
+      <div style="display:flex;align-items:center;gap:8px;padding:6px 6px 6px 22px;border-radius:999px;background:var(--plate);box-shadow:inset 4px 4px 10px var(--sd),inset -4px -4px 10px var(--sl);max-width:100%;box-sizing:border-box">
+        <a href="mailto:adityaku003@e.ntu.edu.sg" style="min-width:0;color:var(--ink);font-size:clamp(14px,1.6vw,19px);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">adityaku003@e.ntu.edu.sg</a>
+        <button type="button" onClick="{{ copyEmail }}" style="all:unset;cursor:pointer;flex:0 0 auto;height:44px;padding:0 20px;border-radius:999px;background:var(--ink);color:var(--on-ink);font-size:15px;font-weight:600;display:flex;align-items:center;transition:transform .5s cubic-bezier(.16,1,.3,1)" style-hover="transform:scale(1.04)">{{ copyLabel }}</button>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:8px">
+        <a href="https://www.linkedin.com/in/adigo10/" target="_blank" rel="noopener" style="display:flex;align-items:center;height:44px;padding:0 18px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:var(--ink);font-size:14px;font-weight:600;transition:box-shadow .35s ease" style-hover="box-shadow:inset 4px 4px 10px var(--sd),inset -4px -4px 10px var(--sl);color:var(--ink)">LinkedIn</a>
+        <a href="https://github.com/Adigo10" target="_blank" rel="noopener" style="display:flex;align-items:center;height:44px;padding:0 18px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:var(--ink);font-size:14px;font-weight:600;transition:box-shadow .35s ease" style-hover="box-shadow:inset 4px 4px 10px var(--sd),inset -4px -4px 10px var(--sl);color:var(--ink)">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=U_htYhgAAAAJ&amp;hl=en" target="_blank" rel="noopener" style="display:flex;align-items:center;height:44px;padding:0 18px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:var(--ink);font-size:14px;font-weight:600;transition:box-shadow .35s ease" style-hover="box-shadow:inset 4px 4px 10px var(--sd),inset -4px -4px 10px var(--sl);color:var(--ink)">Scholar</a>
+        <a href="https://medium.com/@adityagoel1999" target="_blank" rel="noopener" style="display:flex;align-items:center;height:44px;padding:0 18px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:var(--ink);font-size:14px;font-weight:600;transition:box-shadow .35s ease" style-hover="box-shadow:inset 4px 4px 10px var(--sd),inset -4px -4px 10px var(--sl);color:var(--ink)">Medium</a>
+        <a href="https://www.instagram.com/adigo.captures/" target="_blank" rel="noopener" style="display:flex;align-items:center;height:44px;padding:0 18px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:var(--ink);font-size:14px;font-weight:600;transition:box-shadow .35s ease" style-hover="box-shadow:inset 4px 4px 10px var(--sd),inset -4px -4px 10px var(--sl);color:var(--ink)">Instagram</a>
+        <a href="tel:+6588465661" target="_blank" rel="noopener" style="display:flex;align-items:center;height:44px;padding:0 18px;border-radius:999px;background:var(--plate);box-shadow:5px 5px 12px var(--sd),-5px -5px 12px var(--sl);color:var(--ink);font-size:14px;font-weight:600;transition:box-shadow .35s ease" style-hover="box-shadow:inset 4px 4px 10px var(--sd),inset -4px -4px 10px var(--sl);color:var(--ink)">+65 8846 5661</a>
+      </div>
+    </div>
+    <footer style="padding:32px 8px 24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:13px;color:var(--mute)">
+      <span>© 2026 Aditya Kumar Goel</span>
+      <span>Singapore</span>
     </footer>
+  </section>
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroFinish&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;iridescent&quot;,&quot;champagne&quot;,&quot;silver&quot;,&quot;blue&quot;,&quot;coral&quot;,&quot;violet&quot;],&quot;default&quot;:&quot;iridescent&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;3D&quot;},&quot;portraitMono&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Profile&quot;},&quot;revealAnimations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+const PAL = [
+  { soft: 'oklch(calc(0.95 - var(--drop)) 0.03 255)', ink: 'oklch(calc(0.50 + var(--lift)) 0.18 255)', vivid: 'oklch(0.62 0.19 255)' },
+  { soft: 'oklch(calc(0.95 - var(--drop)) 0.035 55)', ink: 'oklch(calc(0.53 + var(--lift)) 0.15 45)', vivid: 'oklch(0.70 0.17 55)' },
+  { soft: 'oklch(calc(0.95 - var(--drop)) 0.035 150)', ink: 'oklch(calc(0.48 + var(--lift)) 0.12 150)', vivid: 'oklch(0.68 0.17 150)' },
+  { soft: 'oklch(calc(0.95 - var(--drop)) 0.03 300)', ink: 'oklch(calc(0.50 + var(--lift)) 0.18 300)', vivid: 'oklch(0.62 0.2 300)' },
+  { soft: 'oklch(calc(0.95 - var(--drop)) 0.03 15)', ink: 'oklch(calc(0.52 + var(--lift)) 0.17 15)', vivid: 'oklch(0.66 0.19 15)' },
+];
+const ROLES = [
+  { org: 'Go-Genie', role: 'AI Product Engineer', years: 'Since 2026', dates: 'Jan 2026 to present', loc: 'Singapore', logo: 'assets/gogenie_logo.jpg', mono: 'GG', points: [
+    'Building an all-in-one Second Brain and smart ERP solution.',
+    'Develop ML models with scikit-learn and PyTorch for logistics demand forecasting, route optimisation and load balancing.',
+    'Engineer data pipelines and integrate AI inference into backend microservices via REST APIs for scalable deployment.',
+    'Design a dynamic RAG pipeline with Gemini, LangChain and BM25, using sequential API triggering and context-aware prompting.',
+    'Built an AI-powered HRMS assistant for leave, payslips and personalised FAQs, reducing administrative overhead.'] },
+  { org: 'Accenture', role: 'Responsible AI Senior Analyst', years: '2022 to 2025', dates: 'Jul 2022 to Jul 2025', loc: 'Bengaluru, India', logo: 'assets/accenture_logo.jpg', mono: 'AC', points: [
+    'Evaluated 30+ AI business use cases and worked with EU representatives to interpret the AI Act, creating self-service evaluation workflows and compliance reports.',
+    'Delivered 5+ end-to-end GenAI solutions, including RAG-based knowledge management that cut client time spent on database lookups.',
+    'Developed a Tesseract OCR pipeline to extract and structure invoice data for downstream retrieval.',
+    'Built a quantitative Responsible AI evaluation system handling thousands of batch requests with auto-prioritisation.',
+    'Applied MLOps practice across Azure (CI/CD) and AWS (EC2, ECS, SageMaker, Bedrock, S3) for training, versioning and deployment.'] },
+];
+const PROJECTS = [
+  { title: 'Doorlah', cat: 'Product', desc: 'A platform for better discovery of, and engagement with, local services, with fast navigation and clear calls to action. Launched publicly.', stack: 'Web · Product · UX', link: 'https://doorlah.github.io', linkLabel: 'Visit site' },
+  { title: 'Product Market Profiling', cat: 'NLP', desc: 'A sentiment engine using key-phrase extraction and source filtering across social media and news, served by an async FastAPI backend on Groq LPU.', stack: 'Python · FastAPI · Groq LPU · OpenAI', link: '' },
+  { title: 'Stock Prediction', cat: 'Finance + NLP', desc: 'Combines market-news signals with price features to forecast short-term equity direction, validated with rolling windows and daily snapshots.', stack: 'Python · NLP · Finance', link: 'https://github.com/Adigo10/stock_market_sentiment_analyzer', linkLabel: 'View on GitHub' },
+  { title: 'Bias & Toxicity Detection', cat: 'Responsible AI', desc: 'Fine-tuned transformers for multi-label toxicity and bias classification in generated text, plus a synthetic-data pipeline for adversarial robustness.', stack: 'PyTorch · Hugging Face · Transformers', link: '' },
+  { title: 'Multi-Document Q&A', cat: 'Document Intelligence', desc: 'OCR extraction, vector indexing and semantic search across documents, with dynamic prompting and GPT-3.5 Turbo summarisation, cutting token cost by 80%.', stack: 'Python · LangChain · OCR · Vector DB', link: '' },
+  { title: 'Manufacturing Defect Detection', cat: 'Computer Vision', desc: 'CNN models trained in PyTorch to detect vehicle manufacturing defects, deployed via OpenCV to automate quality checks on the line.', stack: 'PyTorch · OpenCV · Deep learning', link: '' },
+];
+const HONOURS = [
+  { name: 'ACE Inspiring Innovator', org: 'Accenture', group: 'Industry', c: 0 },
+  { name: 'Innovation Excellence', org: 'Accenture', group: 'Industry', c: 0 },
+  { name: 'Technical Excellence', org: 'Accenture', group: 'Industry', c: 0 },
+  { name: 'HPAIR Delegate', org: 'Harvard College Project for Asian & International Relations', group: 'Academia', c: 3 },
+  { name: "Special Achiever's Award", org: 'VIT University', group: 'Academia', c: 3 },
+  { name: 'Top 20 · Prospect 100', org: 'Global Tech Innovation', group: 'External', c: 1 },
+];
+const EASE = 'cubic-bezier(.16,1,.3,1)';
+const FIN = ['blue', 'orange', 'green', 'violet', 'rose'];
+const NAV = [['profile', 'Profile'], ['experience', 'Experience'], ['work', 'Work'], ['research', 'Research'], ['education', 'Education']];
+const SEC_NAME = { top: 'Home', profile: 'Profile', experience: 'Experience', work: 'Work', research: 'Research', education: 'Education', contact: 'Contact' };
+const ORB = ['oklch(0.70 0.17 255)', 'oklch(0.80 0.15 65)', 'oklch(0.80 0.16 150)', 'oklch(0.70 0.18 300)', 'oklch(0.72 0.17 15)'];
 
-    <button class="to-top" id="to-top" aria-label="Scroll to top">
-        <svg class="to-top-ring" viewBox="0 0 44 44" aria-hidden="true"><circle class="track" cx="22" cy="22" r="19"></circle><circle class="bar" cx="22" cy="22" r="19"></circle></svg>
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
+class Component extends DCLogic {
+  state = { active: 0, copied: false, now: Date.now(), post: null, navOpen: false, sec: 'top', vw: typeof innerWidth === 'number' ? innerWidth : 1200 };
+  secRef = React.createRef();
+  ribbonRef = React.createRef();
+  portraitRef = React.createRef();
+  detailRef = React.createRef();
 
-    <!-- Toast -->
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  componentDidMount() {
+    this.clock = setInterval(() => this.setState({ now: Date.now() }), 15000);
+    this.reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if ((this.props.revealAnimations ?? true) && !this.reduce) this.setupReveal();
+    const rb = this.ribbonRef.current;
+    if (rb && !this.reduce) { rb.style.paddingRight = '0px'; this.ribbonAnim = rb.animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-50%)' }], { duration: 60000, iterations: Infinity }); }
+    this.onResize = () => this.setState({ vw: innerWidth });
+    addEventListener('resize', this.onResize, { passive: true });
+    const SECS = ['top', 'profile', 'experience', 'work', 'research', 'education', 'contact'];
+    this.secIO = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) this.setState({ sec: e.target.id }); }), { rootMargin: '-45% 0px -50% 0px' });
+    SECS.forEach((id) => { const el = document.getElementById(id); el && this.secIO.observe(el); });
+    this.onScroll = () => {
+      if (this.raf) return;
+      this.raf = requestAnimationFrame(() => {
+        this.raf = 0;
+        const el = this.portraitRef.current;
+        if (!el || !el.parentElement) return;
+        const r = el.parentElement.getBoundingClientRect();
+        const prog = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
+        el.style.transform = `translate3d(0, ${Math.min(0, prog * -36).toFixed(2)}px, 0)`;
+      });
+    };
+    addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+    const rss = 'https://medium.com/feed/@adityagoel1999';
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(rss))
+      .then((r) => r.json())
+      .then((data) => {
+        const p = data && data.items && data.items[0];
+        if (!p) return;
+        const tmp = document.createElement('div'); tmp.innerHTML = p.description || '';
+        const raw = (tmp.textContent || '').trim().slice(0, 170).trim();
+        this.setState({ post: { title: p.title, link: p.link, excerpt: raw ? raw + '…' : '' } });
+      })
+      .catch(() => {});
+  }
 
-    <script src="app.js"></script>
-    <script src="enhancements.js"></script>
+  setupReveal() {
+    const els = [...document.querySelectorAll('[data-reveal]')];
+    els.forEach((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.top < innerHeight * 0.9 && el.dataset.reveal !== 'rise' && !el.closest('#top')) return;
+      el.style.transition = 'none';
+      el.style.willChange = 'transform, opacity';
+      if (el.dataset.reveal === 'rise') el.style.transform = 'translate3d(0,110%,0)';
+      else { el.style.opacity = '0'; el.style.transform = 'translate3d(0,40px,0) scale(0.985)'; }
+      el.__pending = true;
+    });
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      this.io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          const el = e.target, d = +(el.dataset.delay || 0);
+          el.style.transition = `opacity 1s ${EASE} ${d}ms, transform 1.2s ${EASE} ${d}ms`;
+          el.style.opacity = '1'; el.style.transform = 'none';
+          setTimeout(() => { el.style.willChange = ''; }, 1400 + d);
+          this.io.unobserve(el);
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+      els.filter((el) => el.__pending).forEach((el) => {
+        if (el.dataset.reveal === 'rise') {
+          const d = +(el.dataset.delay || 0);
+          el.style.transition = `transform 1.2s ${EASE} ${d}ms`;
+          el.style.transform = 'none';
+        } else this.io.observe(el);
+      });
+    }));
+  }
+
+  componentDidUpdate(pp, ps) {
+    if (ps.sec !== this.state.sec && this.secRef.current && !this.reduce) {
+      this.secRef.current.animate([{ opacity: 0, transform: 'translate3d(0,8px,0)', filter: 'blur(4px)' }, { opacity: 1, transform: 'none', filter: 'blur(0)' }], { duration: 550, easing: EASE });
+    }
+    if (ps.active !== this.state.active && this.detailRef.current && !this.reduce) {
+      this.detailRef.current.animate(
+        [{ opacity: 0, transform: 'translate3d(0,14px,0)' }, { opacity: 1, transform: 'none' }],
+        { duration: 600, easing: EASE });
+    }
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.clock);
+    removeEventListener('scroll', this.onScroll);
+    removeEventListener('resize', this.onResize);
+    this.io && this.io.disconnect();
+    this.secIO && this.secIO.disconnect();
+    this.ribbonAnim && this.ribbonAnim.cancel();
+    (this.orbAnims || []).forEach((a) => a.cancel());
+    clearTimeout(this.copyT);
+  }
+
+  copyEmail = () => {
+    const email = 'adityaku003@e.ntu.edu.sg';
+    (navigator.clipboard ? navigator.clipboard.writeText(email) : Promise.reject()).catch(() => {});
+    this.setState({ copied: true });
+    clearTimeout(this.copyT);
+    this.copyT = setTimeout(() => this.setState({ copied: false }), 1800);
+  };
+
+  renderVals() {
+    const { active, copied, now, post } = this.state;
+    const sgTime = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Singapore', hour: '2-digit', minute: '2-digit' }).format(new Date(now)) + ' SGT';
+    const roles = ROLES.map((r, i) => ({ ...r, ...PAL[i % 5], noLogo: !r.logo, shadow: i === active ? 'inset 4px 4px 10px var(--sd), inset -4px -4px 10px var(--sl)' : 'inset 0 0 0 var(--sd), inset 0 0 0 #FFFFFF', select: () => this.setState({ active: i }) }));
+    const d = roles[active];
+    const mono = !!this.props.portraitMono;
+    return {
+      sgTime,
+      heroFinish: this.props.heroFinish ?? 'iridescent',
+      mono, colour: !mono,
+      ribbonRef: this.ribbonRef, portraitRef: this.portraitRef, detailRef: this.detailRef,
+      roles, d,
+      projects: PROJECTS.map((p, i) => ({ ...p, ...PAL[i % 5], shape: String([1, 4, 2, 3, 0, 2][i]), finish: FIN[i % 5], no: String(i + 1).padStart(2, '0'), delay: String((i % 3) * 90) })),
+      honours: HONOURS.map((h) => ({ ...h, ...PAL[h.c] })),
+      postTitle: post ? post.title : 'Notes on Responsible AI, LLMs and shipping GenAI.',
+      postExcerpt: post ? post.excerpt : 'Lessons from building and evaluating generative systems in the real world.',
+      postLink: post ? post.link : 'https://medium.com/@adityagoel1999',
+      postCta: post ? 'Read the latest' : 'Read on Medium',
+      copyEmail: this.copyEmail,
+      secRef: this.secRef,
+      sectionName: SEC_NAME[this.state.sec] || 'Home',
+      navCols: this.state.navOpen && this.state.vw >= 760 ? '1fr' : '0fr',
+      navOpacity: this.state.navOpen && this.state.vw >= 760 ? 1 : 0,
+      panelRows: this.state.navOpen && this.state.vw < 760 ? '1fr' : '0fr',
+      panelOpacity: this.state.navOpen && this.state.vw < 760 ? 1 : 0,
+      panelPE: this.state.navOpen && this.state.vw < 760 ? 'auto' : 'none',
+      showName: this.state.vw >= 420,
+      navIcon: this.state.navOpen ? 'rotate(45deg)' : 'rotate(0deg)',
+      navLinks: NAV.map(([id, label]) => ({ href: '#' + id, label, current: this.state.sec === id ? 'location' : undefined, bg: this.state.sec === id ? 'rgba(20,30,45,0.08)' : 'transparent' })),
+      navVis: this.state.navOpen && this.state.vw >= 760 ? 'visible' : 'hidden',
+      panelVis: this.state.navOpen && this.state.vw < 760 ? 'visible' : 'hidden',
+      navExpanded: this.state.navOpen ? 'true' : 'false',
+      navLabel: (this.state.navOpen ? 'Close sections menu, now on ' : 'Open sections menu, now on ') + (SEC_NAME[this.state.sec] || 'Home'),
+      navKey: (e) => { if (e.key === 'Escape' && this.state.navOpen) this.setState({ navOpen: false }); },
+      navEnter: () => { if (matchMedia('(hover: hover)').matches && this.state.vw >= 760) this.setState({ navOpen: true }); },
+      navLeave: () => { if (matchMedia('(hover: hover)').matches && this.state.vw >= 760) this.setState({ navOpen: false }); },
+      navToggle: () => this.setState((st) => ({ navOpen: !st.navOpen })),
+      navClose: () => this.setState({ navOpen: false }),
+      copyLabel: copied ? 'Copied' : 'Copy',
+    };
+  }
+}
+</script>
 </body>
-
 </html>
